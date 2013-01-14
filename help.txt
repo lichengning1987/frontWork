@@ -1,0 +1,101 @@
+http://js.fgm.cc/learn/
+http://hi.baidu.com/sunshgang/blog/item/dd181c66d1882429aa184cf4.html
+http://www.html5china.com/
+http://ishare.iask.sina.com.cn/f/11422895.html
+http://www.mhtml5.com/tag/html5%E6%95%99%E7%A8%8B
+http://www.slideshare.net/lijing00333/ss-12511889
+http://wiki.ued.taobao.net/doku.php
+http://www.wufangbo.com/
+http://www.kenwoodsc3.com/?theme=light#home
+http://aralejs.org
+
+http://wiki.ued.taobao.net/doku.php?id=team:cs:cart:cartplugin
+
+git学习网站
+http://www.xbc.me/git-commands/   
+http://yunsim.com/ch3-2.html
+
+http://mongodb.github.com/node-mongodb-native/contents.html //nodejs Mongodb
+
+SNS http://t.taobao.com/platform/sharePlugin.htm
+http://www.taobao.com/go/act/trip_tool/trip_template.php //淘宝旅行套头
+
+
+阿里旺旺生成地址：http://www.taobao.com/wangwang/2011_seller/wangbiantianxia/index.php
+
+2640135039
+http://localhost:1119/website/Default/Default.aspx
+当TMS提示 YAHOO is not defined的时候
+在页面靠前位置引入：<script src="http://a.tbcdn.cn/tbra/1.0/tbra-widgets.js"></script>
+
+刚才才知道，KISSY判断flash版本
+
+大部分客户端信息，都存在于 KISSY.UA 这个对象中的
+如果要获取Flash的UA则
+KISSY.use('flash',function(){
+   alert(KISSY.UA.fpv());
+})
+xjb050013 
+(name="(?:[\w\d-])+")([\r\n\s\w\W.])*?\1
+阿里旺旺:http://www.taobao.com/wangwang/2011_seller/wangbiantianxia/index.php
+
+
+font-family: "Microsoft Yahei", "Arial", "Verda", "tahoma";
+
+http://wiki.ued.taobao.net/doku.php?id=user:yuanquan:p4pflusher&s[]=p4p&s[]=%E7%BC%93%E5%AD%98
+
+
+encodeURIComponent(encodeURIComponent("中文字符位置"))
+
+
+http://wiki.ued.taobao.net/doku.php?id=user:yuanquan:p4pflusher&s[]=p4p
+
+http://placehold.it/350x150
+
+http://wiki.ued.taobao.net/doku.php?id=user:zizhong:business:luckydraw //淘金币抽奖
+
+/*淘金币抽奖*/
+<div id="J_LuckyWheel"></div>
+<link rel="stylesheet" href="http://a.tbcdn.cn/apps/matrix-exchange/css/app-luckywheel.css?t=20120820.css">
+<script type="text/javascript" src="http://a.tbcdn.cn/apps/matrix-exchange/js/app-luckywheel.js?t=20120820.js"></script>
+<script>
+KISSY.ready(function() {
+    var luckywheelID = "20120821";
+    new KISSY.LuckyWheel('J_LuckyWheel',{'luckywheelID':luckywheelID,"isShowDetail": false });
+});
+</script>
+<div class="hidden" id="Jianghu_tb_token">
+<input id='J_TbToken' name='_tb_token_' type='hidden' value=<?php echo htmlspecialchars($__COOKIE["_tb_token_"], ENT_QUOTES);;?> />
+</div>
+/*淘金币抽奖end*/
+
+
+http://game.daily.taobao.net/lottery/activities/shijitiancheng-2012-09-20.htm
+http://game.taobao.com/lottery/activities/shijitiancheng-2012-09-20.htm
+
+
+
+
+https://login.taobao.com/member/login.jhtml?f=top&redirectURL=http://game.taobao.com/lottery/activities/shijitiancheng-2012-09-20.htm
+
+/*获取Token值*/
+<script type="text/javascript" src="http://www.taobao.com/go/act/xm-token.php "></script>
+<script type="text/javascript">
+  Tiao._tb_token_ =xm_tb_token_;
+  Tiao.param = {moduleId : 7};
+</script>
+
+
+KISSY.unparam("a=1&b=2&c=3&d=4&e=5")
+S.io.serialize(obform)
+
+meta(charset="utf-8")
+
+.ln_floatnav{width:102px;height:368px;position:fixed;left:50%;margin-left:500px; top:200px; overflow:hidden;_position:absolute;_top: expression(eval(documentElement.scrollTop+200));}
+.ln_floatnav .ln_nav{ background:url("images1/floatnav.gif") no-repeat;width:102px;height:368px;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/rightnav.png",sizingMethod='crop');}
+
+
+html{background-image:url(about:blank);background-attachment:fixed;}
+body{background-image:url(about:blank);background-attachment:fixed;}
+
+onfous="this.blur()"
