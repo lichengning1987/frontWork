@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>浮动导航</title>
+</head>
+
+<body style="height:2000px; background:#eee;">
+<!-- 侧栏菜单 -->
+<style type="text/css">
+
+.l-nav{width:172px; height:478px; left:50%; margin-left:490px;_position:absolute !important;}
+
+</style>
+<div id="J_ActivityNav" class="l-nav">
+	<!--Up to 200000 people http://img03.taobaocdn.com/tps/i3/T1iwEjXgBeXXbCye2A-149-543.png-->
+	<img src="http://img02.taobaocdn.com/tps/i2/T12Rv2XkxkXXbCye2A-149-543.png" alt="" border="0" usemap="#l-Map" />
+<map name="l-Map" id="l-Map">
+  <area shape="rect" coords="18,86,133,204" href="http://act.ju.taobao.com/go/act/123-again.php" target="_blank" />
+  <area shape="rect" coords="16,214,135,254" href="http://ju.taobao.com/tg/item_list.htm?spm=608.1000525.0.26.OR3BjV" target="_blank" />
+  <area shape="rect" coords="17,255,133,295" href="http://act.ju.taobao.com/go/act/sale/123pinpaituan.php" target="_blank" />
+  <area shape="rect" coords="17,340,135,424" href="http://act.ju.taobao.com/go/act/juhuasuan/123lingjiang.php" target="_blank" />
+  <area shape="rect" coords="15,300,132,341" href="javascript:;" />
+  <area shape="rect" coords="18,430,133,518" href="http://act.ju.taobao.com/go/act/123-rule.php#zz_point5" target="_blank" />
+</map>
+</div>
+<script src="http://a.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+<script type="text/javascript">
+    (function () {
+        var nav = document.getElementById('J_ActivityNav'), isIE6 = KISSY.UA.ie === 6;
+		var _top = 480
+        function navCheck () {
+            var t = document.documentElement.scrollTop || document.body.scrollTop;
+            if (t >= _top) {
+                if (!isIE6) {
+                    nav.style.position = "fixed";
+                    nav.style.top = '0'
+                } else {
+                    nav.style.top = t + 'px';
+                }
+            } else {
+                if (!isIE6) {
+                    nav.style.position = "absolute";
+                    nav.style.top = _top+'px'
+                } else {
+                    nav.style.top = _top+'px';
+                }
+            }
+        }
+
+        navCheck();
+        window.onscroll = function () {
+            navCheck();
+        }
+    })();
+</script>
+</body>
+</html>

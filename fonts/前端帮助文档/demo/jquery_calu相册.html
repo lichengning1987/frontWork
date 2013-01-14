@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        body,.sw_box,.sw_box ul,.sw_box li{margin:0;padding:0;}
+        .sw_box img{display: block; border:0;}
+        .sw_box ul{ list-style:none;}
+        .sw_box .clear{zoom:1}
+        .sw_box .clear:after{content:'.';display:block; clear: both;height:0; visibility: hidden;}
+        .sw_box{width:490px;height:224px;border:2px solid #ccc; margin:0 auto; position:relative;}
+        .sw_box .sw_nav{padding-top:170px;padding-left:30px;}
+        .sw_box .sw_nav li{float:left;width:70px;height:50px; overflow: hidden; margin-right:14px; display:inline; }
+        .sw_box .sw_nav li img{width:70px;height:50px;position:absolute;}
+        .sw_box .sw_nav li.selected{border:1px solid red;}
+        .sw_showAreas{ overflow: hidden;}
+        .sw_showAreas img{position:absolute;left:0;top:0;}
+        .s_zindex{z-index:10;}
+        .s_zindexnav{z-index:100;}
+    </style>
+</head>
+<script src="jquery-1.7.2-min.js"></script>
+<script src="http://a.tbcdn.cn/libs/jquery/1.7.1/jquery.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var n=0;
+        $(".sw_nav li").each(function(index){
+
+            $this=$(this);
+            $(".sw_nav li:eq("+ 0+") img:eq(1)").css({
+                width:490,
+                height:170,
+                left:0,
+                top:0
+            });
+            $(".sw_nav li:eq("+ index+") img:eq(1)").css({
+                left:30+70*index+14*index,
+                top:170
+            });
+            $(".sw_nav li:eq("+ index+")").click(function(){
+                if( $(".sw_nav li:eq("+ index+") img:eq(1)").hasClass("s_zindex")){return;}
+                $(".sw_nav li:eq("+ n+") img:eq(1)").removeClass("s_zindex").animate({
+                    width:70,
+                    height:50,
+                    left:30+70*n+14*n,
+                    top:170
+                },2000,function(){
+                });
+                $(".sw_nav li:eq("+ index+") img:eq(1)").addClass("s_zindex").animate({
+                    width:490,
+                    height:170,
+                    left:0,
+                    top:0
+                },2000,function(){
+                });
+                n=index;
+            })
+        })
+
+    })
+</script>
+<body>
+<div class="sw_box clear">
+    <ul class="sw_nav clear">
+        <li class="selected"><img src="images/01.jpg"><img src="images/01.jpg" ></li>
+        <li><img src="images/02.jpg"><img src="images/02.jpg"></li>
+        <li><img src="images/03.jpg"><img src="images/03.jpg"></li>
+        <li><img src="images/04.jpg"><img src="images/04.jpg"></li>
+        <li><img src="images/05.jpg"><img src="images/05.jpg"></li>
+    </ul>
+</div>
+</body>
+</html>

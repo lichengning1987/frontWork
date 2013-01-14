@@ -1,0 +1,78 @@
+            	<div class="txt_super">
+                	<span class="titletxt">精选酒店</span>
+                	 <div id="js_Tab2" class="js_Tab">
+                     	<div class="titlebox">
+                            <ul class="js_TabTitle">
+                                <cms:custom title="东北特价酒店城市名" group="东北特价酒店" fields="text1:城市名:string" row="60" defaultRow="3">
+                            #foreach ($item in $customList)
+                                <li #if($velocityCount == 1) class="js_TabHover" #end>$!item.text1</li>
+                             #end
+                             </cms:custom>
+                            </ul>
+                        </div>
+                        <cms:repeat title="区域" group="东北特价酒店" row="10">
+                        <div #if($repeatCount == 1) class="js_TabMain js_TabHover clearfix" #else class="js_TabMain  clearfix" #end>
+                            <div class="shows mod">
+                            	<cms:custom title="东北特价酒店1" group="东北特价酒店" fields="img:图片地址:url,text1:酒店名:string,price:现价:string,href:酒店链接:url" row="60" defaultRow="4">
+                                #foreach ($item in $customList)
+                            	<div class="dls">
+                                    <div #if($velocityCount == 1) class="showsMain showsHover mains" #end>
+                                        <a href="$!item.href" target="_blank" ><img src="$!item.img" class="jiuimg"></a>
+                                        <div class="jiao"></div>	
+                                    </div>
+                                    <span class="jiuwenzi showsHover"><a href="$!item.href" target="_blank">$!item.text1<b>￥$!item.price</b></a></span>
+                                </div>
+                                #end
+                                </cms:custom> 
+                            </div>	
+                            <div class="shows mod">
+                            
+                            	<cms:custom title="东北特价酒店2" group="东北特价酒店" fields="img:图片地址:url,text1:酒店名:string,price:现价:string,href:酒店链接:url" row="60" defaultRow="4">
+                                #foreach ($item in $customList)
+                            	<div class="dls">
+                                    <div #if($velocityCount == 1) class="showsMain showsHover mains"  #end>
+                                        <a href="$!item.href" target="_blank" ><img src="$!item.img" class="jiuimg"></a>
+                                        <div class="jiao"></div>	
+                                    </div>
+                                    <span class="jiuwenzi showsHover"><a href="$!item.href" target="_blank">$!item.text1<b>￥$!item.price</b></a></span>
+                                </div>
+                                #end
+                                </cms:custom> 
+                                 
+                            </div>	
+                            <div class="shows mod">
+                            	<cms:custom title="东北特价酒店3" group="东北特价酒店" fields="img:图片地址:url,text1:酒店名:string,price:现价:string,href:酒店链接:url" row="60" defaultRow="4">
+                                #foreach ($item in $customList)
+                            	<div class="dls">
+                                    <div #if($velocityCount == 1) class="showsMain showsHover mains" #end>
+                                        <a href="$!item.href" target="_blank" ><img src="$!item.img" class="jiuimg"></a>
+                                        <div class="jiao"></div>	
+                                    </div>
+                                    <span class="jiuwenzi showsHover"><a href="$!item.href" target="_blank">$!item.text1<b>￥$!item.price</b></a></span>
+                                </div>
+                                #end
+                                </cms:custom> 
+                                 
+                            </div>	
+                            <div class="shows mod">
+                           		<cms:custom title="东北特价酒店4" group="东北特价酒店" fields="img:图片地址:url,text1:酒店名:string,price:现价:string,href:酒店链接:url" row="60" defaultRow="4">
+                                #foreach ($item in $customList)
+                            	<div class="dls">
+                                    <div #if($velocityCount == 1) class="showsMain showsHover mains" #end>
+                                        <a href="$!item.href" target="_blank" ><img src="$!item.img" class="jiuimg"></a>
+                                        <div class="jiao"></div>	
+                                    </div>
+                                    <span class="jiuwenzi showsHover"><a href="$!item.href" target="_blank">$!item.text1<b>￥$!item.price</b></a></span>
+                                </div>
+                                #end
+                                </cms:custom>  
+                            </div>	
+                        </div>
+                        </cms:repeat>
+                    </div>
+                </div>
+
+
+http://game.taobao.com/json/cardAuction.do?requestType=3&callback=callback&couponType=1&sellerId=428592267&activityId=
+428592267
+26048123

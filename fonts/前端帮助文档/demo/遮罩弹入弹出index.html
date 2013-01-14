@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	.ln_container ul, .ln_container li,.ln_container h4{ margin:0; padding:0;}
+	.ln_container{width:900px;margin:0 auto;}	
+	.ln_container .clear{zoom:1;}
+	.ln_container .clear:after{ display:block; clear:both; visibility:hidden; content:'.'; height:0;}		
+	.ln_container ul{ list-style:none;width:900px; margin:0 auto;}
+	.ln_container ul li{ float:left;width:211px;height:151px; position:relative; overflow:hidden;}
+	.ln_container .ln_div{ background:#000; opacity:0.5;filter:alpha(opacity=50); color:#fff; font-size:12px;height:100px; position:absolute; }
+	
+</style>
+</head>
+
+<body>
+<div class="ln_container">
+<div id="newbox">
+	<ul>
+    	<li class="clear"><img src="1212.jpg" />
+        	<div class="ln_div">
+            	<h4>小乔<span>国色天香</span></h4><p>小乔，三国时期的主要女性人物之一。在三国时归属吴国，国色流离、资貌绝伦，是当时有名的东吴美女。</p>
+            </div>
+        </li>
+       <li class="clear"><img src="1212.jpg" />
+        	<div class="ln_div">
+            	<h4>潘安<span>花样美男</span></h4><p>潘安，西晋文学家，本名潘岳。中国古代最著名的美男子之首、"金谷二十四友"之首。</p>
+            </div>
+        </li>
+      <li class="clear"><img src="1212.jpg" />
+        	<div class="ln_div">
+            	<h4>朱元璋<span>明太祖</span></h4><p>朱元璋，明王朝的开国皇帝，建立了全国统一的封建政权。</p>
+            </div>
+        </li>
+       <li class="clear"><img src="1212.jpg" />
+        	<div class="ln_div">
+            	<h4>小乔<span>国色天香</span></h4><p>小乔，三国时期的主要女性人物之一。在三国时归属吴国，国色流离、资貌绝伦，是当时有名的东吴美女。</p>
+            </div>
+        </li>
+       <li class="clear"><img src="1212.jpg" />
+        	<div class="ln_div">
+            	<h4>小乔<span>国色天香</span></h4><p>小乔，三国时期的主要女性人物之一。在三国时归属吴国，国色流离、资貌绝伦，是当时有名的东吴美女。</p>
+            </div>
+        </li>
+       <li class="clear"><img src="1212.jpg" />
+        	<div class="ln_div">
+            	<h4>小乔<span>国色天香</span></h4><p>小乔，三国时期的主要女性人物之一。在三国时归属吴国，国色流离、资貌绝伦，是当时有名的东吴美女。</p>
+            </div>
+        </li>
+               <li class="clear"><img src="1212.jpg" />
+        	<div class="ln_div">
+            	<h4>小乔<span>国色天香</span></h4><p>小乔，三国时期的主要女性人物之一。在三国时归属吴国，国色流离、资貌绝伦，是当时有名的东吴美女。</p>
+            </div>
+        </li>       
+        <li class="clear"><img src="1212.jpg" />
+        	<div class="ln_div">
+            	<h4>小乔<span>国色天香</span></h4><p>小乔，三国时期的主要女性人物之一。在三国时归属吴国，国色流离、资貌绝伦，是当时有名的东吴美女。</p>
+            </div>
+        </li>            
+    </ul>
+</div>    
+</div>
+<script type="text/javascript">
+	var $=function(id){return typeof id === "string" ? document.getElementById(id):id}
+	var $$=function(tagname,obj){return (obj || document).getElementsByTagName(tagname);}
+	var $$$=function(sClass,obj)
+	{
+			var aClass = [];
+			var reClass = new RegExp("(//s|^)" + sClass + "($|//s)");
+			var aElem = $$("*", obj);
+			for (var i = 0; i < aElem.length; i++) reClass.test(aElem[i].className) && aClass.push(aElem[i]);
+			return aClass	
+	}
+	function addHandler(oElement, sEventType, fnHandler)
+			{
+				return oElement.addEventListener ? oElement.addEventListener(sEventType, fnHandler, false) : oElement.attachEvent("on" + sEventType, fnHandler)	
+			}
+/*	function showimg(showID)
+	{
+		var obox=$(showID),oUl=$$("ul",obox)[0],oLi=oUl.children,len=oLi.length,showdiv=$$$("ln_div",obox),_this=this,sp,timer;
+		for(var i=0;i<len;i++)
+		{
+			(function(i){
+				oLi[i].onmouseover=function(){
+					//alert(showdiv[i].offsetTop);
+					clearInterval(timer);
+					timer=setInterval(function(){
+						sp=50-showdiv[i].offsetTop/5;
+						//alert(showdiv[i].offsetTop)
+						sp=sp >0 ? Math.ceil(sp): Math.floor(sp);
+						showdiv[i].offsetTop == 55 ? clearInterval(timer):(showdiv[i].style.top=showdiv[i].offsetTop-sp+"px");
+						//sp=sp-20;
+					},30)
+				}
+				oLi[i].onmouseout=function(){
+					clearInterval(timer);
+					timer=setInterval(function(){
+						sp=50-showdiv[i].offsetTop/5;
+						//alert(showdiv[i].offsetTop)
+						sp=sp >0 ? Math.ceil(sp): Math.floor(sp);
+						showdiv[i].offsetTop == 151 ? clearInterval(timer):(showdiv[i].style.top=showdiv[i].offsetTop+sp+"px");
+						//sp=sp-20;
+					},30)	
+				}
+			})(i)	
+		}
+	}*/
+	function showimg(obj)
+	{
+/*			this.obox=$(showID);
+			this.oUl=$$("ul",this.obox)[0];
+			this.oLi=this.oUl.children;
+			this.len=this.oLi.length;
+			this.showdiv=$$$("ln_div",this.obox);*/
+			this.oLi=obj;
+			//alert(obj)
+	}
+	showimg.prototype={
+		init:function(){
+			var _this=this,n=-1;
+			this.showdiv=$$$("ln_div",this.oLi)[0];
+			this.oLi.onmouseover=function(){
+				_this.showmove(57);	
+			}
+			this.oLi.onmouseout=function(){
+				_this.showmove(200);
+			}	
+		},
+		showmove:function(numbers){
+			var _this=this;
+			clearInterval(this.timer);
+			this.timer=setInterval(function(){
+				var sp=(numbers-_this.showdiv.offsetTop)/5;
+				sp=sp>0 ? Math.ceil(sp) : Math.floor(sp);
+				//alert(_this.showdiv[i].offsetTop)
+				_this.showdiv.offsetTop==numbers ? clearInterval(_this.timer):(_this.showdiv.style.top=_this.showdiv.offsetTop+sp+"px");
+			},20)
+			//alert(i);	
+		}	
+	}
+	var oBox=$("newbox");	
+	var oDiv=$$("ul",oBox)[0];
+	var oLi=$$("li",oDiv);
+	var len=oLi.length;
+	for(var i=0;i<len;i++)
+	{
+		var p= new showimg(oLi[i]);
+  		 p.init();	
+	}
+   
+</script>
+</body>
+</html>

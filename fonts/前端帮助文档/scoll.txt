@@ -1,0 +1,45 @@
+.tab_nav_ab{width:990px; height:61px; margin:0 auto;}
+.tab_nav_fix{ width:990px; height:61px;position: fixed;left: 50%;margin-left: -496px;top: 0px;z-index: 9999;_position: absolute;background-color:#EC225B;}
+<script>
+(function(S){
+var DOM=S.DOM,Event=S.Event;
+	function NavCheckScoll(fgm){
+		this.nav=DOM.get(fgm.navFClass);
+		this.absCalss=fgm.absClass||"";
+		this.fixClass=fgm.fixClass||"";
+		this.loc = fgm.locat;
+		this.onefx=DOM.viewportHeight();
+		this.refix=function(elem){var p = 0;while ( elem.offsetParent ) {p += elem.offsetTop;elem = elem.offsetParent;}return p;}(this.nav);
+		this.init();
+		
+	}
+	NavCheckScoll.prototype={
+		PDFIX:function(){
+			var _this=this,t=DOM.scrollTop(window);
+			if(_this.loc == "top"){
+				return t>_this.refix;
+			}else{
+				return (t+_this.onefx)>(_this.refix+_this.nav.offsetHeight);
+			}
+		},
+		navCheck:function(){
+			var _this=this;
+			if(_this.PDFIX()) {
+				DOM.replaceClass(_this.nav,_this.absCalss,_this.fixClass);
+			}
+			else {
+				DOM.replaceClass(_this.nav,_this.fixClass,_this.absCalss);
+			}
+		},
+		init:function(){
+			var oThis=this;
+			oThis.navCheck();
+			Event.on(window, "scroll",function(){
+				oThis.navCheck();
+			})
+			//window.onscroll=oThis.winonscoll;
+		}	
+	};
+	new NavCheckScoll({navFClass:".tab_nav",absClass:"tab_nav_ab",fixClass:"tab_nav_fix",locat:"top"})		
+})(KISSY)
+</script>

@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+body,ln_container div,.ln_container ul,ln_container li,h2,h3,h4,dl,dt,p{margin:0;padding:0;}
+.ln_container img{border:0; display:block;}
+.ln_container ul{ list-style:none;}
+.ln_container a{ text-decoration:none;}
+.ln_container em{ font-style:normal;}
+.ln_container .clearfix:after{ content:'.';height:0; clear:both; visibility:hidden; display:block;}
+.ln_container .clearfix{ zoom:1}
+
+
+.treeMain{width:300px;margin:0 auto;}
+.tree_children,.tree_lchildren{padding-left:30px;}
+.tree_icon{ background:url(images/tree.gif) no-repeat;}
+.tree_iconPos{ background-position:0px 0px;width:13px;height:13px; display:inline-block;}
+.tree_iconPos1{background-position:0px -33px;width:13px;height:13px; display:inline-block;}
+.tree_iconPos2{background-position:0px -14px;width:13px;height:13px; display:inline-block;}
+.tree_item,.tree_row{margin-bottom:5px;}
+.tree_label{padding-left:5px;}
+
+</style>
+</head>
+
+<body>
+<div class="ln_container">
+	<div class="treeMain" id="root">
+    	<div class="tree_row tree_lrow">
+    		<span class="tree_label">全部视频</span>
+        </div>
+    	<div class="tree_lchildren">
+        	<div class="tree_item">
+            	<div class="tree_row">
+            		<span class="tree_label">按分类选择</span>
+                </div>    
+                <div class="tree_children">
+                	<div class="tree_item">
+                    	<span class="tree_label">收藏的宝贝1</span>
+                    </div>
+                    <div class="tree_item">
+                    	<span class="tree_label">收藏的宝贝2</span>
+                    </div>
+                    <div class="tree_item">
+                    	<span class="tree_label">收藏的宝贝3</span>
+                    </div>
+                    <div class="tree_item">
+                    	<span class="tree_label">收藏的宝贝4</span>
+                    </div>
+                </div>
+            </div>  
+            <div class="tree_item">
+            	<div class="tree_row">
+            		<span class="tree_label">按视频选择</span>
+                </div> 
+                <div class="tree_children">
+                	<div class="tree_item">
+                    	<span class="tree_label">收藏的宝贝1</span>
+                    </div>
+                    <div class="tree_item">
+                    	<span class="tree_label">收藏的宝贝2</span>
+                    </div>
+                    <div class="tree_item">
+                    	<span class="tree_label">收藏的宝贝3</span>
+                    </div>
+                    <div class="tree_item">
+                    	<span class="tree_label">收藏的宝贝4</span>
+                    </div>
+                </div>
+            </div>   
+        </div>
+        
+    </div>
+</div>
+<script src="http://a.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+<script type="text/javascript">
+	KISSY.ready(function(){
+		var S=KISSY,DOM=S.DOM,Event=S.Event;
+		var otree_child=S.query(".tree_children");
+		var otree_row=S.query(".tree_row");
+		var otree_icon,otree_icon1;
+		S.each(otree_row,function(item){
+			var otree_label=S.query(".tree_label",item);
+			S.each(otree_label,function(item,index){
+				otree_icon=DOM.create("<div>");
+				DOM.addClass(otree_icon,"tree_icon");
+				DOM.addClass(otree_icon,"tree_iconPos");
+				DOM.insertBefore(otree_icon,item);			
+			})		
+		})	
+		S.each(otree_child,function(item){
+				var otree_lab=S.query(".tree_label",item);
+				S.each(otree_lab,function(item1){
+					otree_icon1=DOM.create("<div>");
+					DOM.addClass(otree_icon1,"tree_icon");
+					DOM.addClass(otree_icon1,"tree_iconPos1");
+					DOM.insertBefore(otree_icon1,item1);		
+				})		
+		})
+		var ob_jchild=S.query(".tree_lchildren");
+		S.each(ob_jchild,function(item){
+			var o_jian=S.query(".tree_iconPos",item);	
+			Event.on(o_jian,"click",itemChange)
+			function itemChange(ev){
+				var index=S.indexOf(ev.target,o_jian);
+				var dbattr=DOM.css(otree_child[index],"display")
+				if(dbattr == "none"){
+					DOM.removeClass(o_jian[index],".tree_iconPos2");
+					DOM.css(otree_child[index],'display','block');
+					return false;	
+				}
+				DOM.css(otree_child[index],'display','none');
+				DOM.addClass(o_jian[index],".tree_iconPos2");									
+			}
+		})	
+		var ob_lrow=S.query(".tree_lrow");
+		S.each(ob_lrow,function(item){
+			var o_jian=S.query(".tree_iconPos",item);
+			Event.on(o_jian,"click",itemChange)
+			function itemChange(ev){
+				var index=S.indexOf(ev.target,o_jian);
+				var dbattr=DOM.css(otree_child[index],"display")
+				if(dbattr == "none"){
+					DOM.removeClass(o_jian[index],".tree_iconPos2");
+					DOM.css(otree_child[index],'display','block');
+					return false;	
+				}
+				DOM.css(otree_child[index],'display','none');
+				DOM.addClass(o_jian[index],".tree_iconPos2");									
+			}	
+			
+			
+		})
+		
+		
+		
+		
+		
+			
+		
+	})
+	
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

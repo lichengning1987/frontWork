@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        body{font-size: 12PX;}
+        TABLE{width:360px;border-collapse:collapse;}
+        table tr th,td{border:solid 1px #666; text-align: center}
+        table tr td img{width:42px;height:60px;cursor:hand;padding:3px;}
+        table tr td span{float:left;padding-left:12px;}
+        table tr th{background:#ccc;height:32px;}
+        .clsimg{position:absolute;border:solid 1px #ccc;width:785px;height:420px; display: none;}
+        .btn{border:#666 1px solid; width:50px; }
+        .greys{background:#999;}
+    </style>
+    <script src="jquery-1.7.2-min.js"></script>
+    <script src="http://a.tbcdn.cn/libs/jquery/1.7.1/jquery.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            //$("#pretable tr:even").addClass("greys");
+            $("#pretable tr:nth-child(odd)").css("background-color","#eee");
+            var x = 5,y=15;
+            $("#pretable tr td img").mousemove(function(e){
+                $("#imgtip").attr("src",this.src).css({"top":(e.pageY + y)+"px",left:(e.pageX + x)+"px"})
+                        .show(2000)
+            });
+            $("#pretable tr td img").mouseout(function(e){
+                $("#imgtip").hide();
+            })
+            $('#chkall').click(function(){
+                if(this.checked)
+                {
+                    $("#pretable tr td input[type=checkbox]").attr("checked",true);
+                }
+                else{
+                    $("#pretable tr td input[type=checkbox]").attr("checked",false);
+                }
+            })
+            $('#btndel').click(function(){
+                var intl=$("#pretable tr td input:checked:not('#chkall')").length;
+                //console.log(intl);
+               if(intl !=0)
+                {
+                    $("#pretable tr td input[type=checkbox]:not('#chkall')").each(function(index){
+                        if(this.checked)
+                        {
+                            $("#pretable tr[id="+this.value+"]").remove();
+                        }
+
+                    })
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<table id="pretable">
+    <tr>
+        <th>选项</th>
+        <th>编号</th>
+        <th>封面</th>
+        <th>购书人</th>
+        <th>性别</th>
+        <th>购书价</th>
+    </tr>
+    <tr id="0">
+        <td><input type="checkbox" id="checkbox1" value="0"></td>
+        <td>1001</td>
+        <td><img src="images/01.jpg"></td>
+        <td>李晓明</td>
+        <td>男</td>
+        <td>35.6元</td>
+    </tr>
+    <tr id="1">
+        <td><input type="checkbox" id="checkbox2" value="1"></td>
+        <td>1001</td>
+        <td><img src="images/02.jpg"></td>
+        <td>李晓明</td>
+        <td>男</td>
+        <td>35.6元</td>
+    </tr>
+    <tr id="2">
+        <td><input type="checkbox" id="checkbox3" value="2"></td>
+        <td>1001</td>
+        <td><img src="images/03.jpg"></td>
+        <td>李晓明</td>
+        <td>男</td>
+        <td>35.6元</td>
+    </tr>
+    <tr id="3">
+        <td><input type="checkbox" id="checkbox4" value="3"></td>
+        <td>1001</td>
+        <td><img src="images/04.jpg"></td>
+        <td>李晓明</td>
+        <td>男</td>
+        <td>35.6元</td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td>
+            <span><input id="chkall" type="checkbox">全选</span>
+            <span><input id="btndel" type="button" value="删除" class="btn"></span>
+        </td>
+    </tr>
+</table>
+<img id="imgtip" class="clsimg" src="images/01.jpg" alt="">
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+                    <style type="text/css">
+
+                        ul {
+                            list-style: none;
+                            margin: 0;
+                            padding: 0;
+                        }
+
+                        #demo1 {
+                            position: relative;
+                            width: 750px;
+                            padding-top: 29px;
+                        }
+
+                        #demo1 .ks-switchable-nav {
+                            position: absolute;
+                            left: 20px;
+                            margin-top: -29px;
+                            z-index: 99;
+                        }
+
+                        #demo1 .ks-switchable-nav li {
+                            float: left;
+                            width: 130px;
+                            height: 27px;
+                            line-height: 21px;
+                            text-align: center;
+                            background: #999;
+                            margin-right: 3px;
+                            padding-top: 8px;
+                            cursor: pointer;
+                        }
+
+                        #demo1 .ks-switchable-nav li.ks-active {
+                            background: red;
+                            cursor: default;
+                        }
+
+                        #demo1 .ks-switchable-content {
+                            position: relative;
+                            height: 120px;
+                            padding: 20px;
+                            border: 1px solid #AEC7E5;
+                        }
+                    </style>
+                
+</head>
+
+<body>
+                    <div id="demo1" class="s-demo">
+                        <ul class="ks-switchable-nav">
+                            <li>标题 A</li>
+                            <li>标题 B</li>
+                            <li>标题 C</li>
+                            <li>标题 D</li>
+                            <li>标题 E</li>
+                        </ul>
+                        <div class="ks-switchable-content">
+                            <div style="display: none">A</div>
+                            <div style="display: none">B</div>
+                            <div style="display: none">C</div>
+                            <div style="display: none">D</div>
+                            <div style="display: none">E</div>
+
+                        </div>
+                    </div>
+                                    <script src="http://a.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+                    <script>
+                        KISSY.use("datalazyload,switchable", function (S) {
+                            var Tabs = S.Tabs;
+                            S.ready(function (S) {
+                                window.tabs = new Tabs('#demo1', {
+                                    // aria:false 默认 true，支持 aria
+                                    switchTo:0
+                                });
+                                tabs.on('beforeSwitch', function (ev) {
+                                    var index = ev.toIndex;
+                                    if (index !== 0 && index !== 4) { // 不改变第 1 个和第 5 个 Panel 的内容
+                                        //this.panels[index].innerHTML = 'index = ' + index;
+                                    }
+                                });
+                            });
+                        });
+                    </script>
+                
+</body>
+</html>

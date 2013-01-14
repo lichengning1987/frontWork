@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>本地倒计时</title>
+</head>
+
+<body>
+<div id="timeBox">
+   <span id="countDay">0</span><em>天</em>
+   <span id="countHour">0</span><em>时</em>
+   <span id="countMin">0</span><em>分</em>
+   <span id="countSec">0</span><em>秒</em>
+</div>
+
+<script>
+   (function TimeCount(lastTime){
+       function Count(lastTime){
+           var countDay=document.getElementById("countDay");
+           var countHour=document.getElementById("countHour");
+           var countMin=document.getElementById("countMin");
+           var countSec=document.getElementById("countSec");
+           var now=new Date().getTime();
+           var time=new Date(lastTime).getTime();
+		   console.log(time);
+		   console.log(now);
+           var d=(time-now)/1000;
+
+           var lday=parseInt(Math.floor(d/3600)/24);
+           var lHour=Math.floor(d/3600)%24;
+           d=d%3600;
+           var lMin=parseInt(d/60);
+           d=d%60;
+           var lSecond=parseInt(d);
+
+           if(lday<=0){lday=0;}
+           if(lHour<=0){lHour=0;}
+           if(lMin<=0){lMin=0;}
+           if(lSecond<=0){lSecond=0;}
+
+           countDay.innerHTML=lday;
+           countHour.innerHTML=lHour;
+           countMin.innerHTML=lMin;
+           countSec.innerHTML=lSecond;
+       }
+       setInterval(function(){Count(lastTime)},1000);
+   })("2012/12/30 00:00:00");
+</script>                 
+</body>
+</html>

@@ -1,0 +1,353 @@
+<style type="text/css">
+/*do it by boyang*/
+/*public*/
+#page{ width:100%;}
+#content{width:100%;}
+body,.suncn_container div,.suncn_container ul,.suncn_container li,.suncn_container span,.suncn_container a,.suncn_container img,.suncn_container strong,.suncn_container em,.suncn_container h3{margin:0; padding:0; font-size:12px; font-family:Arial, Helvetica, sans-serif;}
+.suncn_container a{ text-decoration:none;}
+.suncn_container img{ border:none; display:block;}
+.suncn_container ul{ list-style:none;}
+.suncn_container em,.suncn_container i{ font-style:normal;}
+.suncn_container .clearfix:after{ content:"."; clear:both; height:0; display:block; visibility:hidden;}
+.suncn_container .clearfix {zoom: 1;}
+/*for suncn_container*/
+.suncn_container{ width:100%; background:#D3D2C9;}
+
+.suncn_container .suncn_headerbg{ width:100%; background:url("http://img01.taobaocdn.com/tps/i1/T1Mrz1Xe4hXXcowDrD-1680-397.jpg") no-repeat center 0;}
+.suncn_container .suncn_header{width:990px; margin:0 auto;}
+.suncn_container .suncn_content{width:990px; margin:0 auto;}
+
+.suncn_container .suncn_content ul{width:990px; padding-top:20px;}
+.suncn_container .suncn_content ul li{width:180px; float:left; _display:inline; border:2px solid #D3D2C9; background:#fff; position:relative; margin-left:11px; margin-bottom:10px;}
+.suncn_container .suncn_content ul li a.suncn_pic img{width:180px; height:180px;}
+.suncn_container .suncn_content ul li span{width:180px; height:20px; line-height:20px; display:block; overflow:hidden; text-indent:5px;}
+.suncn_container .suncn_content ul li span a.suncn_name{ color:#6D6D6D;}
+.suncn_container .suncn_content ul li span del{ color:#BCBCBC;}
+.suncn_container .suncn_content ul li span em{color:#DB0A0A;}
+.suncn_container .suncn_content ul li span em b{ font-size:16px;}
+.suncn_container .suncn_content ul li a.gouwuche{width:82px; height:19px; position:absolute; right:10px; top:2px;}
+.suncn_container .suncn_content ul li .J_CartPluginTrigger{display:none;}
+.suncn_container .suncn_content ul li a.J_more{ width:45px; height:34px; position:absolute; bottom:5px; right:10px;}
+/*for round*/
+
+.suncn_container .suncn_round{position:fixed; width:121px;height:248px;right:10px;top:100px; _position:absolute; _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,0)||0)-(parseInt(this.currentStyle.marginBottom,10)||0))-0);z-index:9999; display:none;}
+/*.suncn_container .floatnav div{ background:url("http://img01.taobaocdn.com/tps/i1/T1rSjZXbhjXXcEz27e-1010-70.gif");width:1010px;height:70px;}
+.suncn_container .floatnav img{width:1010px;height:68px;display:block; position:absolute; top:0; left:0;}
+*/
+.suncn_container .suncn_round h3{width:121px; height:12px; padding-bottom:1px;}
+.suncn_container .suncn_round h3 em{width:12px; height:12px; display:block; background:url("http://img02.taobaocdn.com/tps/i2/T1pzPUXkFmXXcbU07.-12-12.gif") no-repeat 0 0; float:right;}
+.suncn_container .suncn_round span{width:121px; background:#484848; display:block; padding:2px 0;}
+.suncn_container .suncn_round span a{width:115px; height:25px; line-height:25px; display:block; margin:0 auto; text-indent:-9999px;}
+.suncn_container .suncn_round span a.link01{ background:url("http://img02.taobaocdn.com/tps/i2/T1yFj2XddfXXX9QdZ7-115-25.jpg") no-repeat 0 0;}
+.suncn_container .suncn_round span a.link02{ background:url("http://img02.taobaocdn.com/tps/i2/T1F2Y1Xl8jXXX9QdZ7-115-25.jpg") no-repeat 0 0;}
+.suncn_container .suncn_round span a.link03{ background:url("http://img01.taobaocdn.com/tps/i1/T1YDv2XgtaXXX9QdZ7-115-25.jpg") no-repeat 0 0;}
+.suncn_container .suncn_round span a.link04{ background:url("http://img01.taobaocdn.com/tps/i1/T1rWD2XiFdXXX9QdZ7-115-25.jpg") no-repeat 0 0;}
+.suncn_container .suncn_round span a.link05{ background:url("http://img03.taobaocdn.com/tps/i3/T1uKv1XelgXXX9QdZ7-115-25.jpg") no-repeat 0 0;}
+.suncn_container .suncn_round span a.link06{ background:url("http://img04.taobaocdn.com/tps/i4/T1lzH2XixaXXX9QdZ7-115-25.jpg") no-repeat 0 0;}
+.suncn_container .suncn_round span a.link07{ background:url("http://img03.taobaocdn.com/tps/i3/T1avv1Xh4iXXX9QdZ7-115-25.jpg") no-repeat 0 0;}
+.suncn_container .suncn_round span a.link01:hover{ background:url("http://img02.taobaocdn.com/tps/i2/T11vv2XfJaXXX9QdZ7-115-25.jpg") no-repeat 0 0;}
+.suncn_container .suncn_round span a.link02:hover{ background:url("http://img04.taobaocdn.com/tps/i4/T1lVn2XkFeXXX9QdZ7-115-25.jpg") no-repeat 0 0;}
+.suncn_container .suncn_round span a.link03:hover{ background:url("http://img02.taobaocdn.com/tps/i2/T17Lb2XeVcXXX9QdZ7-115-25.jpg") no-repeat 0 0;}
+.suncn_container .suncn_round span a.link04:hover{ background:url("http://img01.taobaocdn.com/tps/i1/T1evvYXcRjXXX9QdZ7-115-25.jpg") no-repeat 0 0;}
+.suncn_container .suncn_round span a.link05:hover{ background:url("http://img03.taobaocdn.com/tps/i3/T1AOH2Xf0aXXX9QdZ7-115-25.jpg") no-repeat 0 0;}
+.suncn_container .suncn_round span a.link06:hover{ background:url("http://img03.taobaocdn.com/tps/i3/T11z2ZXghhXXX9QdZ7-115-25.jpg") no-repeat 0 0;}
+.suncn_container .suncn_round span a.link07:hover{ background:url("http://img04.taobaocdn.com/tps/i4/T1Rq_YXXJmXXX9QdZ7-115-25.jpg") no-repeat 0 0;}
+
+.suncn_container .suncn_round span i{width:95px; height:1px; background:#535353; display:block; margin:0 auto;}
+.suncn_container .suncn_round strong{width:121px; background:#484848; display:block;}
+.suncn_container .suncn_round strong a{width:111px; height:15px; line-height:15px; display:block; margin:0 auto; padding:5px 0;}
+/*banner*/
+.wxh-banner1{ width:990px; margin:0px auto;}
+.wxh-banner1 .picture{margin-top:30px;}
+.wxh-banner1 .picture li{  width:230px; height:160px;float:left; margin-right:23px; display:inline;padding-bottom:8px;}
+.wxh-banner1 .picture li.last{margin-right:0;}
+.wxh-banner1 .picture li img{ width:230px; height:160px; display:block; background:#9C9;} 
+body .suncn_container .wsecond, body .suncn_container .wsthird{ width:990px; margin:20px auto 0 auto;}
+.probox{ width:990px; overflow:hidden;}
+.probox ul{ width:988px; overflow:hidden; padding-left:2px; padding-top:5px;}
+.probox ul li{ width:244px; height:244px; position:relative; float:left; margin-right:3px; display:inline; margin-bottom:3px;}
+.probox ul li a{ border:6px solid #FFF; width:232px; display:block; height:232px;}
+.probox ul li a:hover{ border:6px solid #cd193c;}
+.probox ul li .li_img{ width:232px; height:232px; background:#000;}
+.toumtu{ width:232px; height:76px; position:absolute; bottom:-1px; left:0px;}
+.toumtu1{ background:url(http://img01.taobaocdn.com/tps/i1/T1kqT3XopaXXbCWono-232-76.png);_background: none; 
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='http://img01.taobaocdn.com/tps/i1/T1kqT3XopaXXbCWono-232-76.png');}
+.toumtu2{ background:url(http://img04.taobaocdn.com/tps/i4/T1Jv_1Xh8lXXbCWono-232-76.png);_background: none; 
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='http://img04.taobaocdn.com/tps/i4/T1Jv_1Xh8lXXbCWono-232-76.png');}
+.toumtu3{ background:url(http://img02.taobaocdn.com/tps/i2/T1bSb2XXRdXXbCWono-232-76.png);_background: none; 
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='http://img02.taobaocdn.com/tps/i2/T1bSb2XXRdXXbCWono-232-76.png');}
+.toumtu4{ background:url(http://img04.taobaocdn.com/tps/i4/T1Y.f2XX8cXXbCWono-232-76.png);_background: none; 
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='http://img04.taobaocdn.com/tps/i4/T1Y.f2XX8cXXbCWono-232-76.png');}
+.toumtu5{ background:url(http://img01.taobaocdn.com/tps/i1/T1r8_1XeFhXXbCWono-232-76.png);_background: none; 
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='http://img01.taobaocdn.com/tps/i1/T1r8_1XeFhXXbCWono-232-76.png');}
+.toumtu6{ background:url(http://img02.taobaocdn.com/tps/i2/T1H222Xb4dXXbCWono-232-76.png);_background: none; 
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='http://img02.taobaocdn.com/tps/i2/T1H222Xb4dXXbCWono-232-76.png');}
+.toumtu7{ background:url(http://img03.taobaocdn.com/tps/i3/T1.Kv2XfJfXXbCWono-232-76.png);_background: none; 
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='http://img03.taobaocdn.com/tps/i3/T1.Kv2XfJfXXbCWono-232-76.png');}
+.toumtu8{ background:url(http://img02.taobaocdn.com/tps/i2/T1fzHRXbhqXXbCWono-232-76.png);_background: none; 
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='http://img02.taobaocdn.com/tps/i2/T1fzHRXbhqXXbCWono-232-76.png');}
+#footer{ margin-top:40px;}
+/*end*/
+</style>
+<script type="text/javascript">
+(function (d) {
+var t=d.createElement("script");t.type="text/javascript";t.async=true;t.id="tb-beacon-aplus";
+t.setAttribute("exparams","category=&userid=734253470&aplus");
+t.src=("https:"==d.location.protocol?"https://s":"http://a")+".tbcdn.cn/s/aplus_v2.js";
+d.getElementsByTagName("head")[0].appendChild(t);
+})(document);
+</script>
+
+<script type="text/javascript">
+(function (d) {
+var ta=d.createElement("script");ta.type="text/javascript";ta.async=true;ta.id="tb-beacon";
+ta.setAttribute("exparams","category=&userid=734253470&tid=UIHiLt3xTIbZQyexSUkP3NnnGMvysyZid43FM2wBUQ%253D%253D&channel=112&atpanel_end");
+ta.src=("https:"==d.location.protocol?"https://s":"http://a")+".tbcdn.cn/s/atp.js";
+d.getElementsByTagName("head")[0].appendChild(ta);
+})(document);
+</script>
+
+<script type="text/javascript">
+(function (d) {
+var ta=d.createElement("script");ta.type="text/javascript";ta.async=true;ta.id="tb-beacon-ac";
+ta.setAttribute("exparams","category=&userid=734253470&channel=112&");
+ta.src=("https:"==d.location.protocol?"https://s":"http://a")+".tbcdn.cn/s/ac.js";
+d.getElementsByTagName("head")[0].appendChild(ta);
+})(document);
+</script>
+  <div style="width:100%; background:#484848;">
+     <div style="margin:0 auto; width:990px; height:90px;"><img src="http://img03.taobaocdn.com/tps/i3/T1rUf6XcXcXXbt.h_s-990-90.png" usemap="#Map2" />
+       <map name="Map2">
+       <cms:custom title="顶通" group="顶通" fields="href1:单鞋专场链接:url,href2:靴子专场链接:url,href3:雪地靴专场链接:url,href4:团购专场链接:url,href5:潮鞋专场链接:url,href6:休闲低帮专场链接:url,href7:商务皮鞋专场链接:url,href8:高帮靴子专场链接:url,href9:男女鞋主会场专场链接:url" name="89c617eb-d7f0-4b24-839e-7416289c26a6">
+         <area shape="rect" coords="3,15,195,45" href="$!href1"   target="_blank">
+         <area shape="rect" coords="200,15,390,44" href="$!href2" target="_blank">
+         <area shape="rect" coords="397,13,588,45" href="$!href3" target="_blank">
+         <area shape="rect" coords="595,14,786,45" href="$!href4" target="_blank">
+         <area shape="rect" coords="3,46,194,75"   href="$!href5" target="_blank">
+         <area shape="rect" coords="200,46,391,74" href="$!href6" target="_blank">
+         <area shape="rect" coords="397,47,588,73" href="$!href7" target="_blank">
+         <area shape="rect" coords="596,47,786,75" href="$!href8" target="_blank">
+         <area shape="rect" coords="792,14,984,75" href="$!href9" target="_blank">
+        </cms:custom> 
+       </map>
+     </div>
+  </div><!--顶通-->
+<div class="suncn_container">
+	<div class="suncn_headerbg">
+    	<div class="suncn_header">
+        	<img src="http://img04.taobaocdn.com/tps/i4/T17hr2XcdaXXba2N6h-990-130.jpg" alt="" border="0" usemap="#Map" />
+            <map name="Map">
+              <area shape="rect" coords="917,10,985,30" href="#" id="hxj_sc"><!--收藏-->
+            </map>
+            <img src="http://img03.taobaocdn.com/tps/i3/T1MT20XihkXXcW9ijh-990-152.jpg" alt="" />
+            <img src="http://img04.taobaocdn.com/tps/i4/T1VE20XgVjXXbHH4Yh-990-115.jpg" alt="" />
+        </div>
+    </div>
+    <div class="suncn_content">
+    	<ul class="clearfix"  id="tpl1">
+        	
+        </ul>
+    </div>
+
+    <div class="suncn_round">
+    	<h3><em></em></h3>
+        <cms:custom title="滚动条链接" group="滚动条链接" fields="href01:潮鞋专场链接:url,href02:商务鞋专场链接:url,href03:休闲低帮专场链接:url,href04:靴子专场链接:url,href05:淘金币专场链接:url,href06:鞋类主会场链接:url,href07:更多商品链接:urlhref08:返回主会场链接:url" name="80c04454-054e-4d80-9fd0-bf917614e8b8">
+        <span><a href="$!href01" target="_blank" class="link01">潮鞋专场</a><i></i></span>
+        <span><a href="$!href02" target="_blank" class="link02">商务鞋专场</a><i></i></span>
+        <span><a href="$!href03" target="_blank" class="link03">休闲低帮专场</a><i></i></span>
+        <span><a href="$!href04" target="_blank" class="link04">靴子专场</a><i></i></span>
+        <span><a href="$!href05" target="_blank" class="link05">淘金币专场</a><i></i></span>
+        <span><a href="$!href06" target="_blank" class="link06">鞋类主会场</a><i></i></span>
+        <span><a href="$!href07" target="_blank" class="link07">更多商品</a><i></i></span>
+        <strong><a href="$!href08" target="_blank" class="suncn_back"><img src="http://img01.taobaocdn.com/tps/i1/T1xzjVXn0nXXapcDU5-111-15.png" alt="" /></a></strong>
+        </cms:custom>
+    </div>
+
+
+         <div class="wsecond clearfix">
+              <div class="wstitle clearfix" style="height:37px; overflow:hidden;"><img src="http://img04.taobaocdn.com/tps/i4/T110r6XctcXXXw_4zs-990-37.jpg" /></div>
+              <div class="probox nvmore">
+                <ul>
+                <cms:custom title="2F更多女鞋分会场(232*232)" group="2F更多女鞋分会场" fields="href1:单鞋链接地址:url,img1:单鞋图片地址:img,href2:靴子链接地址:url,img2:靴子图片地址:img,href3:雪地靴链接地址:url,img3:雪地靴图片地址:img,href4:团购链接地址:url,img4:团购图片地址:img" name="f9898096-3d25-4084-affc-69e29e0874ab">
+                    <li>
+                        <a href="$!href1" target="_blank">
+                            <img src="$!img1" class="li_img" />
+                            <p class="toumtu toumtu1"></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="$!href2" target="_blank">
+                            <img src="$!img2" class="li_img" />
+                            <p class="toumtu toumtu2"></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="$!href3" target="_blank">
+                            <img src="$!img3" class="li_img" />
+                            <p class="toumtu toumtu3"></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="$!href4" target="_blank">
+                            <img src="$!img4" class="li_img" />
+                            <p class="toumtu toumtu4"></p>
+                        </a>
+                    </li>
+                 </cms:custom>   
+                </ul>
+            </div><!--probox-->
+           </div><!--wsecond-->
+              
+           <div class="wsthird clearfix">
+             <div class="wstitle clearfix" style="height:37px; overflow:hidden;"><img src="http://img02.taobaocdn.com/tps/i2/T1Us_6XkFdXXXw_4zs-990-37.jpg" /></div>
+             <div class="probox nanmore">
+                <ul>
+                 <cms:custom title="3F更多男鞋分会场(232*232)" group="3F更多男鞋分会场" fields="href1:潮鞋链接地址:url,img1:潮鞋图片地址:img,href2:休闲低帮链接地址:url,img2:休闲低帮图片地址:img,href3:商务皮鞋链接地址:url,img3:商务皮鞋图片地址:img,href4:高帮靴子链接地址:url,img4:高帮靴子图片地址:img" name="5e2bd8a8-e160-4ee1-91a5-7b5508933e20">
+                    <li>
+                         <a href="$!href1" target="_blank">
+                            <img src="$!img1" class="li_img" />
+                            <p class="toumtu toumtu5"></p>
+                        </a>
+                    </li>
+                    <li>
+                         <a href="$!href2" target="_blank">
+                            <img src="$!img2" class="li_img" />
+                            <p class="toumtu toumtu6"></p>
+                        </a>
+                    </li>
+                    <li>
+                         <a href="$!href3" target="_blank">
+                            <img src="$!img3" class="li_img" />
+                            <p class="toumtu toumtu7"></p>
+                        </a>
+                    </li>
+                    <li>
+                         <a href="$!href4" target="_blank">
+                            <img src="$!img4" class="li_img" />
+                            <p class="toumtu toumtu8"></p>
+                        </a>
+                    </li>
+                  </cms:custom>  
+                </ul>
+            </div><!--probox nanmore-->
+           </div><!--wsthird-->
+       </div><!--wbody-->
+   </div><!--wheaderbody-->
+
+
+
+
+    <script src="http://a.tbcdn.cn/??s/kissy/1.2.0/kissy-min.js" ></script>
+    <script src="http://a.tbcdn.cn/apps/cart/plugin/1.2/??cartplugin.js,auto.js"></script><!--购物车引入-->
+    <script type="text/javascript">
+		(function(){
+			function addBookmark(){
+				var title,url;
+				title=document.title;
+				url=document.location.href;
+				if(window.sidebar){ //for FF
+					window.sidebar.addPanel(title, url,"");
+				}else if(document.all){ // for ie
+					window.external.AddFavorite(url, title);
+				}else{
+					alert('您的浏览器不支持此功能，您可以按下"Ctrl+d"键加入收藏！');
+				}
+				return false;
+			}
+			document.getElementById("hxj_sc").onclick = function(){
+				addBookmark();
+			} 
+		})();
+	</script>
+    <script src="http://a.tbcdn.cn/apps/hesper/vc/p4p/p4p.js?data=20120411.js" charset="utf-8"></script>
+    <script type="txt/html" id="p4ptpl">
+		<li>
+			<a href="{{eurl}}" target="_blank" class="suncn_pic"><img src="{{pictureUrl}}" alt="" /></a>
+			<span><a href="#" target="_blank" class="suncn_name">{{itemTitle}}</a></span>
+			<span><del>市场价：￥<% print((originalPrice / 100).toFixed(2)); %></del></span>
+			<span><em>嘉年华价：￥<b><% print((activityPrice / 100).toFixed(2)); %></b></em></span>
+			<a href="{{itemURL}}" target="_blank" class="gouwuche"><img  class="J_CartPluginTrigger" src="http://img03.taobaocdn.com/tps/i3/T1cu6UXjloXXao0Yzp-82-19.png" alt="" /></a>
+		</li>
+	</script>
+	<script type="text/javascript">
+        var p4pObj = [
+            <cms:custom title="潮鞋专区" group="潮鞋专区" fields="acid:活动ID:string,id:ID:string,pid:PID:string,count:数量:string" name="7da6ed24-c2b2-470d-940c-229ad9d75881">
+            [$!acid,$!id,'$!pid',$!count],
+    		</cms:custom>
+	        ];
+        for (var i = 0; i < p4pObj.length; i++) {
+            var obj = p4pObj[i];
+            (function () {
+                return (function (obj,i) {
+    
+                    p4p.getItems({
+                        activity_id:obj[0],
+                        blocks:[
+                            {
+                                id:obj[1],
+                                pid:obj[2],
+                                count:obj[3],
+                                tmpl:KISSY.get('#p4ptpl').innerHTML,
+                                resultContainer:'#tpl' + (i + 1),
+                                cb:function (items) {
+                                   //购物车
+									KISSY.ready(function(S){
+										var D=S.DOM,E=S.Event;
+										var oLi=D.query('li','.suncn_content');
+										var ogou=D.query('.J_CartPluginTrigger');
+										var oa=D.query('.J_more');
+										//console.log(oLi.length);
+										S.each(oLi,function(item){
+											var ss=S.indexOf(item,oLi);
+											E.on(item,'mouseenter',function(){
+													D.css(ogou[ss],'display','block');
+													D.css(item,'borderColor','#45C2F6');//控制边框颜色
+												})
+											E.on(item,'mouseleave',function(){
+													D.css(ogou[ss],'display','none');
+													D.css(item,'borderColor','#D3D2C9');//控制边框颜色
+												})
+											E.on(ogou[ss],'mouseenter',function(){
+													D.css(ogou[ss],'display','block');
+												})
+											<cms:custom title="更多折扣链接" group="更多折扣链接" fields="href:更多折扣链接:url" name="15dce686-540e-4754-bd4d-1dd306f8ba00">
+											KISSY.use("node",function(S,NodeList){
+											NodeList.all('<a '+'href="$!href" '+'target="_blank" '+'class="J_more"><img '+'src="http://img03.taobaocdn.com/tps/i3/T1TY_1XkhiXXaubyjg-45-34.png" '+'alt="" '+'/></a>').appendTo(NodeList.all(item));
+											});  
+											</cms:custom>
+										})
+									})
+                                }
+                            }
+                        ],
+                        charset:'utf-8'
+                    });
+    
+                })(obj,i);
+            })();
+        }
+		
+    </script>
+    <script type="text/javascript">
+		var rounded=KISSY.DOM.get('.suncn_round');
+		var oicon=KISSY.DOM.get('em','.suncn_round');
+		KISSY.Event.on(window,'scroll',function(){
+		var top=KISSY.DOM.scrollTop();
+		rounded.style.display="none";
+		if(top<500)
+				{ 
+					rounded.style.display="none";
+				}
+		else
+				{
+					rounded.style.display="block";	
+					KISSY.Event.on(oicon,'click',function(){
+						rounded.style.display="none";
+						})
+				}
+		})
+	</script>
+    <script type="text/javascript">
+	
+	</script>
+</div>

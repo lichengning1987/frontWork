@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk" />
+    <title></title>
+    <script>
+        var ua="";
+        var UA_Opt=new Object;
+        UA_Opt.LogVal="ua";
+        UA_Opt.MaxMCLog=3;
+        UA_Opt.MaxMPLog=3;
+        UA_Opt.MaxKSLog=3;
+        UA_Opt.Token=new Date().getTime()+":"+Math.random();
+        UA_Opt.SendMethod=8;
+        UA_Opt.Flag=14222;
+    </script>
+    <script src="http://uaction.aliyuncdn.com/actionlog/js/ua.js"></script>
+    <script type="text/javascript">
+        function changetitle(){
+            document.title="不玩游戏 没有青春";
+        }
+        window.setTimeout('changetitle()',500);
+    </script>
+    <style>
+        /*reset*/
+        body,div,p,span,b,a,em,i,img,ul,li,ol,dl,dt,dd,input,select,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
+        .gcontent img{display:block;border:0;}
+        .gcontent a{text-decoration:none;}
+        .gcontent ul,li,ol{list-style:none;}
+        .clearfix:after{content:'.';display:block;visibility:hidden;clear:both;height:0;line-height:0;}
+        .clearfix{zoom:1;}
+        /*start*/
+        .gcontent{width:100%;font-size:12px;font-family:"微软雅黑",Arial,sans-serif;}
+            .gcenter{width:990px;margin:0 auto;position:relative;z-index:0;}
+        /*head*/
+        .ghead{width:100%;background:url("images/outbg_01.jpg") no-repeat center top;height:486px;}
+        .ghead .gcenter{z-index:9999;}
+            .ghead .gcenter .rights{position:absolute;top:405px;left:305px;color:#AF5D00;padding:0 0 0 60px;}
+                .ghead .gcenter .rights dt{font-weight:bold;width:60px;height:20px;line-height:20px;position:absolute;left:0;top:0;}
+                .ghead .gcenter .rights dd{height:20px;line-height:20px;width:350px;overflow:hidden;}
+                .onekey{width:365px;height:75px;position:absolute;top:330px;left:355px;}
+                    .onekey .btn-onkey{position:absolute;bottom:15px;left:175px;width:175px;height:50px;z-index:998;cursor:pointer;}
+                    .onekey .btn-onkey:hover{text-decoration:none;}
+                    .selectbox{width:160px;position:absolute;top:10px;left:45px;z-index:999;}
+                    .select{font-size:12px;color:#000;_display:inline;width:117px;background:url("images/chooseandbtn_06.jpg") no-repeat;}
+                    .select1{position:absolute;top:2px;left:0;z-index:9999;}
+                    .select2{position:absolute;top:28px;left:0;z-index:9998;}
+                    .select span{width:89px;_width:110px;height:21px;line-height:21px;overflow:hidden;padding:0 0 0 9px;cursor:pointer;display:block;}
+                    .select input{width:84px;height:17px;line-height:17px;_height:16px;_line-height:16px;overflow:hidden;}
+                    .select .g_menu{width:86px;margin:0 0 0 1px;background:url("images/nogamenoYouth_10.jpg") repeat;display:none;}
+                    .select .g_gmenu li{width:91px;height:20px;line-height:20px;padding:0 0 0 9px;cursor:pointer;}
+                    .select .g_menu li:hover{background:#8b8b8b;color:#fff;}
+        /*step*/
+        .step{width:100%;background:url("images/stepbg_02.jpg") no-repeat center top;height:474px;}
+            .step .gcenter{}
+            .step .main_num {position:absolute; top:155px; left:774px; display:block; height:20px; line-height:20px; font-size:12px; color:#FDEF57; font-weight:bold; font-family:"微软雅黑";  width:155px;}
+            .step .main_num  span{ display:block; float:left; height:19px; width:19px;line-height:19px;text-align:center}
+            .step .siframe{width:300px;height:175px;overflow:hidden;background:#fff;position:absolute;top:264px;left:423px;}
+        /*roles*/
+        .roles{width:100%;background:url("images/rolebg_02.jpg") no-repeat center top;height:258px;}
+            .roles .gcenter{background:url("images/inbg_06.jpg") no-repeat;height:258px;}
+                .activetime{width:790px;height:35px;line-height:35px;overflow:hidden;margin:65px 0 0 20px;float:left;_display:inline;}
+                    .activetime h1{float:left;width:90px;height:20px;margin:5px 0 0 0;}
+                    .activetime span{float:left;margin:0 0 0 5px;color:#FFE400;font-weight:bold;font-size:14px;_display:inline;}
+                .activeroles{width:790px;float:left;margin:0 0 0 20px;_display:inline;}
+                    .activeroles h1{float:left;}
+                    .activeroles ul{float:left;}
+                        .activeroles ul li{width:645px;line-height:25px;color:#CB862E;margin:0 0 5px 0;padding:0 0 0 15px;position:relative;letter-spacing:1px;}
+                        .activeroles ul li h4{font-size:12px;position:absolute;top:3px;left:0;width:13px;height:15px;line-height:15px;text-align:center;background:url("images/roletipbg_03.jpg") no-repeat;}
+                .roles .btn-look{width:134px;height:45px;background:url("images/nogamenoYouth_21.jpg") no-repeat;display:block;position:absolute;bottom:40px;right:30px;}
+                .roles .btn-look:hover{text-decoration:none;}
+        /*zeroproduct*/
+        .zeroproduct{width:100%;background:url("images/outbg_04.jpg") no-repeat center top;height:713px;}
+            .zeroproduct .gcenter{background:url("images/inbg_07.jpg") no-repeat;height:713px;}
+            .zeroproduct .gcenter ul{float:left;margin:67px 0 0 25px;_display:inline;width:960px;overflow:hidden;}
+                .product{width:296px;height:290px;overflow:hidden;background:url("images/nogamenoYouth_25.jpg") no-repeat;padding:2px;position:relative;float:left;margin:0 20px 20px 0;}
+                    .product .name{width:291px;height:20px;line-height:20px;overflow:hidden;display:block;padding:0 0 0 5px;color:#FCBE92;margin:3px 0 0 0;}
+                    .product del{width:120px;height:20px;line-height:20px;overflow:hidden;display:block;padding:0 0 0 5px;color:#BF7B4F;}
+                    .product span{width:120px;height:20px;line-height:20px;overflow:hidden;padding:0 0 0 5px;color:#FFE700;}
+                    .product .btn-nowbuy{position:absolute;right:10px;bottom:10px;}
+                    .product .btn-free{position:absolute;right:90px;bottom:5px;background:url("images/nogamenoYouth_32.jpg") no-repeat;width:73px;height:27px;}
+                    .product .btn-exchange{position:absolute;right:10px;bottom:5px;background:url("images/nogamenoYouth_34.jpg") no-repeat;width:73px;height:27px;}
+        /*Q&A*/
+        .qanda{width:100%;background:url("images/outbg_05.jpg") no-repeat center top;height:620px;}
+            .qanda .gcenter{background:url("images/inbg_08.jpg") no-repeat;width:970px;height:383px;padding:65px 0 0 20px;}
+                .qatxt{width:895px;height:55px;margin:0 0 5px 0;}
+                    .qatxt h2{font-size:18px;color:#E7781E;height:30px;line-height:30px;position:relative;padding:0 0 0 25px;}
+                        .qatxt h2 em{position:absolute;top:5px;left:0;background:url("images/nogamenoYouth_40.jpg") no-repeat;width:21px;height:21px;}
+                    .qatxt p{font-size:13px;color:#A97451;height:20px;line-height:20px;position:relative;padding:0 0 0 25px;}
+                        .qatxt p em{position:absolute;top:0;left:0;width:20px;height:20px;line-height:20px;text-align:center;font-style:normal;}
+        /*layout*/
+        .main-float .main-close{ width:40px; height:40px; float: left; cursor:pointer; text-indent:-200px; overflow:hidden}
+        .black{ position:fixed;_position:absolute;  z-index:99999; width:100%;height:100%;_height:expression(eval(documentElement.scrollHeight));top:0;left:0px; background:#000;opacity:0.5; filter:alpha(opacity=50);display:none}
+        .tc-box{ width:421px; height:231px;position:fixed;top:250px;_position:absolute;_top:expression(eval(documentElement.scrollTop+200)); z-index:100000; left:50%; margin-left:-200px; display:none ; }
+        .tc-box .main-box { width:360px; height:211px;float: left; margin:10px 10px 0 11px;_display:inline; overflow:hidden; }
+        .tc-box .main-box li { display:none}
+        .tcboxbg { background:url("http://img03.taobaocdn.com/tps/i3/T1bU6uXgJmXXbdYm3g-421-231.png")  no-repeat;}
+        .gamebg {background:url("http://img03.taobaocdn.com/tps/i3/T15ivxXj8aXXbGNFHI-611-822.png")  no-repeat;}
+        .sns-widget { position:absolute; top:135px; left:70px; height:30px; width:86px; cursor:pointer; }
+        .float-cz { position:fixed;top:250px;_position:absolute;_top:expression(eval(documentElement.scrollTop+200)); z-index:100000; left:50%; margin-left:-250px; width:511px; height:282px; display:none; background-position:0 -541px;  }
+    </style>
+    <script src="http://a.tbcdn.cn/s/kissy/1.1.6/kissy-min.js"></script>
+</head>
+<body>
+<div class="gcontent">
+    <div class="ghead">
+        <div class="gcenter">
+            <img src="images/nogamenoYouth_02.jpg" />
+            <img src="images/nogamenoYouth_04.jpg" />
+            <img src="images/inbg_03.jpg" />
+            <dl class="rights clearfix">
+                <dd>权益一：在淘宝勋章馆 、旺旺展现淘宝超绚勋章</dd>
+                <dd>权益二：在淘宝网游的活动中，享受不一定的特权</dd>
+            </dl>
+            <div class="onekey">
+                <div class="selectbox">
+                    <div class="select select1">
+                        <!--<span class="" id="J-choose1" data-name="">选择品牌</span>-->
+                        <input type="text" id="J-choose1" value="" />
+                        <ul class="g_menu clearfix" id="J-menu1">
+                            <li>请选择</li>
+                        </ul>
+                    </div><!--select1-->
+                    <div class="select select2">
+                        <!--<span class="" id="J-choose2" data-fuid="">选择品牌</span>-->
+                        <input type="text" id="J-choose2" value="" />
+                        <ul class="g_menu clearfix" id="J-menu2">
+                            <li>请选择1</li>
+                        </ul>
+                    </div><!--select2-->
+                </div><!--selectbox-->
+                <a id="J-onekey" class="btn-onkey"><img src="images/chooseandbtn_03.jpg" /></a>
+            </div><!--onekey-->
+        </div><!--gcenter-->
+    </div><!--ghead-->
+
+    <div class="step">
+        <div class="gcenter">
+            <img src="images/step_03.jpg" />
+            <img src="images/step_05.jpg" />
+            <p class="main_num" id="xznum"></p>
+            <div class="siframe">
+                <iframe width="290" scrolling="no" height="148" frameborder="0" src="http://tcc.taobao.com/expwy/game_card.htm?css=fp_2012"></iframe>
+            </div><!--siframe-->
+        </div><!--gcenter-->
+    </div><!--step-->
+
+    <div class="roles">
+        <div class="gcenter clearfix">
+            <div class="activetime">
+                <h1><img src="images/roleheadimg_03.jpg" /></h1>
+                <span>2012年7月25日-2012年12月31日</span>
+            </div><!--activetime-->
+
+            <div class="activeroles">
+                <h1><img src="images/roleheadimg_06.jpg" /></h1>
+                <ul class="clearfix">
+                    <li>
+                        <h4>1</h4>
+                        之前在淘宝网游购买过点卡的会员，即2012年在淘宝网游类目下累计购买1笔以上的用户，直接填写您玩的游戏名称和区服，就可以免费领取超级绚丽游戏认证勋章。
+                    </li>
+                    <li>
+                        <h4>2</h4>
+                        之前在淘宝网购买过实物产品1笔以上的用户，即2012年没有在淘宝网游类目下购买过的用户，可以免费领取一个1元红包，可以购买2元以上的网络游戏点卡、装备、金币，并且可以直接抵用，购买完成确认收货之后，填写完您玩的游戏和区服等信息后即可领取“游戏认证勋章”。
+                    </li>
+                </ul>
+            </div><!--activeroles-->
+
+            <a class="btn-look" href="#" target="_blank">&nbsp;</a>
+        </div><!--gcenter-->
+    </div><!--roles-->
+
+    <div class="zeroproduct">
+        <div class="gcenter clearfix">
+            <ul class="clearfix">
+                <li class="product">
+                    <a href="#" target="_blank">
+                        <img src="images/nogamenoYouth_28.jpg" width="295" height="225" />
+                    </a>
+                    <a class="name" href="#" target="_blank">英雄联盟</a>
+                    <del>原价：30元</del>
+                    <span>活动价：1个集分宝</span>
+                    <a class="btn-nowbuy" href="#" target="_blank"><img src="images/btn-rightnow_03.jpg" /></a>
+                </li><!--product-->
+                <li class="product">
+                    <a href="#" target="_blank">
+                        <img src="images/nogamenoYouth_28.jpg" width="295" height="225" />
+                    </a>
+                    <a class="name" href="#" target="_blank">英雄联盟</a>
+                    <del>原价：30元</del>
+                    <span>活动价：1个集分宝</span>
+                    <a class="btn-nowbuy" href="#" target="_blank"><img src="images/btn-rightnow_03.jpg" /></a>
+                </li><!--product-->
+                <li class="product">
+                    <a href="#" target="_blank">
+                        <img src="images/nogamenoYouth_28.jpg" width="295" height="225" />
+                    </a>
+                    <a class="name" href="#" target="_blank">英雄联盟</a>
+                    <del>原价：30元</del>
+                    <span>活动价：1个集分宝</span>
+                    <a class="btn-nowbuy" href="#" target="_blank"><img src="images/btn-rightnow_03.jpg" /></a>
+                </li><!--product-->
+                <li class="product">
+                    <a href="#" target="_blank">
+                        <img src="images/nogamenoYouth_28.jpg" width="295" height="225" />
+                    </a>
+                    <a class="name" href="#" target="_blank">英雄联盟</a>
+                    <del>原价：30元</del>
+                    <span>活动价：1个集分宝</span>
+                    <a class="btn-nowbuy" href="#" target="_blank"><img src="images/btn-rightnow_03.jpg" /></a>
+                </li><!--product-->
+                <li class="product">
+                    <a href="#" target="_blank">
+                        <img src="images/nogamenoYouth_28.jpg" width="295" height="225" />
+                    </a>
+                    <a class="name" href="#" target="_blank">英雄联盟</a>
+                    <del>原价：30元</del>
+                    <span>活动价：1个集分宝</span>
+                    <a class="btn-nowbuy" href="#" target="_blank"><img src="images/btn-rightnow_03.jpg" /></a>
+                </li><!--product-->
+                <li class="product">
+                    <a href="#" target="_blank">
+                        <img src="images/nogamenoYouth_28.jpg" width="295" height="225" />
+                    </a>
+                    <a class="name" href="#" target="_blank">英雄联盟</a>
+                    <del>原价：30元</del>
+                    <span>活动价：1个集分宝</span>
+                    <a class="btn-nowbuy" href="#" target="_blank"><img src="images/btn-rightnow_03.jpg" /></a>
+                </li><!--product-->
+            </ul>
+        </div><!--gcenter-->
+    </div><!--zeroproduct-->
+
+    <div class="qanda">
+        <div class="gcenter">
+            <div class="qatxt">
+                <h2><em></em> 会员提交信息会有安全问题么？</h2>
+                <p><em>A：</em>淘宝信息绝对不会有任何泄露，请广大淘宝会员放心填写。</p>
+            </div><!--qatxt-->
+            <div class="qatxt">
+                <h2><em></em> 会员提交信息会有安全问题么？</h2>
+                <p><em>A：</em>淘宝信息绝对不会有任何泄露，请广大淘宝会员放心填写。</p>
+            </div><!--qatxt-->
+            <div class="qatxt">
+                <h2><em></em> 会员提交信息会有安全问题么？</h2>
+                <p><em>A：</em>淘宝信息绝对不会有任何泄露，请广大淘宝会员放心填写。</p>
+            </div><!--qatxt-->
+            <div class="qatxt">
+                <h2><em></em> 会员提交信息会有安全问题么？</h2>
+                <p><em>A：</em>淘宝信息绝对不会有任何泄露，请广大淘宝会员放心填写。</p>
+            </div><!--qatxt-->
+            <div class="qatxt">
+                <h2><em></em> 会员提交信息会有安全问题么？</h2>
+                <p><em>A：</em>淘宝信息绝对不会有任何泄露，请广大淘宝会员放心填写。</p>
+            </div><!--qatxt-->
+            <div class="qatxt">
+                <h2><em></em> 会员提交信息会有安全问题么？</h2>
+                <p><em>A：</em>淘宝信息绝对不会有任何泄露，请广大淘宝会员放心填写。</p>
+            </div><!--qatxt-->
+        </div><!--gcenter-->
+    </div><!--qanda-->
+</div><!--gcontent-->
+
+
+
+
+<div class="float-cz main-float gamebg">
+    <div class="main-czbox"><iframe scrolling="no" frameborder="0" src="http://tcc.taobao.com/expwy/game_card.htm?css=fp_2012"></iframe></div>
+    <span class="main-close"></span>
+</div>
+<div class="black main-float" id="black"></div>
+<div class="tc-box main-float tcboxbg"   >
+    <ul class="main-box">
+        <li lid="0"  class="main-float" ><img src="http://img01.taobaocdn.com/tps/i1/T1e1rwXjXcXXbFTD_r-360-211.jpg" border="0" usemap="#Map2" />
+            <map name="Map2" id="Map2">
+                <area shape="rect" coords="117,111,245,167" href="https://login.taobao.com/member/login.jhtml?&redirectURL=http://www.taobao.com/go/act/sale/xinrengame.php"  target="_self"/>
+            </map>
+        </li>
+        <li  lid="1" class="main-float" value="领取成功" style=" position:relative">
+
+            <Img src="http://img04.taobaocdn.com/tps/i4/T14tHxXghjXXbFTD_r-360-211.jpg" border="0" usemap="#Map20">
+            <map name="Map20" id="Map20">
+                <area shape="rect" coords="182,73,281,93" href="http://vip.taobao.com/all_medal.htm?medalId=200701"  target="_blank"/>
+                <area shape="rect" coords="180,137,290,167" href="http://vip.taobao.com/user_medal.htm"  target="_blank"/>
+            </map>
+
+            <div class="sns-widget" data-sharebtn="{&quot;skinType&quot;:3,&quot;pic&quot;:&quot;http://img03.taobaocdn.com/tps/i3/T10d2wXlVpXXcdL1Yv-150-150.gif&quot;,&quot;client_id&quot;:&quot;144455&quot;,&quot;comment&quot;:&quot;小勋章，玩转大淘宝我刚获得淘宝特发游戏特权勋章，成为淘宝网游的初级达人啦，玩游戏，有特权，我的青春火辣辣的开始了，赶紧加入吧！&quot;,&quot;type&quot;:&quot;webpage&quot;,&quot;key&quot;:&quot;http://vip.taobao.com/all_medal.htm?medalId=200701&quot;}"><img alt="" src="http://img03.taobaocdn.com/tps/i3/T1CJvxXlhhXXcT7NDq-86-30.jpg" /></div><script type="text/javascript">KISSY.ready(function(S){var D=S.DOM,E=S.Event;if(typeof SNS=="undefined" || typeof SNS.define=="undefined"){S.io.getScript("http://a.tbcdn.cn/p/snsdk/core.js",function(){})}})</script>
+        </li>
+        <li  lid="2" class="main-float" value="领取失败" ><img src="http://img03.taobaocdn.com/tps/i3/T1l3jvXjJiXXbFTD_r-360-211.jpg" border="0" usemap="#Map4" />
+            <map name="Map4" id="Map4">
+                <area shape="rect" coords="91,130,270,183" href="javascript:gethb()" target="_self"/>
+            </map>
+        </li>
+        <li  lid="3" class="main-float"  value="红包领取成功"><img src="http://img03.taobaocdn.com/tps/i3/T1w__vXfBgXXbFTD_r-360-211.jpg" border="0" usemap="#Map5" />
+
+            <map name="Map5" id="Map5">
+                <area shape="rect" coords="113,110,246,167" href="javascript:showbox('float-cz')" target="_self" />
+            </map>
+        </li>
+        <li lid="4"  class="main-float" value="红包领取失败"><img src="http://img01.taobaocdn.com/tps/i1/T1ec_vXmhmXXbFTD_r-360-211.jpg" border="0" usemap="#Map6" />
+            <map name="Map6" id="Map6">
+                <area shape="rect" coords="91,112,269,169" href="http://www.taobao.com/go/act/sale/xinrengame.php"  target="_self"/>
+            </map>
+        </li>
+        <li lid="5"  class="main-float" value="红包领取重复"><img src="http://img04.taobaocdn.com/tps/i4/T1DuzvXhhnXXbFTD_r-360-211.jpg" border="0" usemap="#Map7"/>
+            <map name="Map7" id="Map7">
+                <area shape="rect" coords="116,111,246,166" href="javascript:showbox('float-cz')" target="_self" />
+            </map>
+        </li>
+        <li lid="6"  class="main-float" value="红包已领取完"><img src="http://img02.taobaocdn.com/tps/i2/T15cTxXlppXXbFTD_r-360-211.jpg" border="0" usemap="#Map8"/>
+            <map name="Map8" id="Map8">
+                <area shape="rect" coords="116,112,245,167" href="http://www.taobao.com/go/act/sale/xinrengame.php" target="_self"/>
+            </map>
+        </li>
+        <li lid="7"  class="main-float" value="勋章已领取过"><img src="http://img01.taobaocdn.com/tps/i1/T1gp_vXm8mXXbFTD_r-360-211.jpg" /></li>
+        <li lid="8"  class="main-float" value="勋章失败请购买" ><img src="http://img02.taobaocdn.com/tps/i2/T15B6vXfNiXXbFTD_r-360-211.jpg" border="0" usemap="#Map3" />
+            <map name="Map3" id="Map3">
+                <area shape="rect" coords="100,129,260,183" href="javascript:showbox('float-cz')" target="_self" />
+            </map>
+        </li>
+        <li lid="9"  class="main-float" value="支付宝"><img src="http://img01.taobaocdn.com/tps/i1/T1OLHvXXxnXXbFTD_r-360-211.jpg" /></li>
+        <li lid="10"  class="main-float" value="参数错误"><img src="http://img03.taobaocdn.com/tps/i3/T1hFnwXbxgXXbFTD_r-360-211.jpg" /></li>
+        <li lid="11"  class="main-float" value="系统错误"><img src="http://img02.taobaocdn.com/tps/i2/T1TezuXXdlXXbFTD_r-360-211.jpg" /></li>
+        <li lid="12"  class="main-float" value="小二错误"><img src="http://img01.taobaocdn.com/tps/i1/T1xVTyXdFXXXbFTD_r-360-211.jpg "/></li>
+        <li lid="13"  class="main-float" value="不具备领取勋章的条件"><img src="http://img01.taobaocdn.com/tps/i1/T1rOnEXXtaXXbFTD_r-360-211.jpg"/></li>
+    </ul>
+    <div class="main-close">关闭</div>
+</div>
+<script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script>
+    $(".main-close").click(function(){
+        $(".main-float").hide();
+        $("#black").hide();
+    });
+    $(".sns-widget").click(function(){
+        $(".main-float").hide();
+        $("#black").hide();
+    });
+    function showbox(obj){
+        $(".main-float").hide();
+        $("#black").show();
+        $("."+obj).show();
+    }
+    function showli(n){
+        $(".main-float").hide();
+        $("#black").show();
+        $(".tc-box").show().find("li").eq(n).show();
+    }
+</script>
+
+<script>
+    var S=KISSY,DOM= S.DOM,Event= S.Event;
+    function getnum() {
+        var _tt=new Date().getTime();
+        S.io({
+            dataType:'jsonp',
+            url:'http://game.taobao.com/json/getMedal.htm',
+            data:{
+            },
+            jsonp:"callback",
+            jsonpCallback:"getMedal",
+            success:function(d){
+                var _num=S.one("#xznum");
+                if(d.success)
+                {
+                    var str=d.count;
+                    str=""+str+"";
+                    var htm="";
+                    var le=str.length;
+                    for(var i=0;i<8-le;i++){
+                        htm+='<span>0</span>';
+                    }
+                    for(var j=0;j<str.length;j++){
+                        htm+='<span>'+str.substring(j,j+1)+'</span>';
+                    }
+                    _num.html(htm);
+                }
+            }
+        });
+    }
+    getnum();
+    window.setInterval('getnum()',10000);
+
+    function changeselect(selectid,subid){
+        var oSelect = DOM.get(selectid);
+        var oSub = DOM.get(subid);
+        var aLi = oSub.getElementsByTagName("li");
+        var i = 0;
+        Event.on(oSelect, 'click keyup', function (event) {
+            var style = oSub.style;
+            style.display ='block';
+            var menu2 = DOM.get(subid);
+            if (menu2.offsetWidth > 90) {
+                menu2.style.height = "120px";
+                menu2.style.overflowX = "scroll";
+            } else if (menu2.offsetHeight >= 120) {
+                menu2.style.height = "120px";
+                menu2.style.overflowY = "scroll";
+                menu2.style.overflowX = "scroll";
+            }
+
+            //阻止事件冒泡
+            (event || window.event).cancelBubble = true;
+        });
+
+        for (i = 0; i < aLi.length; i++) {
+            //鼠标划过
+            aLi[i].onmouseover = function (){
+                this.className = "hover";
+            };
+            //鼠标离开
+            aLi[i].onmouseout = function (){
+                this.className = "";
+            };
+        }
+    }
+    Event.on('.selectbox','click',function(ev){
+        var eve = ev || window.event;
+        var target=eve.target;
+        switch(target.nodeName){
+            case "LI":
+                var ainput=target.parentNode.parentNode.getElementsByTagName('input')[0];
+                ainput.value=target.innerHTML;
+                DOM.attr(ainput,'data-id',DOM.attr(target,'data-id'));
+                target.parentNode.style.display="none";
+                break;
+        }
+    });
+    function objInit(obj){//下拉列表框初始化
+        return DOM.attr(DOM.get(obj),'value','请选择');
+    }
+
+    changeselect('#J-choose1','#J-menu1');
+    changeselect('#J-choose2','#J-menu2');
+
+    function innerDataSelect(){
+        objInit("#J-choose1");
+        objInit("#J-choose2");
+        var rnd=Math.random();
+
+        var choose1=DOM.get("#J-choose1");
+
+        Event.on(document,'click',function(ev){
+           var eve =ev || window.event;
+           var target=eve.target;
+           var oSub=DOM.query('.g_menu');
+           var parent=DOM.parent(target,'.onekey');
+            if(!parent){
+              S.all('#J-menu1').hide()
+              S.all('#J-menu2').hide()
+            }
+
+        });
+
+
+        var Enable1=true;
+
+
+        function secondIo(cid){
+            S.io({
+                url:'http://game.taobao.com/json/getCategoryAndProperty.htm',
+                data:{
+                    cid:cid,
+                    rnd:Math.random()
+                },
+                dataType:'jsonp',
+                type:'GET',
+                success:function (data) {
+                    var menu2 = DOM.get("#J-menu2");
+                    var arr2 = [];
+                    var listr = '';
+                    S.each(data.gameArea, function (item) {
+                        var areaId = item.split(',')[0].toString();
+                        var str = areaId.replace("5381800:", "");
+                        if (S.indexOf(item.split(',')[1], arr2) < 0) {
+                            arr2.push('<li data-id="' + str + '">' + item.split(',')[1] + '</li>');
+                        }
+                    });
+                    menu2.innerHTML = arr2.join('');
+                }
+            });
+        }
+
+        Event.on(DOM.get("#J-menu1"), 'click', function (ev) {
+            var eve = ev || window.event;
+            var target = eve.target;
+            var cid = DOM.attr(target, 'data-id');
+            objInit("#J-choose2");
+            secondIo(cid);
+        });//选择相应游戏后请求，得到服务区
+
+        (function () {
+            S.io({
+                url:"http://game.taobao.com/json/getCategoryAndProperty.htm",
+                data:{
+                    rnd:rnd
+                },
+                dataType:'jsonp',
+                type:'GET',
+                success:function(data){
+                    var menu1=DOM.get("#J-menu1");
+                    var arr;
+                    S.each(data,function(v,txt){ //遍历数据增加游戏名
+                        var listr='';
+                        S.each(v,function(vin,kin){
+                            arr=vin.split(',');
+                            listr+='<li style="width:120px;padding:0 0 0 3px;" data-id="'+arr[0]+'" data-ping="'+arr[2]+'">'+ arr[1]+'</li>';
+
+                        });
+                        menu1.innerHTML=listr;
+                    });
+                    if(menu1.offsetHeight>=120){
+                        menu1.style.height="120px";
+                        menu1.style.overflowY="scroll";
+                        menu1.style.overflowX="visible";
+                    }
+
+
+                }
+
+
+            });
+        })();
+
+        /*拼音选择 开始*/
+        $("#J-choose1").keyup(function (ev) {
+            var list = $("#J-menu1").html();
+            var obj = $("#J-menu1");
+            var ali = $('#J-menu1 li');
+            var len = $("#J-menu1 li").size();
+            var s = $("#J-choose1").attr("value");
+            var oRe = new RegExp(s, 'i');
+            if (s == "") {
+                //$("#J-menu1").html(list);
+            }
+            else {
+                var ol = s.length; //当前输入字符串的长度
+                var i = len - 1;
+                for (var j = 0; j < len; j++) {
+                    var str = $("#J-menu1 li").eq(j).attr("data-ping");
+                    var ss = $("#J-menu1 li").eq(j).html();
+                    str = str.substring(0, ol);
+                    ss = ss.substring(0, ol);
+                    if (oRe.test(ss) || oRe.test(str)) {
+                        KISSY.DOM.show(ali[j]);
+                    } else {
+                        KISSY.DOM.hide(ali[j]);
+                    }
+                }
+
+
+            }
+        });
+        /*拼音选择 结束*/
+        var cod = {
+            "0":"1", //勋章成功
+            "100":"2", //勋章新人引导
+            "200":"3",//红包成功
+            "201":"11",//系统错误
+            "202":"0",//用户未登录
+            "203":"10",//参数不正确
+            "204":"7",//勋章重复
+            "205":"8",//勋章失败
+            "206":"6",//红包已完
+            "207":"5",//红包重复
+            "208":"4",//红包失败
+            "209":"9",//用户未绑定支付宝
+            "210":"12",//小二
+            "211":"13"// 不具备领取勋章的条件
+        };
+
+        Event.on('#J-onekey','click',function(ev){
+            var gameName=DOM.attr(DOM.get("#J-choose1"),'data-id');
+            var gameArea=DOM.attr(DOM.get("#J-choose2"),'data-id');
+            if(gameName==null || "" || undefined){
+                alert("请选择游戏名");
+            }else if(gameArea == null|| "" || undefined){
+                alert("请选择游戏服务区");
+            }else{
+                S.io({
+                    url:'http://game.taobao.com/json/addMedal.htm',
+                    data:{
+                        gameName:gameName,
+                        gameArea:gameArea
+                    },
+                    dataType:'jsonp',
+                    type:'GET',
+                    success:function(data){
+                        var _d = data.code;
+                        showli(cod[_d]);
+                    }
+                })
+            }
+        });//点击一键游戏认证请求
+
+
+    }
+    innerDataSelect();
+
+    function gethb() {
+        //showli(6);
+        var _tt=new Date().getTime();
+        S.io({
+            dataType:'jsonp',
+            url:'http://game.taobao.com/json/activityInletAction.htm?ua='+encodeURIComponent(ua),
+            data:{
+                "t":_tt
+            },
+            jsonp:"callback",
+            success:function(d){
+                var _d = d.code;
+                showli(cod[_d]);
+                UA_Opt.Token=new Date().getTime()+":"+Math.random();
+                UA_Opt.reload();
+            }
+        });
+    }
+
+
+</script>
+
+    <!--[if IE 6]>
+    <script type="text/javascript" >
+
+    var DD_belatedPNG={ns:"DD_belatedPNG",imgSize:{},delay:10,nodesFixed:0,createVmlNameSpace:function(){if(document.namespaces&&!document.namespaces[this.ns]){document.namespaces.add(this.ns,"urn:schemas-microsoft-com:vml")}},createVmlStyleSheet:function(){var b,a;b=document.createElement("style");b.setAttribute("media","screen");document.documentElement.firstChild.insertBefore(b,document.documentElement.firstChild.firstChild);if(b.styleSheet){b=b.styleSheet;b.addRule(this.ns+"\\:*","{behavior:url(#default#VML)}");b.addRule(this.ns+"\\:shape","position:absolute;");b.addRule("img."+this.ns+"_sizeFinder","behavior:none; border:none; position:absolute; z-index:-1; top:-10000px; visibility:hidden;");this.screenStyleSheet=b;a=document.createElement("style");a.setAttribute("media","print");document.documentElement.firstChild.insertBefore(a,document.documentElement.firstChild.firstChild);a=a.styleSheet;a.addRule(this.ns+"\\:*","{display: none !important;}");a.addRule("img."+this.ns+"_sizeFinder","{display: none !important;}")}},readPropertyChange:function(){var b,c,a;b=event.srcElement;if(!b.vmlInitiated){return}if(event.propertyName.search("background")!=-1||event.propertyName.search("border")!=-1){DD_belatedPNG.applyVML(b)}if(event.propertyName=="style.display"){c=(b.currentStyle.display=="none")?"none":"block";for(a in b.vml){if(b.vml.hasOwnProperty(a)){b.vml[a].shape.style.display=c}}}if(event.propertyName.search("filter")!=-1){DD_belatedPNG.vmlOpacity(b)}},vmlOpacity:function(b){if(b.currentStyle.filter.search("lpha")!=-1){var a=b.currentStyle.filter;a=parseInt(a.substring(a.lastIndexOf("=")+1,a.lastIndexOf(")")),10)/100;b.vml.color.shape.style.filter=b.currentStyle.filter;b.vml.image.fill.opacity=a}},handlePseudoHover:function(a){setTimeout(function(){DD_belatedPNG.applyVML(a)},1)},fix:function(a){if(this.screenStyleSheet){var c,b;c=a.split(",");for(b=0;b<c.length;b++){this.screenStyleSheet.addRule(c[b],"behavior:expression(DD_belatedPNG.fixPng(this))")}}},applyVML:function(a){a.runtimeStyle.cssText="";this.vmlFill(a);this.vmlOffsets(a);this.vmlOpacity(a);if(a.isImg){this.copyImageBorders(a)}},attachHandlers:function(i){var d,c,g,e,b,f;d=this;c={resize:"vmlOffsets",move:"vmlOffsets"};if(i.nodeName=="A"){e={mouseleave:"handlePseudoHover",mouseenter:"handlePseudoHover",focus:"handlePseudoHover",blur:"handlePseudoHover"};for(b in e){if(e.hasOwnProperty(b)){c[b]=e[b]}}}for(f in c){if(c.hasOwnProperty(f)){g=function(){d[c[f]](i)};i.attachEvent("on"+f,g)}}i.attachEvent("onpropertychange",this.readPropertyChange)},giveLayout:function(a){a.style.zoom=1;if(a.currentStyle.position=="static"){a.style.position="relative"}},copyImageBorders:function(b){var c,a;c={borderStyle:true,borderWidth:true,borderColor:true};for(a in c){if(c.hasOwnProperty(a)){b.vml.color.shape.style[a]=b.currentStyle[a]}}},vmlFill:function(e){if(!e.currentStyle){return}else{var d,f,g,b,a,c;d=e.currentStyle}for(b in e.vml){if(e.vml.hasOwnProperty(b)){e.vml[b].shape.style.zIndex=d.zIndex}}e.runtimeStyle.backgroundColor="";e.runtimeStyle.backgroundImage="";f=true;if(d.backgroundImage!="none"||e.isImg){if(!e.isImg){e.vmlBg=d.backgroundImage;e.vmlBg=e.vmlBg.substr(5,e.vmlBg.lastIndexOf('")')-5)}else{e.vmlBg=e.src}g=this;if(!g.imgSize[e.vmlBg]){a=document.createElement("img");g.imgSize[e.vmlBg]=a;a.className=g.ns+"_sizeFinder";a.runtimeStyle.cssText="behavior:none; position:absolute; left:-10000px; top:-10000px; border:none; margin:0; padding:0;";c=function(){this.width=this.offsetWidth;this.height=this.offsetHeight;g.vmlOffsets(e)};a.attachEvent("onload",c);a.src=e.vmlBg;a.removeAttribute("width");a.removeAttribute("height");document.body.insertBefore(a,document.body.firstChild)}e.vml.image.fill.src=e.vmlBg;f=false}e.vml.image.fill.on=!f;e.vml.image.fill.color="none";e.vml.color.shape.style.backgroundColor=d.backgroundColor;e.runtimeStyle.backgroundImage="none";e.runtimeStyle.backgroundColor="transparent"},vmlOffsets:function(d){var h,n,a,e,g,m,f,l,j,i,k;h=d.currentStyle;n={W:d.clientWidth+1,H:d.clientHeight+1,w:this.imgSize[d.vmlBg].width,h:this.imgSize[d.vmlBg].height,L:d.offsetLeft,T:d.offsetTop,bLW:d.clientLeft,bTW:d.clientTop};a=(n.L+n.bLW==1)?1:0;e=function(b,p,q,c,s,u){b.coordsize=c+","+s;b.coordorigin=u+","+u;b.path="m0,0l"+c+",0l"+c+","+s+"l0,"+s+" xe";b.style.width=c+"px";b.style.height=s+"px";b.style.left=p+"px";b.style.top=q+"px"};e(d.vml.color.shape,(n.L+(d.isImg?0:n.bLW)),(n.T+(d.isImg?0:n.bTW)),(n.W-1),(n.H-1),0);e(d.vml.image.shape,(n.L+n.bLW),(n.T+n.bTW),(n.W),(n.H),1);g={X:0,Y:0};if(d.isImg){g.X=parseInt(h.paddingLeft,10)+1;g.Y=parseInt(h.paddingTop,10)+1}else{for(j in g){if(g.hasOwnProperty(j)){this.figurePercentage(g,n,j,h["backgroundPosition"+j])}}}d.vml.image.fill.position=(g.X/n.W)+","+(g.Y/n.H);m=h.backgroundRepeat;f={T:1,R:n.W+a,B:n.H,L:1+a};l={X:{b1:"L",b2:"R",d:"W"},Y:{b1:"T",b2:"B",d:"H"}};if(m!="repeat"||d.isImg){i={T:(g.Y),R:(g.X+n.w),B:(g.Y+n.h),L:(g.X)};if(m.search("repeat-")!=-1){k=m.split("repeat-")[1].toUpperCase();i[l[k].b1]=1;i[l[k].b2]=n[l[k].d]}if(i.B>n.H){i.B=n.H}d.vml.image.shape.style.clip="rect("+i.T+"px "+(i.R+a)+"px "+i.B+"px "+(i.L+a)+"px)"}else{d.vml.image.shape.style.clip="rect("+f.T+"px "+f.R+"px "+f.B+"px "+f.L+"px)"}},figurePercentage:function(d,c,f,a){var b,e;e=true;b=(f=="X");switch(a){case"left":case"top":d[f]=0;break;case"center":d[f]=0.5;break;case"right":case"bottom":d[f]=1;break;default:if(a.search("%")!=-1){d[f]=parseInt(a,10)/100}else{e=false}}d[f]=Math.ceil(e?((c[b?"W":"H"]*d[f])-(c[b?"w":"h"]*d[f])):parseInt(a,10));if(d[f]%2===0){d[f]++}return d[f]},fixPng:function(c){c.style.behavior="none";var g,b,f,a,d;if(c.nodeName=="BODY"||c.nodeName=="TD"||c.nodeName=="TR"){return}c.isImg=false;if(c.nodeName=="IMG"){if(c.src.toLowerCase().search(/\.png$/)!=-1){c.isImg=true;c.style.visibility="hidden"}else{return}}else{if(c.currentStyle.backgroundImage.toLowerCase().search(".png")==-1){return}}g=DD_belatedPNG;c.vml={color:{},image:{}};b={shape:{},fill:{}};for(a in c.vml){if(c.vml.hasOwnProperty(a)){for(d in b){if(b.hasOwnProperty(d)){f=g.ns+":"+d;c.vml[a][d]=document.createElement(f)}}c.vml[a].shape.stroked=false;c.vml[a].shape.appendChild(c.vml[a].fill);c.parentNode.insertBefore(c.vml[a].shape,c)}}c.vml.image.shape.fillcolor="none";c.vml.image.fill.type="tile";c.vml.color.fill.on=false;g.attachHandlers(c);g.giveLayout(c);g.giveLayout(c.offsetParent);c.vmlInitiated=true;g.applyVML(c)}};try{document.execCommand("BackgroundImageCache",false,true)}catch(r){}DD_belatedPNG.createVmlNameSpace();DD_belatedPNG.createVmlStyleSheet();
+</script>
+
+<script type="text/javascript">
+    DD_belatedPNG.fix('.tcboxbg');
+    DD_belatedPNG.fix('.gamebg');
+</script>
+<![endif]-->
+</body>
+</html>

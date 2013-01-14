@@ -1,0 +1,60 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+<title> new document </title>
+<meta name="generator" content="editplus">
+<meta name="author" content="">
+<meta name="keywords" content="">
+<meta name="description" content="">
+</head>
+<script src="http://a.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+<script language="javascript">
+KISSY.ready(function(S){
+			
+			function changes(){
+				var box	=KISSY.query(".main");
+				var cont=KISSY.query(".itemSport",box[0]);
+				var len=cont.length;
+				for(var i=0;i<len;i++){
+					var index = window.parseInt(Math.random()*len);
+					KISSY.DOM.append(cont[index],box[0])
+				}	
+			}
+			changes()
+	    	
+	} 
+)
+	
+</script>
+<body>
+	<div class="box_0531">
+		<div class="cont1" >
+			1
+		</div>
+		<div class="cont2" >
+			2
+		</div>
+		<div class="cont3" >
+			3
+		</div>
+		<div class="cont4">
+			4
+		</div>
+	</div>
+    <h3>-----------------------------------</h3>
+    <div class="box_0531">
+		<div class="cont1" >
+			1
+		</div>
+		<div class="cont2" >
+			2
+		</div>
+		<div class="cont3" >
+			3
+		</div>
+		<div class="cont4">
+			4
+		</div>
+	</div>
+</body>
+</html> 

@@ -1,0 +1,302 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>原生分页</title>
+    <style>
+	body, .ln_container ul, .ln_container ol, .ln_container li, .ln_container p,h2,h3,dl,dt,dd,input{margin:0;padding:0;}
+				.ln_container img{border:0; display:block; }
+				.ln_container a{ text-decoration:none; border:none;}
+				.ln_container ul{ list-style:none;}
+				.ln_container em{ font-style:normal;}
+				.ln_container .clearfix:after {content:".";display:block;clear:both;height:0;visibility:hidden;}
+				.ln_container .clearfix {zoom:1;}
+        li {
+            display: none;
+        }
+		
+		input{background:#fff;border:1px solid #D2D2FF; padding:4px;margin-right:4px; float:left;}
+		.changeinput{background:#0676F6; color:#fff;}
+		.ellipsis{width:30px; text-align:center;height:24px; line-height:24px;border:1px solid #D2D2FF; display:block; float:left; margin-right:4px;}
+		
+    </style>
+</head>
+<body>
+<div class="ln_container">
+<h1>原生分页</h1>
+
+<ul id="result">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>4</li>
+    <li>5</li>
+    <li>4</li>
+    <li>5</li>
+
+   
+
+</ul>
+
+<div id="control">
+    <input type="button" value="first" data-type="first" style="float:left; background:#fff;border:1px solid #D2D2FF;">
+    <input type="button" value="上一页" data-type="prev" style="float:left;background:#fff;border:1px solid #D2D2FF;">
+    <div id="j_nums" style="float:left;">
+    
+    </div>
+    <input type="button" value="下一页" data-type="next" style="float:left;background:#fff;border:1px solid #D2D2FF;">
+    <input type="button" value="last" data-type="last" style="float:left;background:#fff;border:1px solid #D2D2FF;">
+   
+</div>
+</div>
+<script>
+
+var get = {
+	byId: function(id) {
+		return document.getElementById(id)
+	},
+	byClass: function(sClass, oParent) {
+		var aClass = [];
+		var reClass = new RegExp("(^| )" + sClass + "( |$)");
+		var aElem = this.byTagName("*", oParent);
+		for (var i = 0; i < aElem.length; i++) reClass.test(aElem[i].className) && aClass.push(aElem[i]);
+		return aClass
+	},
+	byTagName: function(elem, obj) {
+		return (obj || document).getElementsByTagName(elem)
+	}
+};
+
+    function Pagination(configs) {
+        this.page = isNaN(configs.page) ? 0 : configs.page;
+        this.num = configs.num;
+        this.nodeList = configs.nodeList;
+        this.totalPage = Math.ceil(this.nodeList.length / this.num);
+		this.bos=document.getElementById("j_nums");
+		this.bosinput=document.getElementById("j_nums").getElementsByTagName("input");
+		/*生成分页数字*/
+		this.borninput();	
+		
+        this.ready();		
+
+    }
+	/*生成分页数字*/
+	Pagination.prototype.borninput=function(){
+		for( var i=0;i<this.totalPage;i++){
+			this.bs=document.createElement("input");
+			this.obs=this.bs.setAttribute("data-type","numIndex");
+			this.bs.type="button";
+			this.bs.value=i+1;
+			this.bos.appendChild(this.bs);	
+		}
+		this.bosinput[0].className="changeinput";
+		if(this.totalPage>10){
+			this.hid_Nums=parseInt(this.bosinput.length/2);
+			this.newInput=document.createElement("span");
+			this.newInput.innerHTML="...";
+			this.newInput.className="ellipsis";
+			this.newInput1=document.createElement("span");
+			this.newInput1.innerHTML="...";
+			this.newInput1.className="ellipsis";
+			/*隐藏后半分页数字*/
+			for(var i=0;i<this.bosinput.length;i++){
+				if(i>=this.hid_Nums){
+					this.bosinput[i].style.display="none";
+				}	
+			}	
+		
+			this.bos.insertBefore(this.newInput,this.bosinput[this.bosinput.length-1]);
+			this.bosinput[this.bosinput.length-1].style.display="block";	
+		}
+	}
+	/*点击分页数字事件*/
+    Pagination.prototype.numIndex=function(ev){
+		ev = ev || window.event;
+        var target = ev.target || ev.srcElement;
+		var tar_nums=target.value-1;
+		this.page=tar_nums;
+	    var tbnums=get.byClass('changeinput',this.bos)
+		/*给当前页加上选中背景*/
+		this.numReady();
+		/*判断点击最后一页*/
+		if(target.value == this.bosinput.length){
+			this.lastpage();  	
+		}
+		/*判断点击第一页*/
+		if(target.value == this.page+1){
+			if(this.page<this.bosinput.length-1){
+					if(this.page+1 > tbnums[0].value){
+						this.addnums();	
+					}
+					if(this.page+1 < tbnums[0].value){
+						this.reduce();	
+					}
+			}
+		   if(target.value == 1){
+				this.firstpage(); 
+			}	
+		}
+		
+	};
+	/*给当前页加上选中背景*/
+   Pagination.prototype.numReady=function(){
+		for(var i=0;i<this.bosinput.length;i++){
+			this.bosinput[i].className="";		
+		}
+		this.bosinput[this.page].className="changeinput";
+		this.ready();
+	};
+	/*显示分页内容*/	
+    Pagination.prototype.ready = function () {
+        for (var i = 0; i < this.nodeList.length; i++) {
+            this.nodeList[i].style.display = 'none';
+        }
+        var currentLi = this.nodeList.slice(this.page * this.num, this.page * this.num + this.num);
+        for (i = 0; i < currentLi.length; i++) {
+            currentLi[i].style.display = 'block';
+        }
+			
+    };
+	/*点击下一页*/
+    Pagination.prototype.next = function () {
+        this.page++;
+        if (this.page >= this.totalPage) this.page = this.totalPage - 1;
+		this.numReady();
+        this.ready();
+		if(this.page>=this.hid_Nums-1){/*数字增加与省略号*/
+			this.addnums();
+		}
+		
+    };
+	/*下一页的数字隐藏*/
+	Pagination.prototype.addnums=function(){
+		   this.newInput1.style.display="none";
+		   if(this.page>this.hid_Nums-2){
+				this.newInput1.style.display="block";   
+		    }
+			if(this.page<this.bosinput.length-1){
+				this.bosinput[this.page+1].style.display="block";
+					console.log(this.page);
+					console.log(this.bosinput.length-3);
+					if(this.page==this.bosinput.length-3){
+					<!--隐藏省略号-->
+					this.newInput.style.display="none";	
+				}
+				<!--隐藏前半数字-->
+				for(var i=0;i<=this.page-3;i++){
+					if(this.page<this.bosinput.length-3){
+					this.bosinput[i].style.display="none";		
+					}
+				}
+				this.bosinput[0].style.display="block";	
+				this.bos.insertBefore(this.newInput1,this.bosinput[1]);		
+			}
+	}
+	/*上一页的数字隐藏*/
+	Pagination.prototype.reduce=function(){
+		   var _this=this;
+			if(this.page<=this.hid_Nums+1){
+					if(this.page>=1){
+					this.bosinput[this.page-1].style.display="block";
+					if(this.page==2){
+					<!--隐藏省略号-->
+					this.newInput1.style.display="none";	
+					}
+					<!--隐藏后半数字-->
+					var k=this.bosinput.length-1;
+					//console.log(this.page);
+					for(var i=k;i>this.page+1;i--){
+						console.log(i);
+						console.log(this.page)
+						if(this.page>3){
+							this.bosinput[i].style.display='none';	
+						}
+					}
+					this.newInput.style.display="block";
+					this.bosinput[this.bosinput.length-1].style.display="block";
+				}   	
+			}
+	}
+	/*点击上一页*/
+    Pagination.prototype.prev = function () {
+        this.page--;
+        if (this.page < 0) this.page = 0;
+		this.numReady();
+        this.ready();
+		if(this.page <= this.hid_Nums+1){
+			this.reduce();
+		}	
+    };
+
+    Pagination.prototype.first = function (ev) {
+        this.page = 0;
+		this.numReady();
+        this.ready();
+		/*判断点击第一页*/
+		this.firstpage();
+    };
+    Pagination.prototype.last = function (ev) {
+        this.page = this.totalPage - 1;
+		this.numReady();
+        this.ready();
+		/*判断点击最后一页*/
+		this.lastpage();
+			
+    };
+	/*首页*/
+	Pagination.prototype.firstpage=function(ev){
+		this.newInput1.style.display="none";	
+		for(var i=0;i<this.bosinput.length;i++){
+			this.bosinput[i].style.display="block";	
+			if(i>=this.hid_Nums){
+				this.bosinput[i].style.display="none";
+				this.newInput.style.display="block";	
+			}
+			this.bosinput[this.bosinput.length-1].style.display="block";
+		}   		
+	}
+	/*最后一页*/
+	Pagination.prototype.lastpage=function(ev){
+		this.newInput.style.display="none";	
+		this.newInput1.style.display="block";	
+		for(var i=0;i<this.bosinput.length;i++){
+			this.bosinput[i].style.display="block";	
+			if(i<=this.hid_Nums){
+				this.bosinput[i].style.display="none";
+				this.bos.insertBefore(this.newInput1,this.bosinput[1]);
+				this.newInput1.style.display="block";					
+			}
+			this.bosinput[0].style.display="block";
+		}   	
+	}
+
+    var p = new Pagination({
+        num:4,
+        nodeList:(function () {
+            var liObj = document.getElementsByTagName('li');
+            var liArr = [];
+            for (var i = 0; i < liObj.length; i++) {
+                liArr.push(liObj[i]);
+            }
+            return liArr;
+        })()
+    });
+
+    document.getElementById('control').onclick = function (ev) {
+        ev = ev || window.event;
+        var target = ev.target || ev.srcElement;
+        var type = target.getAttribute('data-type');
+        if (typeof p[type] === 'function') p[type](ev);
+    }
+
+
+</script>
+</body>
+</html>
+

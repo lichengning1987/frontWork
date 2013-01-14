@@ -1,0 +1,71 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+	.content{width:100%;height:100px;background:#b8860b}
+    .content1{height:100px;background:#adff2f;height:100px;}
+		.float{width:10px;height:10px;background:red;position:fixed;top:100px;right:0;}
+    </style>
+</head>
+<body>
+<div class="float" id="float"></div>
+<div class="content"></div>
+<div class="content1"></div>
+<div class="content"></div>
+<div class="content1"></div>
+<div class="content"></div>
+<div class="content1"></div>
+<div class="content"></div>
+<div class="content1"></div>
+<div class="content"></div>
+<div class="content1"></div>
+<div class="content"></div>
+<div class="content1"></div>
+<div class="content"></div>
+<div class="content1"></div>
+<div class="content"></div>
+<div class="content1"></div>
+<div class="content"></div>
+<div class="content1"></div>
+<div class="content"></div>
+<div class="content1"></div>
+<script>
+    (function(){
+        var float=document.getElementById("float");
+        function scrollx(){
+            var i=document.documentElement.scrollTop || document.body.scrollTop;
+            if(i<=700){
+                i+=10;
+                document.documentElement.scrollTop=i;
+                document.body.scrollTop=i;
+            }else{
+                clearInterval(x);
+            }
+        }
+        x=setInterval(function(){scrollx()},10);
+
+
+        function goTop(){
+            var top=document.documentElement.scrollTop || document.body.scrollTop;
+            if(top>0){
+                top=top-10;
+                document.documentElement.scrollTop=top;
+                document.body.scrollTop=top;
+            }else{
+                clearInterval(y);
+            }
+        }
+        window.onscroll=function(){
+            float.onclick=function(){
+                goTop();
+                y=setInterval(function(){goTop();},10);
+            }
+        }
+    })();
+</script>
+</body>
+</html>
+

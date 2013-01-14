@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="http://a.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+<script src="http://a.tbcdn.cn/s/kissy/gallery/countdown/1.0/index-min.js"></script>
+</head>
+
+<body>
+<div id="demo">
+   
+    <div class="cd-lite" data-time="1000" end-time="2012/08/30 00:00:00">剩余时间：${d}天${h}时${m}分${s}秒</div>
+</div>
+<script>
+    var S = KISSY;
+    	S.use("gallery/countdown/1.0/countdown",function(S, Countdown){
+			S.getScript('http://www.taobao.com/go/rgn/try/service-time.php?rand=' + (new Date()).getTime(), function () {	
+			function factory(obj){
+				var leftDate =obj.attr('end-time'),edate=new Date(leftDate);	
+				var today=window.serverDate.getTime();
+				var hour=window.serverDate.getHours();
+				var mins=window.serverDate.getMinutes();
+				var secs=window.serverDate.getSeconds();
+				var ed=Math.floor((edate.getTime() - today) / 1000);
+				lmtime=edate.getTime()-today;
+				var os=obj.attr('data-time',lmtime);
+				new Countdown(obj);
+				}
+				S.all('.cd-lite').each(factory);
+
+		});
+		
+    });
+	
+
+			
+</script>
+
+
+
+</body>
+</html>

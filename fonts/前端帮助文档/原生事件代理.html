@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+
+<div class="divparent">
+	<div class="json">
+    1111111
+	</div>
+   <div class="json1">
+    sdfsdf
+	</div>	
+    <div class="json1">
+    sdfsdf
+	</div>
+    <div class="json">
+    2222222
+	</div>
+    <div class="json">
+    333333333
+	</div>
+//<script>
+//function addEvent(obj,Events,fun)
+//{
+//	if(obj.attachEvent)
+//	{
+//		obj.attachEvent("on"+Events,fun);
+//	}
+//	else if(obj.addEventListener)
+//	{
+//		obj.addEventListener(Events,fun,false);
+//	}
+//}
+//function hasClass(ele,cls) { 
+//return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)')); 
+//}/*判断有class*/
+//function addClass(ele,cls) { 
+//if (!this.hasClass(ele,cls)) ele.className += " "+cls; 
+//}/*添加class*/ 
+//function removeClass(ele,cls) { 
+//	if (hasClass(ele,cls)) { 
+//	var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)'); 
+//	ele.className=ele.className.replace(reg,' '); 
+//	} 
+//}/*移除class*/ 
+//addEvent(document.body,'click',function(ev){
+//	 	var e=ev || window.event;
+//		var target=e.target || e.srcElement;
+//		if(hasClass(target,"json")){
+//			alert(target.innerHTML)		
+//		}
+//})
+//</script>
+
+<script src="http://a.tbcdn.cn/s/kissy/1.1.6/kissy-min.js"></script>
+<script>
+	(function(S){
+			var D=S.DOM,E=S.Event;
+			E.on('.divparent','click',function(ev){
+				if(D.hasClass(ev.target,'json'))	
+				{
+					console.log(ev.target);	
+				}
+				
+		    })
+		
+		
+		
+		
+   })(KISSY)
+	
+
+
+
+</script>
+</body>
+</html>

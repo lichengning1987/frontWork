@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+                     <style type="text/css">
+                        body,.container ul{margin:0;padding:0;}
+                        .container ul{ list-style:none;}
+                        .container .clearfix{zoom:1;}
+                        .container .clearfix:after{ content:'.'; display:block; clear:both; visibility:hidden; height:0;}
+                        .box{width:300px;height:300px;margin:0 auto;border:1px solid #000;}
+                        .container .boxheader{width:300px;height:50px;line-height:50px;}
+                        .container .boxheader li{float:left;width:99px; border-right:1px solid #000; border-bottom:1px solid #000;}
+                        .container .boxheader .current{ border-bottom:none;}
+                        .container .boxheade .three{border-right:0;}
+                        .container .tabmain{width:300px;height:250px;}
+                    </style>
+                 
+                
+</head>
+
+<body>
+                                   <div class="container">
+                        <div class="box clearfix" id="box">
+                            <ul class="boxheader clearfix" >
+                                <li class="current  one">111</li>
+                                <li  class="two">222</li>
+                                <li  class="three">333</li>
+                            </ul>
+                            <div class="tabmain">
+                                11111
+                            </div>
+                            <div class="tabmain" style="display:none;">
+                                22222
+                            </div>
+                            <div class="tabmain" style="display:none;">
+                                3333
+                            </div>
+                        </div>
+                    </div>
+                                    <script type="text/javascript">
+                        (function(){
+                            var $=function(id){return typeof id === "string" ? document.getElementById(id):id;}
+                            var $$=function(tagname,obj){return (obj || document).getElementsByTagName(tagname)};
+                            var $$$=function(sClass, obj){
+                                var aClass = [];
+                                var reClass = new RegExp("(^| )" + sClass + "( |$)");
+                                var aElem = $$("*", obj);
+                                for (var i = 0; i < aElem.length; i++) reClass.test(aElem[i].className) && aClass.push(aElem[i]);
+                                return aClass
+                            };
+                            function hasClass(obj,cls)
+                            {
+                                return (new RegExp("\\b"+cls+"\\b")).test(obj.className);
+                                //return obj.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+                            }
+                            function addClass(obj,cls)
+                            {
+                                if(!hasClass(obj,cls))
+                                {
+                                    obj.className.replace(/\s/g,'')==='' ? obj.className = cls : obj.className+= " "+cls;
+                                }
+                            }
+                            function removeClass(obj,cls)
+                            {
+                                return obj.className = obj.className.replace(new RegExp("\\b"+cls+"\\b"),"");
+                                //hasClass(obj,cls) && (obj.className = obj.className.replace(new RegExp('(\\s*|^)'+cls+'(\\s*|$)'),' '));
+                            }
+                            function switchtab(id,cls1,cls2)
+                            {
+                                this.oBox=$(id);
+                                this.oUl=$$("ul",this.oBox)[0];
+                                this.oLi=$$("li",this.oUl);
+                                this.classHover=cls1;
+                                this.classname=$$$(cls2,this.oBox);
+
+                            }
+                            switchtab.prototype={
+                                init:function(){
+                                    var oThis=this;
+                                    for(var i=0;i<this.oLi.length;i++)
+                                    {
+                                        this.oLi[i].index=i;
+                                        this.oLi[i].onmouseover=function(){
+                                            oThis.number1=this.index;
+                                            oThis.overs();
+                                        }
+                                    }
+                                },
+                                overs:function(){
+                                    for(var i=0;i<this.oLi.length;i++)
+                                    {
+                                        removeClass(this.oLi[i],this.classHover);
+                                        this.classname[i].style.display="none";
+                                    }
+                                    addClass(this.oLi[this.number1],this.classHover);
+                                    this.classname[this.number1].style.display="block";
+                                    //alert(this.number1);
+                                }
+                            }
+                            var p=new switchtab("box","current","tabmain")
+                            p.init();
+                        })()
+                    </script>
+                
+                
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+
+<div id="mt"></div>
+<script>
+    (function(){
+        var box = document.getElementById('mt');
+        var d = box.getAttribute('data-time');
+        //console.log(d)
+		var mydate = new Date();
+		var sday=mydate.getDate()+1
+		
+		//alert(sday);
+		var Jday="2012/08/"+sday;
+        var endTime = new Date(Jday + " 00:00:00").getTime();
+		
+        //console.log(endTime)
+        function now(time){
+            var h = parseInt(time / (60 * 60));
+            var m = parseInt(time % (60 * 60) / 60);
+            var s = parseInt(time % 60);
+            box.innerHTML =  + h + '  '+ '时' + m + '  '+ '分' + s + '秒';
+        }
+        function main(){
+            //console.log(new Date());
+            var nowTime = new Date().getTime();
+			
+			//console.log(mydate.getDate());
+			
+            var _time = parseInt((endTime - nowTime) / 1000);
+            var mt = setInterval(function(){
+                if(_time > 0){
+                    now(_time);
+                    _time--;
+                }else{
+                    clearInterval(mt);
+                    box.innerHTML = '剩余时间:0小时0分0秒';
+                }
+            },1000);
+        }
+        main();
+    })()
+</script>
+</body>
+</html>

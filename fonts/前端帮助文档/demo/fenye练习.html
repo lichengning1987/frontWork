@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<style type="text/css">
+    #Pagin{width:990px;margin:0 auto;}
+</style>
+<body>
+<div class="" id="Pagin">
+    <div class="con">
+        <h2 class="tipc">第一页标题</h2>
+        <div class="item" style="display: block; ">
+            1
+        </div>
+        <div class="item" style="display: block; ">
+            2
+        </div>
+        <div class="item" style="display: block; ">
+            3
+        </div>
+        <div class="item" style="display: block; ">
+            4
+        </div>
+    </div>
+    <div class="con">
+        <h2 class="tipc">第二页标题</h2>
+        <div class="item" style="display: block; ">
+            5
+        </div>
+        <div class="item" style="display: block; ">
+            6
+        </div>
+        <div class="item" style="display: block; ">
+            7
+        </div>
+        <div class="item" style="display: block; ">
+            8
+        </div>
+    </div>
+    <div class="con">
+        <h2 class="tipc">第三页标题</h2>
+        <div class="item" style="display: block; ">
+            9
+        </div>
+        <div class="item" style="display: block; ">
+            10
+        </div>
+        <div class="item" style="display: block; ">
+            11
+        </div>
+        <div class="item" style="display: block; ">
+            12
+        </div>
+    </div>
+</div>
+<div class="setPage" id="ColumnContainer">
+</div>
+
+<script src="http://a.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+<script type="text/javascript">
+    /*分页*/
+    var totalpage, pagesize, cpage, count, curcount, outstr;
+    var obj = document.getElementById("ColumnContainer");
+    cpage = 1;
+    totalpage = 3;
+    outstr = "";
+    function gotopage(target) {
+        cpage = target;
+        setPage();
+        setData(target);
+    }
+    function setData(pg) {
+        (function (S, pg) {
+            var DOM = S.DOM;
+            var item = S.query("#Pagin .item");
+            var tipc = S.query("#Pagin .tipc");
+            DOM.css(item, 'display', 'none');
+            DOM.css(tipc, 'display', 'none');
+            if (pg == 1) {
+                for (var k = 0; k < 4; k++) {
+                    DOM.css(item[k], 'display', 'block');
+                }
+                DOM.css(tipc[0], 'display', 'block');
+            }
+            if (pg == 2) {
+                for(var i=0;i<4;i++){
+                    DOM.css(item[pg + 2+i], 'display', 'block');
+                }
+                DOM.css(tipc[0], 'display', 'none');
+                DOM.css(tipc[1], 'display', 'block');
+            }else if(pg == 3){
+                for(var i=0;i<4;i++){
+                    DOM.css(item[pg + 5+i], 'display', 'block');
+                }
+                DOM.css(tipc[1], 'display', 'none');
+                DOM.css(tipc[2], 'display', 'block');
+            }
+        })(KISSY, pg)
+    }
+    setData(1)
+    function setPage() {
+        if (totalpage <= 10) {        //总页数小于十页
+            for (count = 1; count <= totalpage; count++) {
+                if (count != cpage) {
+                    outstr = outstr + "<a href='javascript:void(0)' onclick='gotopage(" + count + ")'>" + count + "</a>";
+                } else {
+                    outstr = outstr + "<span class='current' >" + count + "</span>";
+                }
+            }
+        }
+        if (totalpage > 10) {        //总页数大于十页
+            if (parseInt((cpage - 1) / 10) == 0) {
+                for (count = 1; count <= 10; count++) {
+                    if (count != cpage) {
+                        outstr = outstr + "<a href='javascript:void(0)' onclick='gotopage(" + count + ")'>" + count + "</a>";
+                    } else {
+                        outstr = outstr + "<span class='current'>" + count + "</span>";
+                    }
+                }
+                outstr = outstr + "<a href='javascript:void(0)' class='nex' onclick='gotopage(" + count + ")'> &gt;&gt;&gt; </a>";
+            }
+            else if (parseInt((cpage - 1) / 10) == parseInt(totalpage / 10)) {
+                outstr = outstr + "<a href='javascript:void(0)' class='pre' onclick='gotopage(" + (parseInt((cpage - 1) / 10) * 10) + ")'>&lt;&lt;&lt; </a>";
+                for (count = parseInt(totalpage / 10) * 10 + 1; count <= totalpage; count++) {
+                    if (count != cpage) {
+                        outstr = outstr + "<a href='javascript:void(0)' onclick='gotopage(" + count + ")'>" + count + "</a>";
+                    } else {
+                        outstr = outstr + "<span class='current'>" + count + "</span>";
+                    }
+                }
+            }
+            else {
+                outstr = outstr + "<a href='javascript:void(0)' class='pre' onclick='gotopage(" + (parseInt((cpage - 1) / 10) * 10) + ")'>&lt;&lt;&lt;</a>";
+                for (count = parseInt((cpage - 1) / 10) * 10 + 1; count <= parseInt((cpage - 1) / 10) * 10 + 10; count++) {
+                    if (count != cpage) {
+                        outstr = outstr + "<a href='javascript:void(0)' onclick='gotopage(" + count + ")'>" + count + "</a>";
+                    } else {
+                        outstr = outstr + "<span class='current'>" + count + "</span>";
+                    }
+                }
+                outstr = outstr + "<a href='javascript:void(0)' class='nex' onclick='gotopage(" + count + ")'> &gt;&gt;&gt; </a>";
+            }
+        }
+        obj.innerHTML = "<div id='setpage'><span id='info'>共" + totalpage + "页|第" + cpage + "页<\/span>" + outstr + "<\/div>";
+        outstr = "";
+    }
+    setPage();   //调用分页
+</script>
+
+</body>
+</html>

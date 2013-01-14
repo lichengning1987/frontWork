@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<div id="J-SHOU">收藏本页</div>
+ <script type="text/javascript">
+                        function addBookmark() {
+                            var title, url;
+                            title = document.title;
+                            url = document.location.href;
+                            if (window.sidebar) { //for FF
+                                window.sidebar.addPanel(title, url, "");
+                            } else if (document.all) { // for ie
+                                window.external.addFavorite(url, title);
+                            } else {
+                                alert('您的浏览器不支持此功能，您可以按下"Ctrl+d"键加入收藏！');
+                            }
+                            return false;
+                        }
+                        document.getElementById("J-SHOU").onclick=function(){
+                            addBookmark()
+                        }
+                    </script>
+</body>
+</html>

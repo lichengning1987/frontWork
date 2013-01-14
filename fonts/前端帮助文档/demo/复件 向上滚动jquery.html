@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<style type="text/css">
+	*{margin:0;padding:0;}
+	#dd{width:100px;margin:0 auto;}
+	li{height:20px; line-height:20px;}
+</style>
+<div id="dd" style="height:80px; overflow:hidden;border:1px solid red;">
+<ul>
+	<li>1111</li>
+    <li>2222</li>
+    <li>3333</li>
+    <li>4444</li>
+
+</ul>
+</div>
+
+ <script src="http://a.tbcdn.cn/libs/jquery/1.7.1/jquery.js"></script>
+<script type="text/javascript">
+    function scroll_new() {
+        jQuery(function () {
+            jQuery("#dd ul li:first").animate({marginTop:"20px"}, 1000, function () {
+                //jQuery(this).appendTo("#dd ul").css("margin-top", "0");
+				//console.log($(this))
+				//console.log($("#dd ul:last"));
+				jQuery("#dd ul li:first").css("margin-top", "0");
+				jQuery("#dd ul li:last").insertBefore(jQuery("#dd ul li:first")).css("margin-top","0");
+				//console.log(jQuery("#dd ul li:last"))
+				
+            })
+        })
+    }
+    jQuery(function () {
+        var scrollTimer;
+        jQuery("#dd").hover(function () {
+            clearInterval(scrollTimer);
+        },function () {
+            scrollTimer = setInterval(function () {
+                scroll_new()
+            }, 3000);
+        }).trigger("mouseleave");
+    });
+</script>
+</body>
+</html>

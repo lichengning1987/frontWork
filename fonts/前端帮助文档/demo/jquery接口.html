@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery接口</title>
+</head>
+
+<body>
+<ul id="zjmd">
+
+</ul>
+
+
+<div id="j_cg">
+</div>
+
+<script src="http://a.tbcdn.cn/libs/jquery/1.7.1/jquery.js"></script>
+<script type="text/javascript">/*jquery接口方法*/
+      var Surl="https://hi.alipay.com/query/winner_boc.json";
+//var Surl="http://localhost/login-status1";
+var ourl="https://hi.alipay.com/query/winner_boc.json?campId=12655&start=1&end=50&_input_charset=utf-8&r=1339045518058&_callback=zjmd";
+       window.bd=function(datas){
+           var str='';
+           var owap = document.getElementById('zjmd');
+           if(datas.stat=='ok'){
+               for(var i=0;i<datas.winners.length;i++){
+                   str+='<li>'+datas.winners[i].userName+'获得'+datas.winners[i].prizeName+'</li>'
+               }
+               owap.innerHTML=str;
+           }
+       };
+       $.ajax({
+           url:Surl,
+           type:'get',
+           dataType:'jsonp',
+           data:{
+               'campId':12655,
+               'start':1,
+               'end':50,
+               _callback:"window.bd" /*非常规接口用window.abc方法*/
+           }
+       });/*非常规接口用window.abc方法---END*/
+       var cgUrl="http://size.taobao.com/json/xinpin.htm";
+       //var oburl="http://wan.taobao.com/yeyou/ajax/ajax_get_recent_user_record.do";
+        var oins=document.getElementById("j_cg");
+        $.ajax({
+            url:cgUrl,
+            type:'get',
+            dataType:'jsonp',
+            data:{
+                'catId':16,
+                'count':30
+            },
+            success:function(datas1){
+                var str='';
+                //console.log(datas1);
+               // var json = eval("(" + datas1.data + ")");
+                //var list= S.JSON.parse(result.data).recent_user;
+                //console.log(list);
+               // console.log(json);
+/*                for(var i=0;i<json.recent_user.length;i++){
+                    var gameurl = "http://wan.taobao.com/yeyou/entra_game.html?game_id=" + json.recent_user[i].game_id;
+                    str +="<li>"+json.recent_user[i].mini_desc+'<a href="' + gameurl + '">'+json.recent_user[i].game_name+"</a><a href="+gameurl+">213123</a></li>";
+                }*/
+                //var list= S.JSON.parse(result.data).recent_user;
+                for(var i=0;i<datas1.result.length;i++){
+                    str +='<li><a  target="_blank" href="' + datas1.result[i].storeURL + '">'+datas1.result[i].nick+"</a>"+"<span>"+datas1.result[i].itemCount+"款新品</span>"+"</li>";
+                }
+                oins.innerHTML=str;
+            }
+        })
+</script>
+</body>
+</html>

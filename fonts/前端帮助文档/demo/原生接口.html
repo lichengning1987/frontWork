@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>原生接口</title>
+</head>
+
+<body>
+<div id="J-jiekou">
+</div>
+<script type="text/javascript">
+(function(){
+	var _sUrl = "http://house.taobao.com/index.do?action=IndexAction&event_submit_do_get_new_appoint=doGetNewAppoint&callback=bd";
+	function loadScript(url, callback){
+		var head = document.getElementsByTagName('head')[0];
+		var script = document.createElement('script');
+		//script.type = 'text/javascript';
+		script.src = url;
+		script.onload = script.onreadystatechange = function(){
+			if((!this.readyState || this.readyState === "loaded" || this.readyState === "complete")){
+				callback && callback();
+				//在IE浏览器处理内存泄漏
+				script.onload = script.onreadystatechange = null;
+				if (head && script.parentNode) {
+					head.removeChild(script);
+				}
+			}
+		};
+		//使用insertBefore，而不是appendChild避免了一个IE6的bug。
+		head.insertBefore(script, head.firstChild);
+	}
+	function callback(obj){
+            return data = obj;
+        }
+    window.bd = callback;
+	window.onload=function(){
+			loadScript(_sUrl,function(){
+					var sj = data;
+					var len = sj.length;        
+					var str="";
+					var NumEle = document.getElementById("J-jiekou");
+					for(var i=0;i<len;i++)
+					{str += '<li><span class="nickname">'+data[i].nickName+'</span><span class="loupan">刚刚在<b>'+data[i].loupanName+'</b>预约看房</span></li>'}
+						NumEle.innerHTML=str;
+					});
+		}		
+})()
+
+
+</script>
+</body>
+</html>

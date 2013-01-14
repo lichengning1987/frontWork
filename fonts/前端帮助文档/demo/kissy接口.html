@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>KISSY接口</title>
+</head>
+
+<body>
+<div id="J-jiekou">
+
+</div>
+<script src="http://a.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+<script type="text/javascript">/*kissy接口方法*/
+    (function(S){
+        var E= S.Event,D= S.DOM;
+        var Surl="https://hi.alipay.com/query/winner_boc.json";
+        window.abc=function(datas1){
+            var str='';
+            var owap = document.getElementById('J-jiekou');
+            if(datas1.stat==='ok'){
+                for(var i=0;i<datas1.winners.length;i++){
+                    str+='<li><a href="#">'+datas1.winners[i].userName+"获得"+datas1.winners[i].prizeName+'</a></li>'
+                    console.log(datas1.winners[i].userName)
+                }
+                owap.innerHTML=str;
+            }
+        };
+        S.io({
+            type:"get",
+            url:Surl,
+            dataType:'jsonp',
+            data:{
+                'campId':12554,
+                'start':1,
+                'end':25,
+                _callback:"window.abc" /*非常规接口用window.abc方法*/
+            }
+/*常规CALLBACK用success:function(data){
+                var str="";
+            }*/
+        })
+    })(KISSY)
+
+</script>
+
+</body>
+</html>

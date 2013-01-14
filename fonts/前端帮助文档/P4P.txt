@@ -1,0 +1,531 @@
+<style>
+#content,#page{width:100%;}
+body,.xyq_container ul, .xyq_container ol, .xyq_container li, .xyq_container p ,div,img,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
+.xyq_container h3, .xyq_container h4, .xyq_container h5, .xyq_container h6 {font-size:100%;font-weight:normal;margin:0;padding:0;}
+.xyq_container img{display:block;border:0;}
+body{width:100%;font-size:12px; font-family:"宋体";background-image:url(about:blank);background-attachment:fixed;}
+.xyq_container a{ text-decoration:none;outline:none;}
+.xyq_container em{font-style:normal;}
+.xyq_container ul{list-style:none;}
+.clearfix:after{ content:'.'; display:block; clear:both; height:0; visibility:hidden;}
+.clearfix{ zoom:1;}
+.xyq_container{background-color:#FEFEF6;}
+.xyq_container .xyq_header{width:100%;background:url(" http://img03.taobaocdn.com/tps/i3/T10WLkXmphXXcPo9.U-1440-518.jpg") no-repeat center top;height:518px;}
+.xyq_container .xyq_header img{width:990px;margin:0 auto;}
+.xyq_container .xyq_content{width:990px;margin:0 auto;position:relative;}
+.xyq_container .xyq_content .xyq_ul{width:990px;margin:-5px auto 0 auto;}
+.xyq_container .xyq_content .xyq_ul ul{width:977px;margin-left:13px;margin-bottom:10px;}
+.xyq_container .xyq_content .xyq_ul ul li{position:relative;width:185px;float:left;margin-right:10px;display:inline;}
+.xyq_container .xyq_content .xyq_ul ul li .pic{width:185px;height:185px;}
+.xyq_container .xyq_content .xyq_ul .ul225 li .pic{width:185px;height:225px;}
+.xyq_container .xyq_content .xyq_ul ul li p{color:#fff;width:175px;padding-left:10px;overflow:hidden;line-height:18px;}
+.xyq_container .xyq_content .xyq_ul ul li b{font-size:13px;color:#fff;width:175px;padding-left:10px;overflow:hidden;line-height:18px;}
+.xyq_container .xyq_content .xyq_ul ul li .btn{position:absolute;left:139px;bottom:10px;}
+
+.xyq_container .xyq_content .xyq_ul1{position:relative;background-color:#F3D1C6;}
+
+.xyq_container .xyq_content .xyq_ul1 .btn{background:url("http://img02.taobaocdn.com/tps/i2/T1BmLiXaJkXXbnt8Dc-31-16.jpg") no-repeat;width:31px;height:16px;}
+.xyq_container .xyq_content .xyq_ul2 .btn{background:url("http://img02.taobaocdn.com/tps/i2/T1QAHiXmllXXcMdBDc-31-15.jpg") no-repeat;width:31px;height:15px;}
+.xyq_container .xyq_content .xyq_ul3 .btn{background:url("http://img03.taobaocdn.com/tps/i3/T1VJbkXk0cXXcMdBDc-31-15.jpg") no-repeat;width:31px;height:15px;}
+.xyq_container .xyq_content .xyq_ul4 .btn{background:url("http://img01.taobaocdn.com/tps/i1/T1kgnkXf4bXXcMdBDc-31-15.jpg") no-repeat;width:31px;height:15px;}
+.xyq_container .xyq_content .xyq_ul1 ul li{background-color:#A87666;}
+.xyq_container .xyq_content .xyq_ul1 ul li p.yj{color:#EBC0B3;}
+.xyq_container .xyq_content .xyq_bt{margin-top:20px;}
+.xyq_container .xyq_content .xyq_ul2{background-color:#8AC9D2; padding-bottom:1px;}
+.xyq_container .xyq_content .xyq_ul2 ul li{background-color:#4A939D;}
+.xyq_container .xyq_content .xyq_ul2 ul li p.yj{color:#A0DFE8;}
+.xyq_container .xyq_content .xyq_ul3{background-color:#9FBDE7; padding-bottom:1px;}
+.xyq_container .xyq_content .xyq_ul3 ul li{background-color:#4A75AD;}
+.xyq_container .xyq_content .xyq_ul3 ul li p.yj{color:#9BBCE7;}
+.xyq_container .xyq_content .xyq_ul4{background-color:#D29C8A; padding-bottom:1px;}
+.xyq_container .xyq_content .xyq_ul4 ul li{background-color:#A4634E;}
+.xyq_container .xyq_content .xyq_ul4 ul li p.yj{color:#ECBCAC;}
+.xyq_container .xyq_content .xyq_banner ul li{ width:230px; height:160px;overflow:hidden; display:inline;float:left; margin-left:14px; margin-top:10px;}
+.xyq_container .xyq_content .hd{margin:20px auto;}
+.xyq_container .xyq_nav{width:160px;height:260px;position:fixed;left:50%;margin-left:516px;top:440px;}
+</style>
+<script type="text/javascript">
+(function (d) {
+var ta=d.createElement("script");ta.type="text/javascript";ta.async=true;ta.id="tb-beacon";
+ta.setAttribute("exparams","category=&userid=734172274&tid=46a33075db88af3e546bccde7f5c6070&channel=112&atpanel_end");
+ta.src=("https:"==d.location.protocol?"https://s":"http://a")+".tbcdn.cn/s/atp.js";
+d.getElementsByTagName("head")[0].appendChild(ta);
+})(document);
+</script>
+
+<script type="text/javascript">
+(function (d) {
+var ta=d.createElement("script");ta.type="text/javascript";ta.async=true;ta.id="tb-beacon-ac";
+ta.setAttribute("exparams","category=&userid=734172274&channel=112&");
+ta.src=("https:"==d.location.protocol?"https://s":"http://a")+".tbcdn.cn/s/ac.js";
+d.getElementsByTagName("head")[0].appendChild(ta);
+})(document);
+</script>
+
+<div class="xyq_container">
+	<div class="xyq_header">
+    	<img src=" http://img02.taobaocdn.com/tps/i2/T1kRLjXmdiXXakLyHh-990-213.jpg" />
+        <img src=" http://img01.taobaocdn.com/tps/i1/T1LuviXddpXXb7R5Yh-990-235.jpg" />
+      <img src="http://img04.taobaocdn.com/tps/i4/T1.B_jXltiXXcjwxYs-990-70.jpg" id="one"/>
+    </div><!--header-->
+    <div class="xyq_content">
+   	  <div class="xyq_ul xyq_ul1 clearfix">
+        	<ul class="ultop ul225 clearfix" id="J_p4pItems1"></ul>
+            <ul class="ultop clearfix" id="J_p4pItems5"></ul>
+            <ul class="ultop clearfix" id="J_p4pItems9"></ul>
+            <ul class="ultop clearfix" id="J_p4pItems13"></ul>
+            <ul class="ultop clearfix" id="J_p4pItems17"></ul>	
+            <ul class="ultop clearfix" id="J_p4pItems18"></ul>
+            <div class="aa"></div>
+        </div><!--ul1-->
+      <div class="xyq_bt" id="two" style="margin-top:20px;"><img src="http://img03.taobaocdn.com/tps/i3/T1AY_jXfXjXXX5JNPs-990-57.jpg" /></div>
+        <div class="xyq_ul xyq_ul2">
+        	<ul class="clearfix ul225" id="J_p4pItems2"></ul>	
+            <ul class="clearfix" id="J_p4pItems6"></ul>	
+            <ul class="clearfix" id="J_p4pItems10"></ul>	
+            <ul class="clearfix" id="J_p4pItems14"></ul>	
+            <ul class="clearfix" id="J_p4pItems19"></ul>	
+        </div><!--ul2-->
+      <div class="xyq_bt" id="three"><img src="http://img01.taobaocdn.com/tps/i1/T1E.2hXdNpXXbgexTs-990-59.jpg" /></div>
+        <div class="xyq_ul xyq_ul3">
+        	<ul class="clearfix ul225" id="J_p4pItems3"></ul>	
+            <ul class="clearfix" id="J_p4pItems7"></ul>	
+            <ul class="clearfix" id="J_p4pItems11"></ul>	
+            <ul class="clearfix" id="J_p4pItems15"></ul>	
+            <ul class="clearfix" id="J_p4pItems20"></ul>		
+        </div><!--ul3-->
+      <div class="xyq_bt" id="four"><img src="http://img04.taobaocdn.com/tps/i4/T10mziXoxjXXbgexTs-990-59.jpg" /></div>
+        <div class="xyq_ul xyq_ul4">
+        	<ul class="clearfix ul225" id="J_p4pItems4"></ul>	
+            <ul class="clearfix" id="J_p4pItems8"></ul>	
+            <ul class="clearfix" id="J_p4pItems12"></ul>	
+            <ul class="clearfix " id="J_p4pItems16"></ul>	
+            <ul class="clearfix" id="J_p4pItems21"></ul>		
+        </div><!--ul4-->
+        <div class="hd"><img src="http://img02.taobaocdn.com/tps/i2/T1NxzjXeRhXXbfk4vs-990-27.jpg" /></div>
+        <div class="xyq_banner">
+          <ul class="clearfix">
+             <cms:custom title="底部Banner230*160" group="底部Banner" fields="img:图片地址:url,href:图片链接地址(URL):url" row="100" defaultRow="16" name="32d4e06b-2392-4f5c-a387-992d54ec7e9b"> 
+                #foreach ($item in $customList)
+               <li><a href="$!item.href" target="_blank"><img src="$!item.img" /></a></li>
+                #end
+             </cms:custom>
+         </ul>
+		</div><!--xyq_banner-->
+    </div><!--content-->
+    <div class="xyq_nav">
+    	<img src="http://img04.taobaocdn.com/tps/i4/T1CujkXl8cXXbFndfM-160-260.jpg" border="0" usemap="#Map" />
+        <map name="Map" id="Map">
+          <area shape="rect" coords="10,11,121,45" href="#one" />
+          <area shape="rect" coords="6,57,126,90" href="#two" />
+          <area shape="rect" coords="5,102,141,140" href="#three" />
+          <area shape="rect" coords="5,150,156,187" href="#four" />
+          <area shape="rect" coords="19,206,114,251" href="#" />
+        </map>
+    </div><!--nav-->
+</div><!--container-->
+<script type="text/html" id="J_p4pItemTmpl">
+<li>
+	<a href="{{eurl}}" target="_blank" style="text-decoration:none;">
+		<img class="pic" src="{{pictureUrl}}" />
+		<p>{{itemTitle}}</p>
+		<p class="yj">原价：<del>￥<% print((originalPrice / 100).toFixed(0)); %></del></p>
+		<b>淘宝价：￥<% print((activityPrice / 100).toFixed(0)); %></b>
+		<div class="btn"> </div>
+	</a>
+</li>
+</script>
+<script src="http://a.tbcdn.cn/apps/hesper/vc/p4p/p4p.js"></script>
+<script>
+p4p.getItems({
+    activity_id: 14199,
+    blocks: [
+        {
+            id: 17771,
+            pid: '420740_1007',
+            count: 5,
+            tmpl: KISSY.get('#J_p4pItemTmpl').innerHTML,
+            resultContainer: '#J_p4pItems1',
+            cb: function(items) {
+                // window.console && console.log &&
+                //     console.log(items);
+            }
+        },
+        {
+            id: 17772,
+            pid: '420740_1007',
+            count: 5,
+            tmpl: KISSY.get('#J_p4pItemTmpl').innerHTML,
+            resultContainer: KISSY.get('#J_p4pItems2'),
+            cb: function(items) {
+                // window.console && console.log &&
+                //     console.log(items);
+            }
+        },
+		{
+            id: 17773,
+            pid: '420740_1007',
+            count: 5,
+            tmpl: KISSY.get('#J_p4pItemTmpl').innerHTML,
+            resultContainer: KISSY.get('#J_p4pItems3'),
+            cb: function(items) {
+                // window.console && console.log &&
+                //     console.log(items);
+            }
+        },
+		{
+            id: 17774,
+            pid: '420740_1007',
+            count: 5,
+            tmpl: KISSY.get('#J_p4pItemTmpl').innerHTML,
+            resultContainer: KISSY.get('#J_p4pItems4'),
+            cb: function(items) {
+                // window.console && console.log &&
+                //     console.log(items);
+            }
+        }
+    ],
+    apiPrefix: '',
+    charset: 'utf-8'
+}, false);
+
+p4p.getItems({
+    activity_id: 14245,
+    blocks: [
+        {
+            id: 17998,
+            pid: '420740_1007',
+            count: 5,
+            tmpl: KISSY.get('#J_p4pItemTmpl').innerHTML,
+            resultContainer: '#J_p4pItems5',
+            cb: function(items) {
+                // window.console && console.log &&
+                //     console.log(items);
+            }
+        },
+        {
+            id: 17999,
+            pid: '420740_1007',
+            count: 5,
+            tmpl: KISSY.get('#J_p4pItemTmpl').innerHTML,
+            resultContainer: KISSY.get('#J_p4pItems6'),
+            cb: function(items) {
+                // window.console && console.log &&
+                //     console.log(items);
+            }
+        },
+		{
+            id: 18000,
+            pid: '420740_1007',
+            count: 5,
+            tmpl: KISSY.get('#J_p4pItemTmpl').innerHTML,
+            resultContainer: KISSY.get('#J_p4pItems7'),
+            cb: function(items) {
+                // window.console && console.log &&
+                //     console.log(items);
+            }
+        },
+		{
+            id: 18001,
+            pid: '420740_1007',
+            count: 5,
+            tmpl: KISSY.get('#J_p4pItemTmpl').innerHTML,
+            resultContainer: KISSY.get('#J_p4pItems8'),
+            cb: function(items) {
+                // window.console && console.log &&
+                //     console.log(items);
+            }
+        }
+    ],
+    apiPrefix: '',
+    charset: 'utf-8'
+}, false);
+
+p4p.getItems({
+    activity_id: 14085,
+    blocks: [
+        {
+            id: 17325,
+            pid: '420740_1007',
+            count: 5,
+            tmpl: KISSY.get('#J_p4pItemTmpl').innerHTML,
+            resultContainer: '#J_p4pItems9',
+            cb: function(items) {
+                // window.console && console.log &&
+                //     console.log(items);
+            }
+        },
+        {
+            id: 17326,
+            pid: '420740_1007',
+            count: 5,
+            tmpl: KISSY.get('#J_p4pItemTmpl').innerHTML,
+            resultContainer: KISSY.get('#J_p4pItems10'),
+            cb: function(items) {
+                // window.console && console.log &&
+                //     console.log(items);
+            }
+        },
+		{
+            id: 17327,
+            pid: '420740_1007',
+            count: 5,
+            tmpl: KISSY.get('#J_p4pItemTmpl').innerHTML,
+            resultContainer: KISSY.get('#J_p4pItems11'),
+            cb: function(items) {
+                // window.console && console.log &&
+                //     console.log(items);
+            }
+        },
+		{
+            id: 17328,
+            pid: '420740_1007',
+            count: 5,
+            tmpl: KISSY.get('#J_p4pItemTmpl').innerHTML,
+            resultContainer: KISSY.get('#J_p4pItems12'),
+            cb: function(items) {
+                // window.console && console.log &&
+                //     console.log(items);
+            }
+        }
+    ],
+    apiPrefix: '',
+    charset: 'utf-8'
+}, false);
+
+p4p.getItems({
+    activity_id: 14111,
+    blocks: [
+        {
+            id: 17360,
+            pid: '420740_1007',
+            count: 5,
+            tmpl: KISSY.get('#J_p4pItemTmpl').innerHTML,
+            resultContainer: '#J_p4pItems13',
+            cb: function(items) {
+                // window.console && console.log &&
+                //     console.log(items);
+            }
+        },
+        {
+            id: 17361,
+            pid: '420740_1007',
+            count: 5,
+            tmpl: KISSY.get('#J_p4pItemTmpl').innerHTML,
+            resultContainer: KISSY.get('#J_p4pItems14'),
+            cb: function(items) {
+                // window.console && console.log &&
+                //     console.log(items);
+            }
+        },
+		{
+            id: 17362,
+            pid: '420740_1007',
+            count: 5,
+            tmpl: KISSY.get('#J_p4pItemTmpl').innerHTML,
+            resultContainer: KISSY.get('#J_p4pItems15'),
+            cb: function(items) {
+                // window.console && console.log &&
+                //     console.log(items);
+            }
+        },
+		{
+            id: 17363,
+            pid: '420740_1007',
+            count: 5,
+            tmpl: KISSY.get('#J_p4pItemTmpl').innerHTML,
+            resultContainer: KISSY.get('#J_p4pItems16'),
+            cb: function(items) {
+                // window.console && console.log &&
+                //     console.log(items);
+            }
+        }
+    ],
+    apiPrefix: '',
+    charset: 'utf-8'
+}, false);
+
+p4p.getItems({
+    activity_id: 14132,
+    blocks: [
+        {
+            id: 17428,
+            pid: '420740_1007',
+            count: 5,
+            tmpl: KISSY.get('#J_p4pItemTmpl').innerHTML,
+            resultContainer: '#J_p4pItems17',
+            cb: function(items) {
+                // window.console && console.log &&
+                //     console.log(items);
+            }
+        },
+        {
+            id: 17429,
+            pid: '420740_1007',
+            count: 5,
+            tmpl: KISSY.get('#J_p4pItemTmpl').innerHTML,
+            resultContainer: KISSY.get('#J_p4pItems18'),
+            cb: function(items) {
+                // window.console && console.log &&
+                //     console.log(items);
+            }
+        },
+		{
+            id: 17430,
+            pid: '420740_1007',
+            count: 5,
+            tmpl: KISSY.get('#J_p4pItemTmpl').innerHTML,
+            resultContainer: KISSY.get('#J_p4pItems19'),
+            cb: function(items) {
+                // window.console && console.log &&
+                //     console.log(items);
+            }
+        },
+		{
+            id: 17431,
+            pid: '420740_1007',
+            count: 5,
+            tmpl: KISSY.get('#J_p4pItemTmpl').innerHTML,
+            resultContainer: KISSY.get('#J_p4pItems20'),
+            cb: function(items) {
+                // window.console && console.log &&
+                //     console.log(items);
+            }
+        }
+    ],
+    apiPrefix: '',
+    charset: 'utf-8'
+}, false);
+p4p.getItems({
+    activity_id: 14166,
+    blocks: [
+        {
+            id: 17599,
+            pid: '420740_1007',
+            count: 5,
+            tmpl: KISSY.get('#J_p4pItemTmpl').innerHTML,
+            resultContainer: '#J_p4pItems21'
+        }
+    ],
+    charset: 'utf-8'
+});
+</script>
+<script type="text/html" id="J_p4pItemTmpl">
+	<li>
+		 <a href="{{eurl}}"  target="_blank"><img src="{{pictureUrl}}" /></a>
+		 <p><a href="{{eurl}}" class="ln_foodlink" target="_blank">{{itemTitle}}</a></p>
+		 <p class="ln_scprice">市场价：￥<% print((originalPrice/100).toFixed(2)); %></p>
+		 <p class="ln_tbprice">降火价： ￥<em><% print((activityPrice / 100).toFixed(2)); %></em></p>
+		 <a href="{{eurl}}" class="ln_ljbtn" target="_blank"><img src="http://img04.taobaocdn.com/tps/i4/T1rGPmXoBXXXcBw8_o-78-24.png" /></a>
+	</li>
+</script>
+<!--<script src="http://a.tbcdn.cn/apps/hesper/vc/p4p/p4p.js"></script>-->
+<script src="http://www.taobao.com/go/rgn/market/p4p.js" charset="utf-8"></script>
+<script>
+var arr=[
+	[14343,18472,'420821_1007',6],
+	[14343,18473,'420821_1007',4]
+]<!--ul个数10 则数组个数为10-->
+
+for(var i=0;i<arr.length;i++){
+	var obj=arr[i];
+	(function(obj,i){
+			p4p.getItems({
+    activity_id: obj[0],
+    blocks: [
+        {
+            id: obj[1],
+            pid:obj[2],
+            count: obj[3],
+			tmpl: KISSY.get('#J_p4pItemTmpl').innerHTML,
+            resultContainer: '#J_p4pItems'+(i+1),
+            cb: function(items) {
+                // window.console && console.log &&
+                //     console.log(items);
+            }}
+			]
+		});
+	})(obj,i);
+}
+ KISSY.get('#J_p4pItemTmpl').innerHTML
+ 
+=============================================
+<script type="text/html" id="J_p4pItemTmpl">
+         <li>
+			  <a href="{{eurl}}" target="_blank" class="img"><img src="{{pictureUrl}}" /></a>
+			  <h3><a href="{{eurl}}" target="_blank">{{itemTitle}}</a></h3>
+			  <del>原价：￥<% print((originalPrice / 100).toFixed(2)); %></del>
+			  <em>现价：￥<span><% print((activityPrice / 100).toFixed(2)); %></span></em>
+			  <a href="{{eurl}}" target="_blank" class="buy"></a>
+        </li>
+</script>
+<script src="http://www.taobao.com/go/rgn/market/p4p.js" charset="utf-8"></script>
+
+<script>
+var arr=[
+	[12500,9474,'420855_1007',5],
+	[12502,9485,'420855_1007',15],
+	[12504,9487,'420855_1007',15],
+	[12503,9486,'420855_1007',15],
+	[12507,9513,'420855_1007',10],
+	[12573,9701,'420855_1007',2],
+	[12573,9702,'420855_1007',2],
+	[12573,9703,'420855_1007',1],
+	[12536,9613,'420855_1007',5],
+	[12550,9664,'420855_1007',5]
+]<!--ul个数10 则数组个数为10-->
+
+for(var i=0;i<arr.length;i++){
+	var obj=arr[i];
+	(function(obj,i){
+			p4p.getItems({
+    activity_id: obj[0],
+    blocks: [
+        {
+            id: obj[1],
+            pid:obj[2],
+            count: obj[3],
+			tmpl: KISSY.get('#J_p4pItemTmpl').innerHTML,
+            resultContainer: '#J_p4pItems'+(i+1),
+            cb: function(items) {
+                // window.console && console.log &&
+                //     console.log(items);
+            }}
+			]
+		});
+	})(obj,i);
+}
+  KISSY.get('#J_p4pItemTmpl').innerHTML
+  
+  
+  var arr=[
+	[14343,18472,'420821_1007',6],
+	[14343,18473,'420821_1007',4]
+]<!--ul个数10 则数组个数为10-->
+
+for(var i=0;i<arr.length;i++){
+	var obj=arr[i];
+	(function(obj,i){
+			p4p.getItems({
+    activity_id: obj[0],
+    blocks: [
+        {
+            id: obj[1],
+            pid:obj[2],
+            count: obj[3],
+			tmpl: KISSY.get('#J_p4pItemTmpl').innerHTML,
+            resultContainer: '#J_p4pItems'+(i+1),
+            cb: function(items) {
+                // window.console && console.log &&
+                //     console.log(items);
+            }}
+			]
+		});
+	})(obj,i);
+}
+  KISSY.get('#J_p4pItemTmpl').innerHTML
+  
+
+
+
+

@@ -1,0 +1,2742 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS效果集合</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        body, .ln_container ul, .ln_container ol, .ln_container p, .ln_container h2 {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 12px/1.5 Tahoma;
+        }
+
+        .ln_container ul {
+            list-style: none;
+        }
+
+        .ln_container img {
+            display: block;
+            border: none;
+        }
+
+        .ln_container em, strong {
+            font-style: none;
+        }
+
+        .ln_container .clear {
+            zoom: 1;
+        }
+
+        .ln_container .clear:after {
+            display: block;
+            content: '.';
+            visibility: hidden;
+            height: 0;
+            clear: both;
+        }
+        .hello{width:400px;margin:100px auto;}
+        .ln_container .lcontent{width:990px;margin:0 auto;}
+        .ln_container .navlesson{width:250px;border:10px solid #CCC;padding:5px; float:left;margin-right:3px;  position:absolute;left:0;top:20px;}
+        .ln_container .navlesson h2{height:30px;line-height:30px; background:#0099FF; font-size:14px; padding-left:1em;}
+        .ln_container .navlesson h2.current{background:#6C3;}
+        .ln_container .navlesson ul{ height:0; overflow:hidden;margin-bottom:1px; }
+        .ln_container .navlesson ul li{line-height:30px;background:#77CCFF; margin-top:1px; padding-left:1em;}
+        .ln_container .navlesson ul li span{cursor:pointer;display:block;width:200px;}
+        .delay{width:604px;margin:0 auto;border:2px solid #eee;}
+        .delay textarea.subText{width:600px;height:300px;}
+    </style>
+</head>
+<body>
+<div class="ln_container">
+    <div class="lcontent" id="oBox1">
+    <div class="hello" id="Mars">
+
+    </div>
+        <div class="navlesson" id="lesson">
+            <h2>Tab</h2>
+            <ul>
+                <li><span>常用Tab</span></li>
+                <li><span>常用Tab（KISSY）</span></li>
+            </ul>
+            <h2>Slide</h2>
+            <ul>
+                <li><span>图片切换之淡入淡出</span></li>
+                <li><span>图片切换之左右切换(旋转木马)</span></li>
+                <li><span>图片遮罩</span></li>
+                <li><span>全屏切换之淡入淡出</span></li>
+            </ul>
+            <h2>拖拽库</h2>
+            <ul>
+                <li><span>简化拖拽</span></li>
+            </ul>
+            <h2>倒计时</h2>
+            <ul>
+                <li><span>简单倒计时</span></li>
+                <li><span>图片倒计时</span></li>
+                <li><span>本地倒计时</span></li>
+                <li><span>服务器倒计时(KISSY服务器)</span></li>
+            </ul>
+            <h2>随机数</h2>
+            <ul>
+                <li><span>页面刷新位置随机显示</span></li>
+                <li><span>按需调整模块位置</span></li>
+            </ul>
+            <h2>分页功能</h2>
+            <ul>
+                <li><span>客户端分页</span></li>
+            </ul>
+            <h2>其他</h2>
+            <ul>
+                <li><span>收藏</span></li>
+                <li><span>获取地址栏特殊字符</span></li>
+                <li><span>插入Flash</span></li>
+            </ul>
+            <h2>瀑布流</h2>
+            <ul>
+                <li><span>原生瀑布流</span></li>
+            </ul>
+            <h2>接口</h2>
+            <ul>
+                <li><span>原生接口</span></li>
+                <li><span>KISSY接口</span></li>
+                <li><span>jquery接口</span></li>
+            </ul>
+            <h2>jquery</h2>
+            <ul>
+                <li><span>动画变大变小</span></li>
+                <li><span>联动下拉框</span></li>
+                <li><span>全选框</span></li>
+                <li><span>相册</span></li>
+            </ul>
+
+        </div>
+        <div class="delay">
+            <div class="safe"><!--常用tab切换-->
+                <h3><a href="demo/Tab.html" target="_blank">demo</a></h3>
+                <h2>css样式表现</h2>
+                <textArea class="subText">
+                    <style type="text/css">
+                        body,.container ul{margin:0;padding:0;}
+                        .container ul{ list-style:none;}
+                        .container .clearfix{zoom:1;}
+                        .container .clearfix:after{ content:'.'; display:block; clear:both; visibility:hidden; height:0;}
+                        .box{width:300px;height:300px;margin:0 auto;border:1px solid #000;}
+                        .container .boxheader{width:300px;height:50px;line-height:50px;}
+                        .container .boxheader li{float:left;width:99px; border-right:1px solid #000; border-bottom:1px solid #000;}
+                        .container .boxheader .current{ border-bottom:none;}
+                        .container .boxheade .three{border-right:0;}
+                        .container .tabmain{width:300px;height:250px;}
+                    </style>
+                </textArea>
+                <h2>div结构</h2>
+                <textArea class="subText">
+                    <div class="container">
+                        <div class="box clearfix" id="box">
+                            <ul class="boxheader clearfix" >
+                                <li class="current  one">111</li>
+                                <li  class="two">222</li>
+                                <li  class="three">333</li>
+                            </ul>
+                            <div class="tabmain">
+                                11111
+                            </div>
+                            <div class="tabmain" style="display:none;">
+                                22222
+                            </div>
+                            <div class="tabmain" style="display:none;">
+                                3333
+                            </div>
+                        </div>
+                    </div>
+                </textArea>
+                <h2>JS行为</h2>
+                <textArea class="subText">
+                    <script type="text/javascript">
+                        (function(){
+                            var $=function(id){return typeof id === "string" ? document.getElementById(id):id;}
+                            var $$=function(tagname,obj){return (obj || document).getElementsByTagName(tagname)};
+                            var $$$=function(sClass, obj){
+                                var aClass = [];
+                                var reClass = new RegExp("(^| )" + sClass + "( |$)");
+                                var aElem = $$("*", obj);
+                                for (var i = 0; i < aElem.length; i++) reClass.test(aElem[i].className) && aClass.push(aElem[i]);
+                                return aClass
+                            };
+                            function hasClass(obj,cls)
+                            {
+                                return (new RegExp("\\b"+cls+"\\b")).test(obj.className);
+                                //return obj.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+                            }
+                            function addClass(obj,cls)
+                            {
+                                if(!hasClass(obj,cls))
+                                {
+                                    obj.className.replace(/\s/g,'')==='' ? obj.className = cls : obj.className+= " "+cls;
+                                }
+                            }
+                            function removeClass(obj,cls)
+                            {
+                                return obj.className = obj.className.replace(new RegExp("\\b"+cls+"\\b"),"");
+                                //hasClass(obj,cls) && (obj.className = obj.className.replace(new RegExp('(\\s*|^)'+cls+'(\\s*|$)'),' '));
+                            }
+                            function switchtab(id,cls1,cls2)
+                            {
+                                this.oBox=$(id);
+                                this.oUl=$$("ul",this.oBox)[0];
+                                this.oLi=$$("li",this.oUl);
+                                this.classHover=cls1;
+                                this.classname=$$$(cls2,this.oBox);
+
+                            }
+                            switchtab.prototype={
+                                init:function(){
+                                    var oThis=this;
+                                    for(var i=0;i<this.oLi.length;i++)
+                                    {
+                                        this.oLi[i].index=i;
+                                        this.oLi[i].onmouseover=function(){
+                                            oThis.number1=this.index;
+                                            oThis.overs();
+                                        }
+                                    }
+                                },
+                                overs:function(){
+                                    for(var i=0;i<this.oLi.length;i++)
+                                    {
+                                        removeClass(this.oLi[i],this.classHover);
+                                        this.classname[i].style.display="none";
+                                    }
+                                    addClass(this.oLi[this.number1],this.classHover);
+                                    this.classname[this.number1].style.display="block";
+                                    //alert(this.number1);
+                                }
+                            }
+                            var p=new switchtab("box","current","tabmain")
+                            p.init();
+                        })()
+                    </script>
+                </textArea>
+            </div>
+            <div class="safe">
+                <h3><a href="demo/Tab_kissy.html" target="_blank">demo</a></h3>
+                <h2>css样式表现</h2>
+                <textArea class="subText">
+                    <style type="text/css">
+
+                        ul {
+                            list-style: none;
+                            margin: 0;
+                            padding: 0;
+                        }
+
+                        #demo1 {
+                            position: relative;
+                            width: 750px;
+                            padding-top: 29px;
+                        }
+
+                        #demo1 .ks-switchable-nav {
+                            position: absolute;
+                            left: 20px;
+                            margin-top: -29px;
+                            z-index: 99;
+                        }
+
+                        #demo1 .ks-switchable-nav li {
+                            float: left;
+                            width: 130px;
+                            height: 27px;
+                            line-height: 21px;
+                            text-align: center;
+                            background: #999;
+                            margin-right: 3px;
+                            padding-top: 8px;
+                            cursor: pointer;
+                        }
+
+                        #demo1 .ks-switchable-nav li.ks-active {
+                            background: red;
+                            cursor: default;
+                        }
+
+                        #demo1 .ks-switchable-content {
+                            position: relative;
+                            height: 120px;
+                            padding: 20px;
+                            border: 1px solid #AEC7E5;
+                        }
+                    </style>
+                </textArea>
+                <h2>div结构</h2>
+                <textArea class="subText">
+                    <div id="demo1" class="s-demo">
+                        <ul class="ks-switchable-nav">
+                            <li>标题 A</li>
+                            <li>标题 B</li>
+                            <li>标题 C</li>
+                            <li>标题 D</li>
+                            <li>标题 E</li>
+                        </ul>
+                        <div class="ks-switchable-content">
+                            <div style="display: none">A</div>
+                            <div style="display: none">B</div>
+                            <div style="display: none">C</div>
+                            <div style="display: none">D</div>
+                            <div style="display: none">E</div>
+
+                        </div>
+                    </div>
+                </textArea>
+                <h2>JS行为</h2>
+                <textArea class="subText">
+                    <script src="http://a.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+                    <script>
+                        KISSY.use("datalazyload,switchable", function (S) {
+                            var Tabs = S.Tabs;
+                            S.ready(function (S) {
+                                window.tabs = new Tabs('#demo1', {
+                                    // aria:false 默认 true，支持 aria
+                                    switchTo:0
+                                });
+                                tabs.on('beforeSwitch', function (ev) {
+                                    var index = ev.toIndex;
+                                    if (index !== 0 && index !== 4) { // 不改变第 1 个和第 5 个 Panel 的内容
+                                        //this.panels[index].innerHTML = 'index = ' + index;
+                                    }
+                                });
+                            });
+                        });
+                    </script>
+                </textArea>
+            </div><!--tab(KISSY)-->
+        </div>
+        <div class="delay">
+            <div class="safe">
+                <h3><a href="demo/index(面向对象淡入淡出).html" target="_blank">demo</a></h3>
+                <h2>css样式表现</h2>
+                <textArea class="subText">
+                    <style type="text/css">
+                        body,div,ul,li{margin:0;padding:0;}
+                        ul{list-style-type:none;}
+                        body{background:#000;text-align:center;font:12px/20px Arial, Helvetica, sans-serif;}
+                        #box{position:relative;width:492px;height:172px;background:#fff;border-radius:5px;border:8px solid #fff; margin:10px auto;}
+                        #box .list{position:relative;width:490px;height:170px;overflow:hidden;border:1px solid #ccc;}
+                        #box .list li{position:absolute;left:0;top:0;width:490px;height:170px;opacity:0;filter:alpha(opacity=0);}
+                        #box .list a{width:490px;height:170px; display:block;}
+                        #box .list .current{opacity:1;filter:alpha(opacity=100);}
+                        #box .count{position:absolute;right:0;bottom:5px; z-index:20;}
+                        #box .count li{color:#fff;float:left;width:20px;height:20px;cursor:pointer;margin-right:5px;overflow:hidden;background:#f90;opacity:0.7;filter:alpha(opacity=70);border-radius:20px;}
+                        #box .count .current{color:#fff;opacity:1;filter:alpha(opacity=100);font-width:700;background:#f60;}
+                    </style>
+                </textArea>
+                <h2>div结构</h2>
+                <textArea class="subText">
+                    <div id="box">
+                        <ul class="list">
+                            <li class="current"><a href="#1" target="_blank"><img src="images/01.jpg" /></a></li>
+                            <li><a href="#2" target="_blank"><img src="images/02.jpg" /></a></li>
+                            <li><a href="#3" target="_blank"><img src="images/03.jpg" /></a></li>
+                            <li><a href="#4" target="_blank"><img src="images/04.jpg" /></a></li>
+                            <li><a href="#5" target="_blank"><img src="images/05.jpg" /></a></li>
+                        </ul>
+                        <ul class="count">
+                            <li class="current">1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                        </ul>
+                    </div>
+                </textArea>
+                <h2>JS行为</h2>
+                <textArea class="subText">
+                    <script type="text/javascript">
+                        /*	function addLoadEvent(func)
+                         {
+                         var oldonload=window.onload;
+                         if(typeof window.onload !='function')
+                         {
+                         window.onload=func;
+                         }
+                         else
+                         {
+                         window.onload=function(){
+                         oldonload();
+                         func();
+                         }
+                         }
+                         }
+                         function autoimg()
+                         {
+                         var oBox=document.getElementById("box");
+                         var aUl=document.getElementsByTagName("ul");
+                         var aImg=aUl[0].getElementsByTagName("li");
+                         var aNum=aUl[1].getElementsByTagName("li");
+                         var timer=play=null;
+                         var i=index=0;
+                         for(i=0;i<aNum.length;i++)
+                         {
+                         aNum[i].index = i;
+                         aNum[i].onmouseover = function ()
+                         {
+                         show(this.index);
+                         }
+                         }
+                         oBox.onmouseover = function ()
+                         {
+                         clearInterval(play);
+                         }
+                         oBox.onmouseout = function ()
+                         {
+                         autoplay();
+                         }
+                         function autoplay()
+                         {
+                         play = setInterval(function (){
+                         index++;
+                         index >=aImg.length && (index = 0);
+                         show(index);
+                         },2000);
+                         }
+                         autoplay();
+                         function show(a)
+                         {
+                         index=a;
+                         var alpha=0;
+                         for(i=0;i<aNum.length;i++) aNum[i].className="";
+                         aNum[index].className= "current";
+                         clearInterval(timer);
+
+                         for(i=0;i<aImg.length;i++)
+                         {
+                         aImg[i].style.opacity=0;
+                         aImg[i].style.filter ="alpha(opacity=0)";
+                         }
+                         timer = setInterval(function(){
+                         alpha +=2;
+                         alpha >100 && (alpha = 100);
+                         aImg[index].style.opacity = alpha /100;
+                         aImg[index].style.filter = "alpha(opacity = "+alpha+")";
+                         alert(alpha);
+                         alpha == 100 && clearInterval(timer)
+                         },20);
+                         }
+
+                         }
+                         addLoadEvent(autoimg);*/
+                        var $ = function (id) {return typeof id === "string" ? document.getElementById(id) : id};
+                        var $$ = function (tagName,oParent){return (oParent || document).getElementsByTagName(tagName)};
+                        var autoPlay=function(id){this.initialize(id)};
+                        autoPlay.prototype = {
+                            initialize:function(id)
+                            {
+                                var aThis = this;
+                                this.aBox = $(id);
+                                this.aUl = $$("ul",this.aBox)[0];
+                                this.bUl = $$("ul",this.aBox)[1];
+                                this.aImg = $$("li",this.aUl);
+                                this.aLink = $$("a",this.aUl);
+                                this.timer = null;
+                                this.autoTimer = null;
+                                this.iNow = 0;
+                                this.bLi=$$("li",this.bUl);
+                                //this.show();
+
+                                this.autoTimer = setInterval(function ()
+                                {
+                                    aThis.next()
+                                },2000);
+                                for(var i=0;i<this.bLi.length;i++)
+                                {
+                                    this.bLi[i].index = i;
+                                    this.bLi[i].onmouseover = function ()
+                                    {
+                                        aThis.iNow = this.index;
+                                        aThis.show();
+                                    }
+                                }
+                                this.aBox.onmouseover = function ()
+                                {
+                                    clearInterval(aThis.autoTimer);
+                                };
+                                this.aBox.onmouseout = function ()
+                                {
+                                    aThis.autoTimer = setInterval(function ()
+                                    {
+                                        aThis.next()
+                                    },2000)
+                                };
+                            },
+                            show: function ()
+                            {
+                                var oThis=this;
+                                var alpha=0;
+                                for(var i=0;i<this.bLi.length;i++)
+                                {
+                                    this.bLi[i].className="";
+                                    this.aImg[i].style.zIndex=1;
+                                    this.aImg[i].style.opacity = 0;
+                                    this.aImg[i].style.filter = "alpha(opacity=0)";
+                                }
+                                this.bLi[this.iNow].className = "current";
+                                this.aImg[this.iNow].style.zIndex=10;
+                                clearInterval(oThis.timer);
+
+                                oThis.aLink[oThis.iNow].style.display="block";
+                                oThis.timer = setInterval(function(){
+
+                                    alpha +=2;
+                                    alpha >100 && (alpha = 100);
+                                    oThis.aImg[oThis.iNow].style.opacity = alpha /100;
+                                    oThis.aImg[oThis.iNow].style.filter = "alpha(opacity = "+alpha+")";
+                                    alpha == 100 && clearInterval(oThis.timer);
+                                },30)
+                            },
+                            next:function ()
+                            {
+                                this.iNow++;
+                                this.iNow >=this.aImg.length && (this.iNow = 0)
+                                this.show();
+                            }
+                        };
+                        window.onload = function ()
+                        {
+                            new autoPlay("box");
+                        }
+
+                    </script>
+                </textArea>
+            </div><!--图片切换之淡入淡出-->
+            <div class="safe">
+                <h3><a href="demo/复件 图片左右切换自动播放(一张一换).html" target="_blank">demo</a></h3>
+                <h2>css样式表现</h2>
+                <textArea class="subText">
+                    <style>
+                        *{ margin:0; padding:0; font:12px/1.5 Arial, Helvetica, sans-serif;}
+                        img{ border:none;}
+                        a{ text-decoration:none;}
+                        ul{ list-style:none;}
+                        .box{ width:584px; height:210px; position:relative; border:1px solid #5e8743; margin:20px auto; background:#032300;}
+                        .box div{ position:absolute; left:52px; top:26px; width:480px; height:151px; overflow:hidden;}
+                        .box .left,.box .right{ position:absolute; width:48px; height:49px; cursor:pointer; overflow:hidden; text-indent:-99999px; top:73px;}
+                        .box .left{ background:url(images/left.png) no-repeat; left:0;}
+                        .box .right{ background:url(images/right.png) no-repeat;; right:0;}
+                        .box div ul{position:absolute;height:151px; width:1000px; border:1px solid red;}/*//让最后一张图片正常显示*/
+                        .box div ul li{ width:160px; height:151px; float:left;display:inline;}
+                        .box img{width:160px;height:151px;display:block;}
+                    </style>
+                </textArea>
+                <h2>div结构</h2>
+                <textArea class="subText">
+                    <div id="J_box" class="box">
+                        <span class="left" >left</span>
+                        <span class="right">right</span>
+                        <div>
+                            <ul class="list">
+                                <li><a href="#" target="_blank"><img src="images/1.jpeg" /></a></li>
+                                <li><a href="#" target="_blank"><img src="images/2.jpeg" /></a></li>
+                                <li><a href="#" target="_blank"><img src="images/2.jpeg" /></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </textArea>
+                <h2>JS行为</h2>
+                <textArea class="subText">
+                    <script>
+                        var get = {
+                            byId: function(id) {
+                                return document.getElementById(id)
+                            },
+                            byClass: function(sClass, oParent) {
+                                var aClass = [];
+                                var reClass = new RegExp("(^| )" + sClass + "( |$)");
+                                var aElem = this.byTagName("*", oParent);
+                                for (var i = 0; i < aElem.length; i++) reClass.test(aElem[i].className) && aClass.push(aElem[i]);
+                                return aClass
+                            },
+                            byTagName: function(elem, obj) {
+                                return (obj || document).getElementsByTagName(elem)
+                            }
+                        };
+                        //初始化对象
+                        function Roll ()
+                        {
+                            this.initialize.apply(this, arguments)
+                        }
+                        Roll.prototype =
+                        {
+                            initialize: function (obj)
+                            {
+                                var _this = this;
+                                this.obj = get.byId(obj);
+                                this.oLeft = get.byClass("left", this.obj)[0];
+                                this.oRight =get.byClass("right", this.obj)[0];
+                                this.oList =get.byClass("list", this.obj)[0];
+                                /*	this.oSpan=get.byTagName("span",this.obj);*/
+                                this.aItem = this.oList.children;//所有的li
+                                this.timer = null;
+                                this.iWidth = this.aItem[0].offsetWidth;
+                                this.AutoPlay=setInterval(function()//自动播放
+                                {
+                                    _this.right()
+
+                                },3000);
+                                this.obj.onmouseover=function()//移上去停止播放
+                                {
+
+                                    clearInterval(_this.AutoPlay);//停止播放
+                                }
+                                this.obj.onmouseout=function()
+                                {
+
+
+                                    _this.AutoPlay=setInterval(function()//重新自动播放
+                                    {
+                                        _this.right()
+
+                                    },3000);
+                                }
+
+                                this.oLeft.onclick = function ()
+                                {
+                                    _this.left()
+                                };
+                                this.oRight.onclick = function ()
+                                {
+                                    _this.right()
+                                }
+                            },
+                            left: function ()
+                            {
+                                //1张一换
+                                this.oList.insertBefore(this.aItem[this.aItem.length - 1], this.oList.firstChild);
+                                this.oList.style.left = -this.iWidth + "px";
+                                this.doMove(0)
+
+
+                            },
+                            right: function ()
+                            {
+                                this.doMove(-this.iWidth, function ()//1张一动
+                                {
+
+                                    this.oList.appendChild(this.aItem[0]);//1张一换
+                                    this.oList.style.left = 0;
+
+                                })
+                            },
+                            doMove: function (iTarget, callBack)
+                            {
+                                var _this = this;
+                                clearInterval(this.timer)
+                                this.timer = setInterval(function ()
+                                {
+                                    var iSpeed = (iTarget - _this.oList.offsetLeft) / 3;
+                                    iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+                                    _this.oList.offsetLeft == iTarget ? (clearInterval(_this.timer), callBack && callBack.apply(_this)) : _this.oList.style.left = iSpeed + _this.oList.offsetLeft + "px"
+                                }, 30)
+                            }
+                        };
+                        new Roll("J_box");
+                    </script>
+                </textArea>
+            </div><!--图片切换之左右切换(旋转木马)-->
+            <div class="safe">
+                <h3><a href="demo/index(遮罩).html" target="_blank">demo</a></h3>
+                <h2>css样式表现</h2>
+                <textArea class="subText">
+                    <style>
+                        *{margin:0;padding:0;border:none;}
+                        body{font-size:12px;}
+                        ul{list-style:none;}
+                        .list{width:930px;height:360px; margin:50px auto;}
+                        .PicAlpha{ position:relative; width:930px; height:360px; }
+                        .PicAlpha a{position:absolute; display:block; line-height:0;}
+                        .PicAlpha .item_01{top:0; left:0; width:280px; height:360px;}
+                        .PicAlpha .item_01 *{width:280px; height:360px;}
+                        .PicAlpha .item_02{top:0; left:280px; width:230px; height:115px;}
+                        .PicAlpha .item_02 *{width:230px; height:115px;}
+                        .PicAlpha .item_03{top:115px; left:280px; width:230px; height:115px;}
+                        .PicAlpha .item_03 *{width:230px; height:115px;}
+                        .PicAlpha .item_04{top:230px; left:280px; width:230px; height:130px;}
+                        .PicAlpha .item_04 *{width:230px; height:130px;}
+                        .PicAlpha .item_05{top:0; left:510px; width:220px; height:130px;}
+                        .PicAlpha .item_05 *{width:220px; height:130px;}
+                        .PicAlpha .item_06{top:130px; left:510px; width:220px; height:230px;}
+                        .PicAlpha .item_06 *{width:220px; height:230px;}
+                        .PicAlpha .item_07{top:0; left:730px; width:200px; height:100px;}
+                        .PicAlpha .item_07 *{width:200px; height:100px;}
+                        .PicAlpha .item_08{top:100px; left:730px; width:200px; height:160px;}
+                        .PicAlpha .item_08 *{width:200px; height:160px;}
+                        .PicAlpha .item_09{top:260px; left:730px; width:200px; height:100px;}
+                        .PicAlpha .item_09 *{width:200px; height:100px;}
+                        .PicAlpha .item_09 div{width:200px; height:100px;}
+                        .PicAlpha div{position:absolute;left:0;top:0;display:block; background:#000; filter: alpha(opacity=70); opacity: .7;}
+
+
+                    </style>
+                </textArea>
+                <h2>div结构</h2>
+                <textArea class="subText">
+                    <div id="J_PicAlpha">
+                        <div class="list" >
+                            <ul >
+                                <li class="PicAlpha">
+                                    <a class="item_01" href="#"><img src="images/3-3.jpg" alt="" /></a>
+                                    <a class="item_02" href="#"><img src="images/2-3.jpg" alt="" /></a>
+                                    <a class="item_03" href="#"><img src="images/3-3.jpg" alt="" /></a>
+                                    <a class="item_04" href="#"><img src="images/4-3.jpg" alt="" /></a>
+                                    <a class="item_05" href="#"><img src="images/5-3.jpg" alt="" /></a>
+                                    <a class="item_06" href="#"><img src="images/1-3.jpg" alt="" /></a>
+                                    <a class="item_07" href="#"><img src="images/2-3.jpg" alt="" /></a>
+                                    <a class="item_08" href="#"><img src="images/3-3.jpg" alt="" /></a>
+                                    <a class="item_09" href="#"><img src="images/4-3.jpg" alt="" /></a>
+                                </li>
+                                <li class="PicAlpha">
+                                    <a class="item_01" href="#"><img src="images/3-3.jpg" alt="" /></a>
+                                    <a class="item_02" href="#"><img src="images/2-3.jpg" alt="" /></a>
+                                    <a class="item_03" href="#"><img src="images/3-3.jpg" alt="" /></a>
+                                    <a class="item_04" href="#"><img src="images/4-3.jpg" alt="" /></a>
+                                    <a class="item_05" href="#"><img src="images/5-3.jpg" alt="" /></a>
+                                    <a class="item_06" href="#"><img src="images/1-3.jpg" alt="" /></a>
+                                    <a class="item_07" href="#"><img src="images/2-3.jpg" alt="" /></a>
+                                    <a class="item_08" href="#"><img src="images/3-3.jpg" alt="" /></a>
+                                    <a class="item_09" href="#"><img src="images/4-3.jpg" alt="" /></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </textArea>
+                <h2>JS行为</h2>
+                <textArea class="subText">
+                    <script>
+                        var $=function(id){ return typeof id === "string" ? document.getElementById(id) : id};
+                        var $$=function (tagName,oParent){return (oParent || document).getElementsByTagName(tagName)};
+                        var $$$=function(sClass,obj){
+                            var aClass = [];
+                            var reClass = new RegExp("(^| )" + sClass + "( |$)");
+                            var aElem = $$("*",obj);
+                            for(var i = 0; i< aElem.length;i++) reClass.test(aElem[i].className) && aClass.push(aElem[i]);
+                            return aClass;
+                        };
+                        var imgChange=function(id){this.initialize(id)};
+                        imgChange.prototype={
+                            initialize:function(id){
+                                var aThis=this;
+                                this.oImgId=$(id);
+                                this.oUl=$$("ul",this.oImgId)[0];
+                                this.oLi=$$$("PicAlpha",this.oImgId);
+                                aThis.CreateDiv();
+                                for(var i=0;i<this.oLi.length;i++)
+                                {
+                                    this.ImgDiv=$$("div",this.oLi[i]);
+                                    this.ImgA=$$("a",this.oLi[i]);
+                                    for(var k=0;k<this.ImgDiv.length;k++)
+                                    {
+                                        this.ht=this.ImgA[k].offsetHeight;
+                                        this.ImgDiv[k].style.display="none";
+                                        this.ImgDiv[k].style.height=this.ht+"px";
+                                    }
+                                    this.oLi[i].index=i;
+                                    this.oLi[i].onmouseover=function(){
+                                        aThis.number=this.index;
+                                        aThis.show();
+                                    }
+                                    this.oLi[i].onmouseout=function(){
+                                        aThis.number=this.index;
+                                        aThis.hidden();
+                                    }
+                                }
+                            },
+                            CreateDiv:function()
+                            {
+                                for(var i=0;i<this.oLi.length;i++)
+                                {
+                                    this.ImgA=$$("a",this.oLi[i]);
+                                    for(var j=0;j<this.ImgA.length;j++)
+                                    {
+                                        var divs=document.createElement("div");
+                                        this.ImgA[j].appendChild(divs);
+                                    }
+
+                                }
+                            },
+                            show:function(){
+                                var _this=this;
+                                this.ImgArea=this.oLi[this.number];
+                                this.ImgA=$$("a",this.ImgArea);
+                                this.ImgDiv=$$("div",this.ImgArea);
+                                for(var i=0;i<this.ImgDiv.length;i++)
+                                {
+                                    this.ImgDiv[i].style.display="block";
+                                }
+                                for(var j=0;j<this.ImgA.length;j++)
+                                {
+                                    this.ImgA[j].index=j;
+                                    this.ImgA[j].onmouseover=function(){
+                                        for(var i=0;i<_this.ImgDiv.length;i++)
+                                        {
+                                            _this.ImgDiv[i].style.background="#000";
+                                        }
+                                        _this.ImgDiv[this.index].style.background="none";
+                                    }
+                                }
+                            },
+                            hidden:function(){
+                                var _this=this;
+                                this.ImgArea=this.oLi[this.number];
+                                this.ImgA=$$("a",this.ImgArea);
+                                this.ImgDiv=$$("div",this.ImgArea);
+                                for(var i=0;i<this.ImgDiv.length;i++)
+                                {
+                                    this.ImgDiv[i].style.display="none";
+                                }
+                            }
+                        };
+                        new imgChange("J_PicAlpha");
+
+                    </script>
+                </textArea>
+            </div><!--图片切换之淡入淡出-->
+            <div class="safe">
+                <h3><a href="demo/全屏切换淡入淡出index.html" target="_blank">demo</a></h3>
+                <h2>css样式表现</h2>
+                <textArea class="subText">
+                    <style type="text/css">
+                            /*全局定义
+                            .............................*/
+                        body{background-image:url(about:blank);background-attachment:fixed;}
+                        body, .ln_Container ul, .ln_Container ol, .ln_Container li, .ln_Container p,.ln_Container dl,.ln_Container dt,.ln_Container dd,.ln_Container h3{margin:0;padding:0;}
+                        .ln_Container img{border:0;display:block;}
+                        .ln_Container a{ text-decoration:none; border:none;}
+                        .ln_Container ul{ list-style:none;}
+                        .ln_Container em{ font-style:normal;}
+                        .ln_Container .clearfix:after {content:".";display:block;clear:both;height:0;visibility:hidden;}
+                        .ln_Container .clearfix {zoom:1;}
+                            /*局部定义
+                            .............................*/
+                        .ln_Container{position:relative; overflow:hidden;height:2000px; }
+                        .ln_Container .ln_topbanner{position:absolute;left:50%;margin-left:-840px;height:327px;}
+                        .ln_Container .ln_topbanner .ln_list{position:relative;}
+                        .ln_Container .ln_topbanner .ln_list li{position:absolute;left:0;top:0;opacity:0;filter:alpha(opacity=0);}
+                        .ln_Container .ln_topbanner .ln_list .ln_current{opacity:1;filter:alpha(opacity=100);}
+                        .ln_Container .ln_topbanner .ln_count{position:absolute;left:50%;margin-left:1000px;top:300px; z-index:100;width:300px;}
+                        .ln_Container .ln_topbanner .ln_count li{color:#fff;float:left; text-align:center;width:20px;height:20px; line-height:20px;cursor:pointer;margin-right:5px;overflow:hidden;background:#f90;opacity:0.7;filter:alpha(opacity=70);}
+                        .ln_Container .ln_topbanner .ln_count .current{color:#fff;opacity:1;filter:alpha(opacity=100);font-width:700;background:#f60;}
+                        .ln_Container .ln_left{width:30px;height:200px; background:red;position:absolute;left:50%;margin-left:-400px;top:100px; display:block;z-index:100; cursor:pointer;}
+                        .ln_Container .ln_right{width:30px;height:200px; background:red;display:block;position:absolute;left:50%;margin-left:300px;top:100px;z-index:100;cursor:pointer;}
+
+                        .ln_header{height:327px;width:100%;}
+                        .ln_content{width:990px;height:300px; background:red; margin:0 auto;}
+                    </style>
+                </textArea>
+                <h2>div结构</h2>
+                <textArea class="subText">
+                    <div class="ln_Container">
+                        <div class="ln_header">
+                            <div class="ln_topbanner clearfix" id="box">
+                                <ul class="ln_list clearfix">
+                                    <li class="ln_current"><img src="images/1.jpg" /></li>
+                                    <li ><img src="images/2.jpg" /></li>
+                                    <li ><img src="images/3.jpg" /></li>
+                                </ul>
+                                <ul class="ln_count clearfix">
+                                    <li class="current">1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <span class="ln_left" id="leftspan">left</span>
+                        <span class="ln_right" id="rightspan">right</span>
+                    </div>
+                </textArea>
+                <h2>JS行为</h2>
+                <textArea class="subText">
+                    <script type="text/javascript">
+                        var $ = function (id) {return typeof id === "string" ? document.getElementById(id) : id};
+                        var $$ = function (tagName,oParent){return (oParent || document).getElementsByTagName(tagName)};
+                        var autoPlay=function(id){this.initialize(id)};
+                        autoPlay.prototype = {
+                            initialize:function(id)
+                            {
+                                var aThis = this;
+                                this.aBox = $(id);
+                                this.aUl = $$("ul",this.aBox)[0];
+                                this.bUl = $$("ul",this.aBox)[1];
+                                this.aImg = $$("li",this.aUl);
+                                //this.aLink = $$("a",this.aUl);
+                                this.timer = null;
+                                this.autoTimer = null;
+                                this.iNow = 0;
+                                this.bLi=$$("li",this.bUl);
+                                var leftspan=document.getElementById("leftspan");
+                                var rightspan=document.getElementById("rightspan");
+                                //this.show();
+
+                                leftspan.onclick=function(){
+                                    aThis.pre();
+                                }
+                                leftspan.onmouseover=rightspan.onmouseover=function(){
+                                    clearInterval(aThis.autoTimer);
+                                }
+                                leftspan.onmouseout=rightspan.onmouseout=function(){
+                                    aThis.autoTimer = setInterval(function ()
+                                    {
+                                        aThis.next()
+                                    },2000)
+                                }
+                                rightspan.onclick=function(){
+
+                                    aThis.next();
+
+                                }
+                                this.autoTimer = setInterval(function ()
+                                {
+                                    aThis.next()
+                                },2000);
+                                for(var i=0;i<this.bLi.length;i++)
+                                {
+                                    this.bLi[i].index = i;
+                                    this.bLi[i].onmouseover = function ()
+                                    {
+                                        aThis.iNow = this.index;
+                                        aThis.show();
+                                    }
+                                }
+                                this.aBox.onmouseover = function ()
+                                {
+                                    clearInterval(aThis.autoTimer);
+                                };
+                                this.aBox.onmouseout = function ()
+                                {
+                                    aThis.autoTimer = setInterval(function ()
+                                    {
+                                        aThis.next()
+                                    },2000)
+                                };
+                            },
+                            show: function ()
+                            {
+                                var oThis=this;
+                                var alpha=0;
+                                for(var i=0;i<this.bLi.length;i++)
+                                {
+                                    this.bLi[i].className="";
+                                    this.aImg[i].style.zIndex=1;
+                                    this.aImg[i].style.opacity = 0;
+                                    this.aImg[i].style.filter = "alpha(opacity=0)";
+                                }
+                                this.bLi[this.iNow].className = "current";
+                                this.aImg[this.iNow].style.zIndex=10;
+                                clearInterval(oThis.timer);
+
+                                oThis.aImg[oThis.iNow].style.display="block";
+                                oThis.timer = setInterval(function(){
+                                    alpha +=2;
+                                    alpha >100 && (alpha = 100);
+                                    oThis.aImg[oThis.iNow].style.opacity = alpha /100;
+                                    oThis.aImg[oThis.iNow].style.filter = "alpha(opacity = "+alpha+")";
+                                    alpha == 100 && clearInterval(oThis.timer);
+                                },30)
+                            },
+                            next:function ()
+                            {
+                                this.iNow++;
+                                this.iNow >=this.aImg.length && (this.iNow = 0)
+                                this.show();
+                            },
+                            pre:function()
+                            {
+                                this.iNow--;
+                                this.iNow < 0 && (this.iNow = this.aImg.length-1);
+                                this.show();
+                            }
+                        };
+
+                        new autoPlay("box");
+
+
+                    </script>
+                </textArea>
+            </div><!--全屏切换之淡入淡出-->
+        </div>
+        <div class="delay">
+            <div class="safe">
+                <h3><a href="demo/简化拖拽库.html" target="_blank">demo</a></h3>
+                <h2>css样式表现</h2>
+                <textArea class="subText">
+                    <style type="text/css">
+                        div,h2,p{margin:0;padding:0;}
+                        body{font:14px/1.5 arial;}
+                        #box{width:100px;height:100px;background:#fef4eb;padding:5px;margin:50px;border:1px solid #f60;}
+                        #box .title{height:25px;background:#f60;}
+                        #tool{margin-bottom:10px;}
+
+                    </style>
+                </textArea>
+                <h2>div结构</h2>
+                <textArea class="subText">
+                    <div id="box">
+                        <h2 class="title"></h2>
+                    </div>
+                </textArea>
+                <h2>JS行为</h2>
+                <textArea class="subText">
+                    <script type="text/javascript">
+                        var $=function(id){return typeof id === "string" ? document.getElementById(id):id};
+                        var $$=function(tagname,obj){return (obj || document).getElementsByTagName(tagname)};
+                        function Drag(drag){
+                            this.drag = $(drag);
+                            this._x = this._y = 0;
+                            this._moveDrag = this.bind(this, this.moveDrag);
+                            this._stopDrag = this.bind(this, this.stopDrag);
+                            this.maxContainer = document.documentElement || document.body;
+                            this.handle=$$('h2',this.drag)[0];
+                            this.handle.style.cursor = "move";
+                            this.maxTop = Math.max(this.maxContainer.clientHeight, this.maxContainer.scrollHeight) - this.drag.offsetHeight;
+                            this.maxLeft = Math.max(this.maxContainer.clientWidth, this.maxContainer.scrollWidth) - this.drag.offsetWidth;
+                        }
+                        Drag.prototype={
+                            init:function(){
+                                this.changeLayout();
+                                this.addHandler(this.handle, "mousedown", this.bind(this, this.startDrag))
+                            },
+                            changeLayout : function ()
+                            {
+                                this.drag.style.top = this.drag.offsetTop + "px";
+                                this.drag.style.left = this.drag.offsetLeft + "px";
+                                this.drag.style.position = "absolute";
+                                this.drag.style.margin = "0"
+                            },
+                            startDrag : function (event)
+                            {
+                                var event = event || window.event;
+                                this._x = event.clientX - this.drag.offsetLeft;
+                                this._y = event.clientY - this.drag.offsetTop;
+
+                                this.addHandler(document, "mousemove", this._moveDrag);
+                                this.addHandler(document, "mouseup", this._stopDrag);
+
+                                event.preventDefault && event.preventDefault();
+                                this.handle.setCapture && this.handle.setCapture();
+                            },
+                            moveDrag : function (event)
+                            {
+                                var event = event || window.event;
+
+                                var iTop = event.clientY - this._y;
+                                var iLeft = event.clientX - this._x;
+
+                                if (this.lock) return;
+
+                                this.limit && (iTop < 0 && (iTop = 0), iLeft < 0 && (iLeft = 0), iTop > this.maxTop && (iTop = this.maxTop), iLeft > this.maxLeft && (iLeft = this.maxLeft));
+
+                                this.lockY || (this.drag.style.top = iTop + "px");
+                                this.lockX || (this.drag.style.left = iLeft + "px");
+
+                                event.preventDefault && event.preventDefault();
+
+                            },
+                            stopDrag : function ()
+                            {
+                                this.removeHandler(document, "mousemove", this._moveDrag);
+                                this.removeHandler(document, "mouseup", this._stopDrag);
+
+                                this.handle.releaseCapture && this.handle.releaseCapture();
+                            },
+                            addHandler : function (oElement, sEventType, fnHandler)
+                            {
+                                return oElement.addEventListener ? oElement.addEventListener(sEventType, fnHandler, false) : oElement.attachEvent("on" + sEventType, fnHandler)
+                            },
+                            //删除绑定事件
+                            removeHandler : function (oElement, sEventType, fnHandler)
+                            {
+                                return oElement.removeEventListener ? oElement.removeEventListener(sEventType, fnHandler, false) : oElement.detachEvent("on" + sEventType, fnHandler)
+                            },
+                            //绑定事件到对象
+                            bind : function (object, fnHandler)
+                            {
+                                return function ()
+                                {
+                                    return fnHandler.apply(object, arguments)
+                                }
+                            }
+                        }
+                        var oBox=$("box");
+                        var oTitle= $$("h2",oBox)[0];
+                        var p= new Drag("box")
+                        p.init();
+
+
+                    </script>
+                </textArea>
+            </div><!--简化拖拽-->
+        </div>
+        <div class="delay">
+             <div class="safe">
+                <h3><a href="demo/倒计时.html" target="_blank">demo</a></h3>
+                <h2>css样式表现</h2>
+                <textArea class="subText">
+
+                </textArea>
+                <h2>div结构</h2>
+                <textArea class="subText">
+                    <div id="mt"></div>
+                </textArea>
+                <h2>JS行为</h2>
+                <textArea class="subText">
+                    <script>
+                        (function(){
+                            var box = document.getElementById('mt');
+                            var d = box.getAttribute('data-time');
+                            //console.log(d)
+                            var mydate = new Date();
+                            var sday=mydate.getDate()+1
+
+                            //alert(sday);
+                            var Jday="2012/08/"+sday;
+                            var endTime = new Date(Jday + " 00:00:00").getTime();
+
+                            //console.log(endTime)
+                            function now(time){
+                                var h = parseInt(time / (60 * 60));
+                                var m = parseInt(time % (60 * 60) / 60);
+                                var s = parseInt(time % 60);
+                                box.innerHTML =  + h + '  '+ '时' + m + '  '+ '分' + s + '秒';
+                            }
+                            function main(){
+                                //console.log(new Date());
+                                var nowTime = new Date().getTime();
+
+                                //console.log(mydate.getDate());
+
+                                var _time = parseInt((endTime - nowTime) / 1000);
+                                var mt = setInterval(function(){
+                                    if(_time > 0){
+                                        now(_time);
+                                        _time--;
+                                    }else{
+                                        clearInterval(mt);
+                                        box.innerHTML = '剩余时间:0小时0分0秒';
+                                    }
+                                },1000);
+                            }
+                            main();
+                        })()
+                    </script>
+                </textArea>
+        </div><!--简单倒计时-->
+            <div class="safe">
+                <h3><a href="demo/index(图片倒计时).html" target="_blank">demo</a></h3>
+                <h2>css样式表现</h2>
+                <textArea class="subText">
+                    <style type="text/css">
+                            /*全局定义
+           .............................*/
+                        #page,#content{ width:100%;}
+                        body, .ln_Container ul, .ln_Container ol, .ln_Container li, .ln_Container p{margin:0;padding:0;}
+                        .ln_Container img{border:0;display:block;}
+                        .ln_Container a{ text-decoration:none; border:none;}
+                        .ln_Container ul{ list-style:none;}
+                        .ln_Container em{ font-style:normal;}
+                        .ln_Container .clearfix:after {content:".";display:block;clear:both;height:0;visibility:hidden;}
+                        .ln_Container .clearfix {zoom:1;}
+                            /*局部定义
+           .............................*/
+                        .ln_Container{ background:#fff url(images/hwbg_01.jpg) no-repeat center 0;width:100%; font-size:12px; color:#fff;}
+                        .ln_Container .ln_header,.ln_Container .ln_main{width:990px;margin:0 auto;}
+
+                        .djs{margin:0 auto;width:450px;height:69px;overflow:hidden;}
+                        .djs ul,.djs li{margin:0;padding:0;}
+                        .djs ul{list-style:none;}
+                        .djs .text{float:left;height:69px;line-height:69px;overflow:hidden;}
+                        .djs .time{float:left;padding-right:1px;height:69px;width:36px;overflow:hidden;}
+                        .djs .ln_left{margin-left:43px;}
+                        .djs .number .item{float:left;width:36px;height:69px;line-height:69px;text-align:center;font-family:'微软雅黑';font-size:16px;color:#000; margin-right:10px;}
+
+
+
+
+                    </style>
+                </textArea>
+                <h2>div结构</h2>
+                <textArea class="subText">
+                    <div class="ln_Container">
+                        <div class="ln_header">
+                            <div class="ln_date">
+                                <cms:custom title="倒计时" group="倒计时" fields="months:开始月:string,day:开始日:string,year1:结束年:string,months1:结束月:string,day1:结束日:string," name="5688e296-fc54-44f8-9181-899f87cd0c0d">
+                                    <span >$!months月$!day日</span><span class="ln_top"><img src="www.jpg" /></span><span id="datebox" data-time="2012/08/29 00:00:00">$!months1月$!day1日</span>
+                                </cms:custom>
+                            </div>
+                            <div class="djs" id="djs">
+                                <div class="time">
+                                    <ul class="number">
+                                        <li class="item"><img src="0.png" /></li>
+                                        <li class="item"><img src="1.png" /></li>
+                                        <li class="item"><img src="2.png" /></li>
+                                        <li class="item"><img src="3.png" /></li>
+                                        <li class="item"><img src="4.png" /></li>
+                                        <li class="item"><img src="5.png" /></li>
+                                        <li class="item"><img src="6.png" /></li>
+                                        <li class="item"><img src="7.png" /></li>
+                                        <li class="item"><img src="8.png" /></li>
+                                        <li class="item"><img src="9.png" /></li>
+                                        <li class="item"><img src="0.png" /></li>
+                                    </ul>
+                                </div>
+                                <div class="time">
+                                    <ul class="number">
+                                        <li class="item"><img src="0.png" /></li>
+                                        <li class="item"><img src="1.png" /></li>
+                                        <li class="item"><img src="2.png" /></li>
+                                        <li class="item"><img src="3.png" /></li>
+                                        <li class="item"><img src="4.png" /></li>
+                                        <li class="item"><img src="5.png" /></li>
+                                        <li class="item"><img src="6.png" /></li>
+                                        <li class="item"><img src="7.png" /></li>
+                                        <li class="item"><img src="8.png" /></li>
+                                        <li class="item"><img src="9.png" /></li>
+                                        <li class="item"><img src="0.png" /></li>
+                                    </ul>
+                                </div>
+                                <div class="time ln_left">
+                                    <ul class="number">
+                                        <li class="item"><img src="0.png" /></li>
+                                        <li class="item"><img src="1.png" /></li>
+                                        <li class="item"><img src="2.png" /></li>
+                                        <li class="item"><img src="3.png" /></li>
+                                        <li class="item"><img src="4.png" /></li>
+                                        <li class="item"><img src="5.png" /></li>
+                                        <li class="item"><img src="6.png" /></li>
+                                        <li class="item"><img src="7.png" /></li>
+                                        <li class="item"><img src="8.png" /></li>
+                                        <li class="item"><img src="9.png" /></li>
+                                        <li class="item"><img src="0.png" /></li>
+                                    </ul>
+                                </div>
+                                <div class="time">
+                                    <ul class="number">
+                                        <li class="item"><img src="0.png" /></li>
+                                        <li class="item"><img src="1.png" /></li>
+                                        <li class="item"><img src="2.png" /></li>
+                                        <li class="item"><img src="3.png" /></li>
+                                        <li class="item"><img src="4.png" /></li>
+                                        <li class="item"><img src="5.png" /></li>
+                                        <li class="item"><img src="6.png" /></li>
+                                        <li class="item"><img src="7.png" /></li>
+                                        <li class="item"><img src="8.png" /></li>
+                                        <li class="item"><img src="9.png" /></li>
+                                        <li class="item"><img src="0.png" /></li>
+                                    </ul>
+                                </div>
+                                <div class="time ln_left">
+                                    <ul class="number">
+                                        <li class="item"><img src="0.png" /></li>
+                                        <li class="item"><img src="1.png" /></li>
+                                        <li class="item"><img src="2.png" /></li>
+                                        <li class="item"><img src="3.png" /></li>
+                                        <li class="item"><img src="4.png" /></li>
+                                        <li class="item"><img src="5.png" /></li>
+                                        <li class="item"><img src="6.png" /></li>
+                                        <li class="item"><img src="7.png" /></li>
+                                        <li class="item"><img src="8.png" /></li>
+                                        <li class="item"><img src="9.png" /></li>
+                                        <li class="item"><img src="0.png" /></li>
+                                    </ul>
+                                </div>
+                                <div class="time">
+                                    <ul class="number">
+                                        <li class="item"><img src="0.png" /></li>
+                                        <li class="item"><img src="1.png" /></li>
+                                        <li class="item"><img src="2.png" /></li>
+                                        <li class="item"><img src="3.png" /></li>
+                                        <li class="item"><img src="4.png" /></li>
+                                        <li class="item"><img src="5.png" /></li>
+                                        <li class="item"><img src="6.png" /></li>
+                                        <li class="item"><img src="7.png" /></li>
+                                        <li class="item"><img src="8.png" /></li>
+                                        <li class="item"><img src="9.png" /></li>
+                                        <li class="item"><img src="0.png" /></li>
+                                    </ul>
+                                </div>
+                                <div class="time ln_left">
+                                    <ul class="number">
+                                        <li class="item"><img src="0.png" /></li>
+                                        <li class="item"><img src="1.png" /></li>
+                                        <li class="item"><img src="2.png" /></li>
+                                        <li class="item"><img src="3.png" /></li>
+                                        <li class="item"><img src="4.png" /></li>
+                                        <li class="item"><img src="5.png" /></li>
+                                        <li class="item"><img src="6.png" /></li>
+                                        <li class="item"><img src="7.png" /></li>
+                                        <li class="item"><img src="8.png" /></li>
+                                        <li class="item"><img src="9.png" /></li>
+                                        <li class="item"><img src="0.png" /></li>
+                                    </ul>
+                                </div>
+                                <div class="time">
+                                    <ul class="number">
+                                        <li class="item"><img src="0.png" /></li>
+                                        <li class="item"><img src="1.png" /></li>
+                                        <li class="item"><img src="2.png" /></li>
+                                        <li class="item"><img src="3.png" /></li>
+                                        <li class="item"><img src="4.png" /></li>
+                                        <li class="item"><img src="5.png" /></li>
+                                        <li class="item"><img src="6.png" /></li>
+                                        <li class="item"><img src="7.png" /></li>
+                                        <li class="item"><img src="8.png" /></li>
+                                        <li class="item"><img src="9.png" /></li>
+                                        <li class="item"><img src="0.png" /></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </textArea>
+                <h2>JS行为</h2>
+                <textArea class="subText">
+                    <script type="text/javascript">
+                        (function(){
+                            var datetime=document.getElementById("datebox").getAttribute('data-time');
+                            var e = new Date(datetime);
+                            var times = document.getElementById("djs").getElementsByTagName("div");
+                            var len = times.length;
+                            var h = 69;
+                            var s = 0;
+                            var delta = 0.08;
+                            var t = [null,null,null,null,null,null,null,null];
+                            var flag = true;
+                            if(window.navigator.userAgent.indexOf("MSIE") != -1){delta = 0.2;}
+                            function countDown(n,num){
+                                if(t[n]){clearInterval(t[n]);t[n] = null;}
+                                if(num == 0 && times[n].scrollTop == 10 * h) return;
+                                var st = times[n].scrollTop;
+                                var dis = num * h - st;
+
+                                t[n] = setInterval(function(){
+                                    s = dis * delta;
+                                    s = s > 0 ? Math.ceil(s) : Math.floor(s);
+                                    if(Math.abs(s) > 0){
+                                        times[n].scrollTop += s;
+                                        dis -= s;
+                                    }else{
+                                        clearInterval(t[n]);
+                                        t[n] = null;
+                                        if(num == 0){times[n].scrollTop = 10 * h;}
+                                    }
+                                },10);
+                            };
+                            setInterval(function(){
+                                var s = new Date();
+                                var d = Math.floor((e.getTime() - s.getTime()) / 1000);
+                                if(d <= 0){return;}
+                                var dArr = [];
+
+                                var day = Math.floor(d / (3600 * 24));
+                                day = day < 10 ? "0" + day : day;
+                                d = d % (3600 * 24);
+
+                                var H = Math.floor(d / 3600);
+                                H = H < 10 ? "0" + H : H;
+                                d = d % 3600;
+
+                                var I = Math.floor(d / 60);
+                                I = I < 10 ? "0" + I : I;
+                                d = d % 60;
+
+                                var S = Math.floor(d);
+                                S = S < 10 ? "0" + S : S;
+
+                                dArr[0] = day.toString().split("")[0];
+                                dArr[1] = day.toString().split("")[1];
+                                dArr[2] = H.toString().split("")[0];
+                                dArr[3] = H.toString().split("")[1];
+                                dArr[4] = I.toString().split("")[0];
+                                dArr[5] = I.toString().split("")[1];
+                                dArr[6] = S.toString().split("")[0];
+                                dArr[7] = S.toString().split("")[1];
+
+                                if(flag){
+                                    for(var i = 0; i < len; i++){
+                                        times[i].scrollTop = 0;
+                                    }
+                                    flag = false;
+                                }
+                                for(var i = 0; i < len; i++){
+                                    countDown(i,dArr[i]);
+                                }
+                            },1000);
+                        })();
+                    </script>
+                </textArea>
+            </div><!--图片倒计时-->
+             <div class="safe">
+                 <h3><a href="demo/本地倒计时.html" target="_blank">demo</a></h3>
+                 <h2>css样式表现</h2>
+                 <textArea class="subText">
+
+                 </textArea>
+                 <h2>div结构</h2>
+                 <textArea class="subText">
+                     <div id="timeBox">
+                         <span id="countDay">0</span><em>天</em>
+                         <span id="countHour">0</span><em>时</em>
+                         <span id="countMin">0</span><em>分</em>
+                         <span id="countSec">0</span><em>秒</em>
+                     </div>
+                 </textArea>
+                 <h2>JS行为</h2>
+                 <textArea class="subText">
+                     <script>
+                         (function TimeCount(lastTime){
+                             function Count(lastTime){
+                                 var countDay=document.getElementById("countDay");
+                                 var countHour=document.getElementById("countHour");
+                                 var countMin=document.getElementById("countMin");
+                                 var countSec=document.getElementById("countSec");
+                                 var now=new Date().getTime();
+                                 var time=new Date(lastTime).getTime();
+                                 var d=(time-now)/1000;
+
+                                 var lday=parseInt(Math.floor(d/3600)/24);
+                                 var lHour=Math.floor(d/3600)%24;
+                                 d=d%3600;
+                                 var lMin=parseInt(d/60);
+                                 d=d%60;
+                                 var lSecond=parseInt(d);
+
+                                 if(lday<=0){lday=0;}
+                                 if(lHour<=0){lHour=0;}
+                                 if(lMin<=0){lMin=0;}
+                                 if(lSecond<=0){lSecond=0;}
+
+                                 countDay.innerHTML=lday;
+                                 countHour.innerHTML=lHour;
+                                 countMin.innerHTML=lMin;
+                                 countSec.innerHTML=lSecond;
+                             }
+                             setInterval(function(){Count(lastTime)},1000);
+                         })("2012/8/30 00:00:00");
+                     </script>
+                 </textArea>
+             </div><!--本地倒计时-->
+             <div class="safe">
+                 <h3><a href="demo/服务器倒计时(kissy).html" target="_blank">demo</a></h3>
+                 <h2>css样式表现</h2>
+                 <textArea class="subText">
+
+                 </textArea>
+                 <h2>div结构</h2>
+                 <textArea class="subText">
+                     <div id="demo">
+                         <div class="cd-lite" data-time="1000" end-time="2012/08/30 00:00:00">剩余时间：${d}天${h}时${m}分${s}秒</div>
+                     </div>
+                 </textArea>
+                 <h2>JS行为</h2>
+                 <textArea class="subText">
+                     <script src="http://a.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+                     <script src="http://a.tbcdn.cn/s/kissy/gallery/countdown/1.0/index-min.js"></script>
+                     <script>
+                         var S = KISSY;
+                         S.use("gallery/countdown/1.0/countdown",function(S, Countdown){
+                             S.getScript('http://www.taobao.com/go/rgn/try/service-time.php?rand=' + (new Date()).getTime(), function () {
+                                 function factory(obj){
+                                     var leftDate =obj.attr('end-time'),edate=new Date(leftDate);
+                                     var today=window.serverDate.getTime();
+                                     var hour=window.serverDate.getHours();
+                                     var mins=window.serverDate.getMinutes();
+                                     var secs=window.serverDate.getSeconds();
+                                     var ed=Math.floor((edate.getTime() - today) / 1000);
+                                     lmtime=edate.getTime()-today;
+                                     var os=obj.attr('data-time',lmtime);
+                                     new Countdown(obj);
+                                 }
+                                 S.all('.cd-lite').each(factory);
+                             });
+                         });
+                     </script>
+                 </textArea>
+             </div><!--本地倒计时-->
+         </div>
+        <div class="delay">
+            <div class="safe">
+                <h3><a href="demo/随机位置显示.html" target="_blank">demo</a></h3>
+                <h2>div结构</h2>
+                <textArea class="subText">
+                    <div class="box_0531" id="box_0531">
+                        <div class="cont1" id="cont1">
+                            1
+                        </div>
+                        <div class="cont2" id="cont2">
+                            2
+                        </div>
+                        <div class="cont3" id="cont3">
+                            3
+                        </div>
+                        <div class="cont4" id="cont4">
+                            4
+                        </div>
+                    </div>
+                </textArea>
+                <h2>JS行为</h2>
+                <textArea class="subText">
+                    <script language="javascript">
+                        window.onload = function(){
+                            var box		=	document.getElementById("box_0531");
+                            var cont	=	box.getElementsByTagName("div");
+                            var len		=	cont.length;
+                            for(var i=0;i<len;i++){
+                                var index = window.parseInt(Math.random()*len);
+                                box.appendChild(cont[index]);
+                            }
+                        }
+                    </script>
+                </textArea>
+            </div><!--随机位置显示-->
+            <div class="safe">
+                <h3><a href="demo/mod-sort按需调整模块位置.html" target="_blank">demo</a></h3>
+                <h2>div结构</h2>
+                <textArea class="subText">
+                    <div class="ms-box">
+                        <ul class="ms-list" id="ms-list">
+                            <li class="mod1" sortnum="5">我要排第五位</li>
+                            <li class="mod2" sortnum="4">第四是我的</li>
+                            <li class="mod3" sortnum="3">三号在哪里</li>
+                            <li class="mod4" sortnum="2">我最二</li>
+                            <li class="mod5" sortnum="8">我有八，一定发</li>
+                            <li class="mod5" sortnum="1">Number One</li>
+                            <li class="mod5" sortnum="0">我是鸭蛋（零）</li>
+                            <li class="mod5" sortnum="9">九九归一</li>
+                        </ul>
+                    </div>
+                    <input type="button" value="点击重排" id="sort">
+                </textArea>
+                <h2>JS行为</h2>
+                <textArea class="subText">
+                    <script type="text/javascript">
+                        var modSort = function(id,tag,prop){
+                            this.box = document.getElementById(id);
+                            this.tag = tag;
+                            this.arr = this.box.getElementsByTagName(this.tag);
+                            this.prop = prop;
+                            this.init();
+                        };
+                        modSort.prototype = {
+                            init:function(){
+                                var _this = this,len = _this.arr.length,temp = 0,nums = [];
+                                for(var i = 0; i < len; i++){
+                                    nums.push(parseInt(_this.arr[i].getAttribute(_this.prop)));
+                                }
+                                for(var i = 0; i < len; i++){
+                                    for(var j = 0; j < len - 1; j++){
+                                        if(nums[j] > nums[j + 1]){
+                                            temp = nums[j];
+                                            nums[j] = nums[j + 1];
+                                            nums[j + 1] = temp;
+                                        }
+                                    }
+                                }
+                                for(var i = 0; i < len; i++){
+                                    for(var j = 0; j < len; j++){
+                                        if(nums[i] == parseInt(_this.arr[j].getAttribute(_this.prop))){
+                                            _this.box.insertBefore(_this.arr[j],_this.arr[i]);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        document.getElementById("sort").onclick = function(){
+                            new modSort("ms-list","li","sortnum");
+                        }
+                    </script>
+                </textArea>
+            </div><!--随机位置显示-->
+        </div>
+        <div class="delay">
+            <div class="safe">
+                <h3><a href="demo/fenye练习.html" target="_blank">demo</a></h3>
+                <h2>css样式表现</h2>
+                <textArea class="subText">
+                    <style type="text/css">
+                        #Pagin{width:990px;margin:0 auto;}
+                    </style>
+                </textArea>
+                <h2>div结构</h2>
+                <textArea class="subText">
+                    <div class="" id="Pagin">
+                        <div class="con">
+                            <h2 class="tipc">第一页标题</h2>
+                            <div class="item" style="display: block; ">
+                                1
+                            </div>
+                            <div class="item" style="display: block; ">
+                                2
+                            </div>
+                            <div class="item" style="display: block; ">
+                                3
+                            </div>
+                            <div class="item" style="display: block; ">
+                                4
+                            </div>
+                        </div>
+                        <div class="con">
+                            <h2 class="tipc">第二页标题</h2>
+                            <div class="item" style="display: block; ">
+                                5
+                            </div>
+                            <div class="item" style="display: block; ">
+                                6
+                            </div>
+                            <div class="item" style="display: block; ">
+                                7
+                            </div>
+                            <div class="item" style="display: block; ">
+                                8
+                            </div>
+                        </div>
+                        <div class="con">
+                            <h2 class="tipc">第三页标题</h2>
+                            <div class="item" style="display: block; ">
+                                9
+                            </div>
+                            <div class="item" style="display: block; ">
+                                10
+                            </div>
+                            <div class="item" style="display: block; ">
+                                11
+                            </div>
+                            <div class="item" style="display: block; ">
+                                12
+                            </div>
+                        </div>
+                    </div>
+                    <div class="setPage" id="ColumnContainer">
+                    </div>
+                </textArea>
+                <h2>JS行为</h2>
+                <textArea class="subText">
+                    <script src="http://a.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+                    <script type="text/javascript">
+                        /*分页*/
+                        var totalpage, pagesize, cpage, count, curcount, outstr;
+                        var obj = document.getElementById("ColumnContainer");
+                        cpage = 1;
+                        totalpage = 3;
+                        outstr = "";
+                        function gotopage(target) {
+                            cpage = target;
+                            setPage();
+                            setData(target);
+                        }
+                        function setData(pg) {
+                            (function (S, pg) {
+                                var DOM = S.DOM;
+                                var item = S.query("#Pagin .item");
+                                var tipc = S.query("#Pagin .tipc");
+                                DOM.css(item, 'display', 'none');
+                                DOM.css(tipc, 'display', 'none');
+                                if (pg == 1) {
+                                    for (var k = 0; k < 4; k++) {
+                                        DOM.css(item[k], 'display', 'block');
+                                    }
+                                    DOM.css(tipc[0], 'display', 'block');
+                                }
+                                if (pg == 2) {
+                                    for(var i=0;i<4;i++){
+                                        DOM.css(item[pg + 2+i], 'display', 'block');
+                                    }
+                                    DOM.css(tipc[0], 'display', 'none');
+                                    DOM.css(tipc[1], 'display', 'block');
+                                }else if(pg == 3){
+                                    for(var i=0;i<4;i++){
+                                        DOM.css(item[pg + 5+i], 'display', 'block');
+                                    }
+                                    DOM.css(tipc[1], 'display', 'none');
+                                    DOM.css(tipc[2], 'display', 'block');
+                                }
+                            })(KISSY, pg)
+                        }
+                        setData(1)
+                        function setPage() {
+                            if (totalpage <= 10) {        //总页数小于十页
+                                for (count = 1; count <= totalpage; count++) {
+                                    if (count != cpage) {
+                                        outstr = outstr + "<a href='javascript:void(0)' onclick='gotopage(" + count + ")'>" + count + "</a>";
+                                    } else {
+                                        outstr = outstr + "<span class='current' >" + count + "</span>";
+                                    }
+                                }
+                            }
+                            if (totalpage > 10) {        //总页数大于十页
+                                if (parseInt((cpage - 1) / 10) == 0) {
+                                    for (count = 1; count <= 10; count++) {
+                                        if (count != cpage) {
+                                            outstr = outstr + "<a href='javascript:void(0)' onclick='gotopage(" + count + ")'>" + count + "</a>";
+                                        } else {
+                                            outstr = outstr + "<span class='current'>" + count + "</span>";
+                                        }
+                                    }
+                                    outstr = outstr + "<a href='javascript:void(0)' class='nex' onclick='gotopage(" + count + ")'> &gt;&gt;&gt; </a>";
+                                }
+                                else if (parseInt((cpage - 1) / 10) == parseInt(totalpage / 10)) {
+                                    outstr = outstr + "<a href='javascript:void(0)' class='pre' onclick='gotopage(" + (parseInt((cpage - 1) / 10) * 10) + ")'>&lt;&lt;&lt; </a>";
+                                    for (count = parseInt(totalpage / 10) * 10 + 1; count <= totalpage; count++) {
+                                        if (count != cpage) {
+                                            outstr = outstr + "<a href='javascript:void(0)' onclick='gotopage(" + count + ")'>" + count + "</a>";
+                                        } else {
+                                            outstr = outstr + "<span class='current'>" + count + "</span>";
+                                        }
+                                    }
+                                }
+                                else {
+                                    outstr = outstr + "<a href='javascript:void(0)' class='pre' onclick='gotopage(" + (parseInt((cpage - 1) / 10) * 10) + ")'>&lt;&lt;&lt;</a>";
+                                    for (count = parseInt((cpage - 1) / 10) * 10 + 1; count <= parseInt((cpage - 1) / 10) * 10 + 10; count++) {
+                                        if (count != cpage) {
+                                            outstr = outstr + "<a href='javascript:void(0)' onclick='gotopage(" + count + ")'>" + count + "</a>";
+                                        } else {
+                                            outstr = outstr + "<span class='current'>" + count + "</span>";
+                                        }
+                                    }
+                                    outstr = outstr + "<a href='javascript:void(0)' class='nex' onclick='gotopage(" + count + ")'> &gt;&gt;&gt; </a>";
+                                }
+                            }
+                            obj.innerHTML = "<div id='setpage'><span id='info'>共" + totalpage + "页|第" + cpage + "页<\/span>" + outstr + "<\/div>";
+                            outstr = "";
+                        }
+                        setPage();   //调用分页
+                    </script>
+                </textArea>
+            </div>
+        </div>
+        <div class="delay">
+          <div class="safe">
+                <h3><a href="demo/收藏.html" target="_blank">demo</a></h3>
+                <h2>div结构</h2>
+                <textArea class="subText">
+                    <div id="J-SHOU">收藏本页</div>
+                </textArea>
+                <h2>JS行为</h2>
+                <textArea class="subText">
+                    <script type="text/javascript">
+                        function addBookmark() {
+                            var title, url;
+                            title = document.title;
+                            url = document.location.href;
+                            if (window.sidebar) { //for FF
+                                window.sidebar.addPanel(title, url, "");
+                            } else if (document.all) { // for ie
+                                window.external.addFavorite(url, title);
+                            } else {
+                                alert('您的浏览器不支持此功能，您可以按下"Ctrl+d"键加入收藏！');
+                            }
+                            return false;
+                        }
+                        document.getElementById("J-SHOU").onclick=function(){
+                            addBookmark()
+                        }
+                    </script>
+                </textArea>
+          </div><!--收藏功能-->
+            <div class="safe">
+                <h2>JS行为</h2>
+                <textArea class="subText">
+                    <script type="text/javascript">
+                        Request = {
+                            QueryString : function(item){
+                                var svalue = location.search.match(new RegExp("[\?\&]" + item + "=([^\&]*)(\&?)","i"));
+                                return svalue ? svalue[1] : svalue;
+                            }
+                        }
+                        var id=Request.QueryString("id");
+                        var tab=Request.QueryString("tab");
+                    </script>
+                </textArea>
+            </div><!--获取地址栏特殊字符-->
+            <div class="safe">
+                <h2>动画Flash</h2>
+                <textArea class="subText">
+                    <embed class="ln_flash" src="http://img01.taobaocdn.com/tps/i1/T1NFnnXgNsXXXtxVjX.swf" width=996 height="250" type="application/x-shockwave-flash" wmode="transparent" allowscriptaccess="always">
+                    </embed>
+                </textArea>
+                <h2>音乐Flash</h2>
+                <textArea class="subText">
+                    <embed id="J_flash" src="http://img04.taobaocdn.com/tps/i4/T1l7YnXjdsXXXtxVjX.swf" autostart="true" loop="true"  hidden="true" loop=-1 >
+                    </embed>
+                </textArea>
+            </div><!--插入Flash-->
+        </div>
+        <div class="delay">
+            <div class="safe">
+            <h3><a href="demo/瀑布流(原生JS).html" target="_blank">demo</a></h3>
+            <h2>css样式表现</h2>
+            <textArea class="subText">
+                <style>
+                    *{margin:0 auto;}
+                    img{border:0; display:block;}
+                    .waterfall{
+                        position: relative;
+                        margin: 0 auto;
+                        width: 904px;
+                        font:12px/1.5 Tahoma,'\5b8b\4f53';
+                        overflow: hidden;
+                    }
+                    .waterfall .wf-cld{
+                        position: absolute;
+                        margin-bottom: 15px;
+                        padding:6px;
+                        width: 200px;
+                        /*<!--    left: -9999px;
+                       top: -9999px;-->*/
+                        border: 1px solid #dedede;
+                        border-radius: 3px;
+                        background-color: #eee;
+                        box-shadow:3px 3px 3px #eaeaea;
+                        overflow: hidden;
+                    }
+                    .waterfall p{
+                        margin:0;
+                        padding:0;
+                    }
+                    .waterfall .wf-link{
+                        display:block;
+                        background-color:#fff;
+                        overflow:hidden;
+                    }
+                    .waterfall .wf-name{
+                        padding-top:4px;
+                        width:200px;
+                        height:24px;
+                        line-height:24px;
+                        overflow:hidden;
+                    }
+                    .waterfall .wf-name a{
+                        text-decoration:none;
+                        color:#666;
+                        font-weight:bold;
+                    }
+                    .waterfall .wf-name a:hover{
+                        color:#007de3;
+                    }
+                    .waterfall .wf-intro{
+                        color:#999;
+                    }
+                    .waterfall .wf-intro span{
+                        color:#007de3;
+                    }
+                </style>
+            </textArea>
+            <h2>div结构</h2>
+            <textArea class="subText">
+                <div class="waterfall" id="waterfall">
+                    <div class="wf-cld">
+                        <a href="http://www.seejs.com/examples/album/index.html" class="wf-link" style="height:99px;" target="_blank">
+                            <img src="http://www.seejs.com/wp-content/uploads/2012/05/album.png" width="200" height="99">
+                        </a>
+                        <p class="wf-name">
+                            <a href="http://www.seejs.com/examples/album/index.html" target="_blank">基于jQuery的相册效果</a>
+                        </p>
+                        <p class="wf-intro"><span>说明：</span>如图所示相册效果，点击左边缩略图，线性移动并同步放大至右边大图效果。具体效果请点击缩略图或文字链接查看示例。</p>
+                    </div>
+                    <div class="wf-cld">
+                        <a href="http://www.seejs.com/examples/enlarge/index.html" class="wf-link" style="height:134px;" target="_blank">
+                            <img src="http://www.seejs.com/wp-content/uploads/2012/05/enlarge.png" width="200" height="134">
+                        </a>
+                        <p class="wf-name">
+                            <a href="http://www.seejs.com/examples/enlarge/index.html" target="_blank">原生JS实现的另类放大镜效果</a>
+                        </p>
+                        <p class="wf-intro"><span>说明：</span>如上图所示，多图排列显示，当鼠标经过其中一张小图时，当前图片在当前位置瞬间放大至指定倍数，根据鼠标在当前图片显示区域的位置，平滑改变大图位置，实现放大效果。具体效果请点击缩略图或文字链接查看示例。
+                        </p>
+                    </div>
+                    <div class="wf-cld">
+                        <a href="http://www.seejs.com/examples/fashion-nav/index.html" class="wf-link" style="height:50px;" target="_blank">
+                            <img src="http://www.seejs.com/wp-content/uploads/2012/05/fashion-nav.png" width="200" height="50">
+                        </a>
+                        <p class="wf-name">
+                            <a href="http://www.seejs.com/examples/fashion-nav/index.html" target="_blank">很炫的CSS3动画菜单</a>
+                        </p>
+                        <p class="wf-intro"><span>说明：</span>图示为四个链接并列的导航菜单，其中第三个是鼠标经过时的最终效果。本例动画效果为鼠标经过每个链接时，红色三角渐显到图示位置，文字渐移到指定位置。具体效果请点击缩略图或文字链接查看示例。
+                        </p>
+                    </div>
+                    <div class="wf-cld">
+                        <a href="http://www.seejs.com/examples/heart/index.html" class="wf-link" style="height:200px;" target="_blank">
+                            <img src="http://www.seejs.com/wp-content/uploads/2012/05/heart.png" width="200" height="200">
+                        </a>
+                        <p class="wf-name">
+                            <a href="http://www.seejs.com/examples/heart/index.html" target="_blank">JS绘制的心型曲线</a>
+                        </p>
+                        <p class="wf-intro"><span>说明：</span>谁说程序员就不懂烂漫呢？程序员的烂漫更有心思。具体效果请点击缩略图或文字链接查看示例。</p>
+                    </div>
+                    <div class="wf-cld">
+                        <a href="http://www.seejs.com/examples/waixuanlunxian/index.html" class="wf-link" style="height:800px;" target="_blank">
+                            <img src="http://www.seejs.com/wp-content/uploads/2012/05/curve.png" width="200" height="800">
+                        </a>
+                        <p class="wf-name">
+                            <a href="http://www.seejs.com/examples/waixuanlunxian/index.html" target="_blank">原生JS绘制的几款神奇曲线</a>
+                        </p>
+                        <p class="wf-intro"><span>说明：</span>图示为四条JS绘制的神奇曲线，本例链接为其中之一。其余三条将链接中的&#8217;waixuanquxian&#8217;分别改成&#8217;neixuanquxian&#8217;、&#8217;waibaixian&#8217;、&#8217;Rhodonea&#8217;。</p>
+                    </div>
+                    <div class="wf-cld">
+                        <a href="http://www.seejs.com/examples/rotate/index.html" class="wf-link" style="height:406px;" target="_blank">
+                            <img src="http://www.seejs.com/wp-content/uploads/2012/05/rotate-nav.png" width="200" height="406">
+                        </a>
+                        <p class="wf-name">
+                            <a href="http://www.seejs.com/examples/rotate/index.html" target="_blank">两种实现方式的旋转导航</a>
+                        </p>
+                        <p class="wf-intro"><span>说明：</span>两个旋转示例，兼容各主流浏览器。上例为JS实现的(旋转对象是小图标)；下例为CSS3实现的，旋转对象为内部指针，在IE下失去平滑过渡。</p>
+                    </div>
+                    <div class="wf-cld">
+                        <a href="http://www.seejs.com/examples/yh/index.html" class="wf-link" style="height:232px;" target="_blank">
+                            <img src="http://www.seejs.com/wp-content/uploads/2012/05/fire.png" width="200" height="232">
+                        </a>
+                        <p class="wf-name">
+                            <a href="http://www.seejs.com/examples/yh/index.html" target="_blank">JS实现的彩色烟花效果</a>
+                        </p>
+                        <p class="wf-intro"><span>说明：</span>曾经在妙味课堂的视频教程中看到过一个简单的烟花效果，该例稍加修改，融入了更多真实，烟花颜色随机产生，爆炸时背景闪烁，碎片加速下落，非常漂亮。</p>
+                    </div>
+                    <div class="wf-cld">
+                        <a href="http://www.seejs.com/examples/redandgreen/index.html" class="wf-link" style="height:92px;" target="_blank">
+                            <img src="http://www.seejs.com/wp-content/uploads/2012/05/down.png" width="200" height="92">
+                        </a>
+                        <p class="wf-name">
+                            <a href="http://www.seejs.com/examples/redandgreen/index.html" target="_blank">很炫的JS倒计数效果，可升级为倒计时</a>
+                        </p>
+
+                        <p class="wf-intro"><span>说明：</span>不同于普通的倒计时效果，看看效果你就知道了。具体效果请点击缩略图或文字链接查看示例。</p>
+                    </div>
+                    <div class="wf-cld">
+                        <a href="#" class="wf-link" style="height:254px;" target="_blank">
+                            <img src="http://www.seejs.com/wp-content/uploads/2012/05/img_03.png" width="200" height="254">
+                        </a>
+                        <p class="wf-name">
+                            <a href="#" target="_blank">原生JS实现的瀑布流效果</a>
+                        </p>
+                        <p class="wf-intro"><span>说明：</span>近来常听见“瀑布流”这个名词废话不多说，看这个页面的布局就知道了，慢慢享受吧。</p>
+                    </div>
+                    <div class="wf-cld">
+                        <a href="#" class="wf-link" style="height:284px;" target="_blank">
+                            <img src="http://www.seejs.com/wp-content/uploads/2012/05/img_03.png" width="200" height="284">
+                        </a>
+                        <p class="wf-name">
+                            <a href="#" target="_blank">原生JS实现的瀑布流效果</a>
+                        </p>
+                        <p class="wf-intro"><span>说明：</span>近来常听见“瀑布流”这个名词废话不多说，看这个页面的布局就知道了，慢慢享受吧。</p>
+                    </div>
+                    <div class="wf-cld">
+                        <a href="#" class="wf-link" style="height:234px;" target="_blank">
+                            <img src="http://www.seejs.com/wp-content/uploads/2012/05/img_03.png" width="200" height="234">
+                        </a>
+                        <p class="wf-name">
+                            <a href="#" target="_blank">原生JS实现的瀑布流效果</a>
+                        </p>
+                        <p class="wf-intro"><span>说明：</span>近来常听见“瀑布流”这个名词废话不多说，看这个页面的布局就知道了，慢慢享受吧。</p>
+                    </div>
+                </div>
+            </textArea>
+            <h2>JS行为</h2>
+            <textArea class="subText">
+                <!--<script type="text/javascript">
+function Waterfall(param){
+    this.id = typeof param.container == 'string' ? document.getElementById(param.container) : param.container;
+    this.colWidth = param.colWidth;
+    this.colCount = param.colCount || 4;
+    this.cls = param.cls;
+    this.init();
+}
+Waterfall.prototype = {
+    getByClass:function(cls,p){
+        var arr = [],reg = new RegExp("(^|\\s+)" + cls + "(\\s+|$)","g");
+        var nodes = p.getElementsByTagName("*"),len = nodes.length;
+        for(var i = 0; i < len; i++){
+            if(reg.test(nodes[i].className)){
+                arr.push(nodes[i]);
+                reg.lastIndex = 0;
+            }
+        }
+        return arr;
+    },
+    maxArr:function(arr){
+        var len = arr.length,temp = arr[0];
+        for(var ii= 1; ii < len; ii++){
+            if(temp < arr[ii]){
+                temp = arr[ii];
+            }
+        }
+        return temp;
+    },
+    getMar:function(node){
+        var dis = 0;
+        if(node.currentStyle){
+            dis = parseInt(node.currentStyle.marginBottom);
+			//console.log(dis);
+        }else if(document.defaultView){
+            dis = parseInt(document.defaultView.getComputedStyle(node,null).marginBottom);
+        }
+        return dis;
+    },
+    getMinCol:function(arr){
+        var ca = arr,cl = ca.length,temp = ca[0],minc = 0;
+        for(var ci = 0; ci < cl; ci++){
+            if(temp > ca[ci]){
+                temp = ca[ci];
+                minc = ci;
+            }
+        }
+        return minc;
+    },
+    init:function(){
+        var _this = this;
+        var col = [];//列高
+        var nodes = _this.getByClass(_this.cls,_this.id),len = nodes.length;
+		//console.log(col)
+		//console.log(col[0]);
+        for(var i = 0; i < _this.colCount; i++){
+            col[i] = 0;
+			//console.log(col[i])
+        }
+		//console.log(col[0])
+		//console.log(col)
+        for(var i = 0; i < len; i++){
+            nodes[i].h = nodes[i].offsetHeight + _this.getMar(nodes[i]);
+			//nodes[i].h = nodes[i].offsetHeight;
+			//console.log(nodes[i].h);
+        }
+        for(var i = 0; i < len; i++){
+            var ming = _this.getMinCol(col);
+			//console.log(ming);
+			//console.log(col)
+            nodes[i].style.left = ming * _this.colWidth + "px";
+            nodes[i].style.top = col[ming] + "px";
+            col[ming] += nodes[i].h;
+        }
+        _this.id.style.height = _this.maxArr(col) + "px";
+    }
+};
+new Waterfall({
+    "container":"waterfall",
+    "colWidth":228,
+    "colCount":4,
+    "cls":"wf-cld"
+});
+</script>--><!--YS-->
+                <script type="text/javascript">
+                    var $=function(id){return typeof id === "string" ? document.getElementById(id):id;}
+                    var $$=function(tagname,obj){return (obj || document).getElementsByTagName(tagname)};
+                    var $$$=function(sClass, obj){
+                        var aClass = [];
+                        var reClass = new RegExp("(^| )" + sClass + "( |$)");
+                        var aElem = $$("*", obj);
+                        for (var i = 0; i < aElem.length; i++) reClass.test(aElem[i].className) && aClass.push(aElem[i]);
+                        return aClass
+                    };
+                    function Waterfall(id,colwidth,colCount,cls)
+                    {
+                        this.oBox=$(id);
+                        this.oWidth=colwidth;
+                        this.oCount=colCount;
+                        this.oClass=cls;
+                    }
+                    Waterfall.prototype={
+                        init:function(){
+                            var _this=this;
+                            var col=[];
+                            var node=$$$(this.oClass,this.oBox),len=node.length;
+                            for(var i=0;i<this.oCount;i++)
+                            {
+                                col[i]=0;
+                            }
+                            //console.log(col);
+                            for(var i=0;i<len;i++)
+                            {
+                                node[i].h=node[i].offsetHeight + this.getMar(node[i]);
+                                //console.log(node[i].h);
+                            }
+                            for(var i=0;i<len;i++)
+                            {
+                                var mm=this.getMinCol(col);
+                                node[i].style.left = mm * _this.oWidth + "px";
+                                node[i].style.top = col[mm] + "px";
+                                col[mm] += node[i].h;
+                                //console.log(col[mm])
+                                //console.log(mm);
+                                //console.log(col);
+
+                            }
+                            _this.oBox.style.height = _this.maxArr(col) + "px";
+                        },
+                        getMinCol:function(arr){
+                            //console.log(arr)
+                            var ca = arr,cl = ca.length,temp = ca[0],minc = 0;
+                            for(var ci = 0; ci < cl; ci++){
+                                if(temp > ca[ci]){
+                                    temp = ca[ci];
+                                    minc = ci;
+                                }
+                            }
+                            return minc;
+                        },
+                        maxArr:function(arr){
+                            var len = arr.length,temp = arr[0];
+                            for(var ii= 1; ii < len; ii++){
+                                if(temp < arr[ii]){
+                                    temp = arr[ii];
+                                }
+                            }
+                            return temp;
+                        },
+                        getMar:function(node){
+                            var dis = 0;
+                            if(node.currentStyle){
+                                dis = parseInt(node.currentStyle.marginBottom);
+                            }else if(document.defaultView){
+                                dis = parseInt(document.defaultView.getComputedStyle(node,null).marginBottom);
+                            }
+                            return dis;
+                        }
+                    }
+                    var p1=new Waterfall("waterfall",228,4,"wf-cld");
+                    p1.init();
+                </script>
+            </textArea>
+        </div><!--原生瀑布流-->
+    </div>
+        <div class="delay">
+            <div class="safe">
+                <h3><a href="demo/原生接口.html" target="_blank">demo</a></h3>
+                <h2>div结构</h2>
+                <textArea class="subText">
+                    <div id="J-jiekou">
+                    </div>
+                </textArea>
+                <h2>JS行为</h2>
+                <textArea class="subText">
+                    <script type="text/javascript">
+                        (function(){
+                            var _sUrl = "http://house.taobao.com/index.do?action=IndexAction&event_submit_do_get_new_appoint=doGetNewAppoint&callback=bd";
+                            function loadScript(url, callback){
+                                var head = document.getElementsByTagName('head')[0];
+                                var script = document.createElement('script');
+                                //script.type = 'text/javascript';
+                                script.src = url;
+                                script.onload = script.onreadystatechange = function(){
+                                    if((!this.readyState || this.readyState === "loaded" || this.readyState === "complete")){
+                                        callback && callback();
+                                        //在IE浏览器处理内存泄漏
+                                        script.onload = script.onreadystatechange = null;
+                                        if (head && script.parentNode) {
+                                            head.removeChild(script);
+                                        }
+                                    }
+                                };
+                                //使用insertBefore，而不是appendChild避免了一个IE6的bug。
+                                head.insertBefore(script, head.firstChild);
+                            }
+                            function callback(obj){
+                                return data = obj;
+                            }
+                            window.bd = callback;
+                            window.onload=function(){
+                                loadScript(_sUrl,function(){
+                                    var sj = data;
+                                    var len = sj.length;
+                                    var str="";
+                                    var NumEle = document.getElementById("J-jiekou");
+                                    for(var i=0;i<len;i++)
+                                    {str += '<li><span class="nickname">'+data[i].nickName+'</span><span class="loupan">刚刚在<b>'+data[i].loupanName+'</b>预约看房</span></li>'}
+                                    NumEle.innerHTML=str;
+                                });
+                            }
+                        })()
+
+
+                    </script>
+
+                </textArea>
+            </div><!--原生接口-->
+            <div class="safe">
+                <h3><a href="demo/kissy接口.html" target="_blank">demo</a></h3>
+                <h2>div结构</h2>
+                <textArea class="subText">
+                    <div id="J-jiekou">
+
+                    </div>
+                </textArea>
+                <h2>JS行为</h2>
+                <textArea class="subText">
+                    <script src="http://a.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+                    <script type="text/javascript">/*kissy接口方法*/
+                    (function(S){
+                        var E= S.Event,D= S.DOM;
+                        var Surl="https://hi.alipay.com/query/winner_boc.json";
+                        window.abc=function(datas1){
+                            var str='';
+                            var owap = document.getElementById('J-jiekou');
+                            if(datas1.stat==='ok'){
+                                for(var i=0;i<datas1.winners.length;i++){
+                                    str+='<li><a href="#">'+datas1.winners[i].userName+"获得"+datas1.winners[i].prizeName+'</a></li>'
+                                    console.log(datas1.winners[i].userName)
+                                }
+                                owap.innerHTML=str;
+                            }
+                        };
+                        S.io({
+                            type:"get",
+                            url:Surl,
+                            dataType:'jsonp',
+                            data:{
+                                'campId':12554,
+                                'start':1,
+                                'end':25,
+                                _callback:"window.abc" /*非常规接口用window.abc方法*/
+                            }
+                            /*常规CALLBACK用success:function(data){
+                             var str="";
+                             }*/
+                        })
+                    })(KISSY)
+
+                    </script>
+
+                </textArea>
+            </div><!--KISSY接口-->
+            <div class="safe">
+                <h3><a href="demo/jquery接口.html" target="_blank">demo</a></h3>
+                <h2>div结构</h2>
+                <textArea class="subText">
+                    <div id="J-jiekou">
+                        <ul id="zjmd">
+
+                        </ul>
+                        <div id="j_cg">
+                        </div>
+                    </div>
+                </textArea>
+                <h2>JS行为</h2>
+                <textArea class="subText">
+
+                    <script type="text/javascript">/*jquery接口方法*/
+                    var Surl="https://hi.alipay.com/query/winner_boc.json";
+                    //var Surl="http://localhost/login-status1";
+                    var ourl="https://hi.alipay.com/query/winner_boc.json?campId=12655&start=1&end=50&_input_charset=utf-8&r=1339045518058&_callback=zjmd";
+                    window.bd=function(datas){
+                        var str='';
+                        var owap = document.getElementById('zjmd');
+                        if(datas.stat=='ok'){
+                            for(var i=0;i<datas.winners.length;i++){
+                                str+='<li>'+datas.winners[i].userName+'获得'+datas.winners[i].prizeName+'</li>'
+                            }
+                            owap.innerHTML=str;
+                        }
+                    };
+                    $.ajax({
+                        url:Surl,
+                        type:'get',
+                        dataType:'jsonp',
+                        data:{
+                            'campId':12655,
+                            'start':1,
+                            'end':50,
+                            _callback:"window.bd" /*非常规接口用window.abc方法*/
+                        }
+                    });/*非常规接口用window.abc方法---END*/
+                    var cgUrl="http://size.taobao.com/json/xinpin.htm";
+                    //var oburl="http://wan.taobao.com/yeyou/ajax/ajax_get_recent_user_record.do";
+                    var oins=document.getElementById("j_cg");
+                    $.ajax({
+                        url:cgUrl,
+                        type:'get',
+                        dataType:'jsonp',
+                        data:{
+                            'catId':16,
+                            'count':30
+                        },
+                        success:function(datas1){
+                            var str='';
+                            //console.log(datas1);
+                            // var json = eval("(" + datas1.data + ")");
+                            //var list= S.JSON.parse(result.data).recent_user;
+                            //console.log(list);
+                            // console.log(json);
+                            /*                for(var i=0;i<json.recent_user.length;i++){
+                             var gameurl = "http://wan.taobao.com/yeyou/entra_game.html?game_id=" + json.recent_user[i].game_id;
+                             str +="<li>"+json.recent_user[i].mini_desc+'<a href="' + gameurl + '">'+json.recent_user[i].game_name+"</a><a href="+gameurl+">213123</a></li>";
+                             }*/
+                            //var list= S.JSON.parse(result.data).recent_user;
+                            for(var i=0;i<datas1.result.length;i++){
+                                str +='<li><a  target="_blank" href="' + datas1.result[i].storeURL + '">'+datas1.result[i].nick+"</a>"+"<span>"+datas1.result[i].itemCount+"款新品</span>"+"</li>";
+                            }
+                            oins.innerHTML=str;
+                        }
+                    })
+                    </script>
+
+                </textArea>
+            </div><!--KISSY接口-->
+          </div>
+        <div class="delay">
+            <div class="safe">
+                <h3><a href="demo/define_animate.html" target="_blank">demo</a></h3>
+                <h2>css样式表现</h2>
+                <textArea class="subText">
+                    <style type="text/css">
+                        .container{width:990px;margin:0 auto; position:relative;}
+                        .divFrame{width:300px;height:40px; border:2px solid #eee; position:absolute;}
+                    </style>
+                </textArea>
+                <h2>div结构</h2>
+                <textArea class="subText">
+                    <div class="container">
+                        <div class="divFrame">
+                            点击变大
+                        </div>
+                    </div>
+                </textArea>
+                <h2>js行为</h2>
+                <textArea class="subText">
+                    <script src="http://a.tbcdn.cn/libs/jquery/1.7.1/jquery.js"></script>
+                    <script type="text/javascript">
+                        $(function(){
+                            $(".divFrame").toggle(function(){
+                                $(this).animate({
+                                            width:"20px;",
+                                            height:"100px",
+                                            left:"200px",
+                                            top:"70px"
+                                        },200,"linear",function(){
+                                            $(this).css({"border":"solid 3px red"}).html("变大了")
+                                        }
+                                )
+
+                            },function(){
+                                $(this).animate({
+                                            width:"0;",
+                                            height:"30px",
+                                            left:"0",
+                                            top:"0"
+                                        },200,"linear",function(){
+                                            $(this).css({"border":"solid 1px black"}).html("变小了")
+                                        }
+                                )
+                            })
+
+                        })
+                    </script>
+                </textArea>
+            </div>
+            <div class="safe">
+                <h3><a href="demo/dropdownlist.html" target="_blank">demo</a></h3>
+                <h2>css样式表现</h2>
+                <textArea class="subText">
+                    <style type="text/css">
+                        body{font-size:12px;}
+                        .clsInit{width:435px;height:35px; line-height: 35px; padding-left:10px;}
+                        .clsTip{padding-top:5px; background-color: #eee; display:none;}
+                    </style>
+                </textArea>
+                <h2>div结构</h2>
+                <textArea class="subText">
+                    <div class="clsInit">
+                        厂商: <select name="" id="selF"><option value="">请选择</option></select>
+                        品牌: <select name="" id="selT"><option value="">请选择</option></select>
+                        型号: <select name="" id="selC"><option value="">请选择</option></select>
+                        <input id="button1" type="button" value="查询" class="btn">
+                    </div>
+                    <div class="clsInit" id="divTip"></div>
+                </textArea>
+                <h2>js行为</h2>
+                <textArea class="subText">
+                    <script src="http://a.tbcdn.cn/libs/jquery/1.7.1/jquery.js"></script>
+                    <script type="text/javascript">
+                        $(function(){
+                            function objInit(obj){//下拉列表框初始化
+                                return $(obj).html("<option>请选择</option>")
+                            }
+                            var arrData = {//保存相关数据
+                                厂商1:{品牌1_1:"型号1_1_1,型号1_1_2",
+                                    品牌1_2:"型号1_2_1,型号1_2_2"},
+                                厂商2:{品牌2_1:"型号2_1_1,型号2_1_2",
+                                    品牌2_2:"型号2_2_1,型号2_2_2"},
+                                厂商3:{品牌3_1:"型号3_1_1,型号3_1_2",
+                                    品牌3_2:"型号3_2_1,型号3_2_2"}
+                            }
+                            $.each(arrData,function(pF){ //遍历数据增加厂商项
+                                $("#selF").append("<option>"+ pF+"</option>");
+                            })
+                            $("#selF").change(function(){
+                                objInit("#selT");
+                                objInit("#selC");
+                                $.each(arrData,function(pF,pS){
+                                    //如果厂商选中项与数据匹配
+                                    if($("#selF option:selected").text() == pF)
+                                    {
+                                        $.each(pS,function(pT,pC){
+                                            //console.log(pT);
+                                            $("#selT").append("<option>"+pT +"</option>")
+                                        })
+                                        //品牌列表框选项改变事件
+                                        $("#selT").change(function(){
+                                            objInit("#selC");
+                                            $.each(pS,function(pT,pC){
+                                                //如果品牌选中项与数据匹配
+                                                if($("#selT option:selected").text() == pT)
+                                                {
+                                                    $.each(pC.split(","),function(){
+                                                        $("#selC").append("<option>"+this+"</option>")
+                                                    })
+                                                }
+                                            })
+                                        })
+                                    }
+                                })
+                            })
+                            $("#button1").click(function(){
+                                //注册按钮单击事件
+                                var strValue= "您选择的厂商:";
+                                strValue +=$("#selF option:selected").text();
+                                strValue += "　您选择的品牌:";
+                                strValue +=$("#selT option:selected").text();
+                                strValue += "　您选择的型号:";
+                                strValue +=$("#selC option:selected").text();
+                                $("#divTip").show().addClass("clsTip").html(strValue);
+                            })
+                        })
+                    </script>
+                </textArea>
+            </div>
+            <div class="safe">
+                <h3><a href="demo/imgpre(预览).html" target="_blank">demo</a></h3>
+                <h2>css样式表现</h2>
+                <textArea class="subText">
+                    <style type="text/css">
+                        body{font-size: 12PX;}
+                        TABLE{width:360px;border-collapse:collapse;}
+                        table tr th,td{border:solid 1px #666; text-align: center}
+                        table tr td img{width:42px;height:60px;cursor:hand;padding:3px;}
+                        table tr td span{float:left;padding-left:12px;}
+                        table tr th{background:#ccc;height:32px;}
+                        .clsimg{position:absolute;border:solid 1px #ccc;width:785px;height:420px; display: none;}
+                        .btn{border:#666 1px solid; width:50px; }
+                        .greys{background:#999;}
+                    </style>
+                </textArea>
+                <h2>div结构</h2>
+                <textArea class="subText">
+                    <table id="pretable">
+                        <tr>
+                            <th>选项</th>
+                            <th>编号</th>
+                            <th>封面</th>
+                            <th>购书人</th>
+                            <th>性别</th>
+                            <th>购书价</th>
+                        </tr>
+                        <tr id="0">
+                            <td><input type="checkbox" id="checkbox1" value="0"></td>
+                            <td>1001</td>
+                            <td><img src="images/01.jpg"></td>
+                            <td>李晓明</td>
+                            <td>男</td>
+                            <td>35.6元</td>
+                        </tr>
+                        <tr id="1">
+                            <td><input type="checkbox" id="checkbox2" value="1"></td>
+                            <td>1001</td>
+                            <td><img src="images/02.jpg"></td>
+                            <td>李晓明</td>
+                            <td>男</td>
+                            <td>35.6元</td>
+                        </tr>
+                        <tr id="2">
+                            <td><input type="checkbox" id="checkbox3" value="2"></td>
+                            <td>1001</td>
+                            <td><img src="images/03.jpg"></td>
+                            <td>李晓明</td>
+                            <td>男</td>
+                            <td>35.6元</td>
+                        </tr>
+                        <tr id="3">
+                            <td><input type="checkbox" id="checkbox4" value="3"></td>
+                            <td>1001</td>
+                            <td><img src="images/04.jpg"></td>
+                            <td>李晓明</td>
+                            <td>男</td>
+                            <td>35.6元</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>
+                                <span><input id="chkall" type="checkbox">全选</span>
+                                <span><input id="btndel" type="button" value="删除" class="btn"></span>
+                            </td>
+                        </tr>
+                    </table>
+                    <img id="imgtip" class="clsimg" src="images/01.jpg" alt="">
+                </textArea>
+                <h2>js行为</h2>
+                <textArea class="subText">
+                    <script type="text/javascript">
+                        $(function(){
+                            //$("#pretable tr:even").addClass("greys");
+                            $("#pretable tr:nth-child(odd)").css("background-color","#eee");
+                            var x = 5,y=15;
+                            $("#pretable tr td img").mousemove(function(e){
+                                $("#imgtip").attr("src",this.src).css({"top":(e.pageY + y)+"px",left:(e.pageX + x)+"px"})
+                                        .show(2000)
+                            });
+                            $("#pretable tr td img").mouseout(function(e){
+                                $("#imgtip").hide();
+                            })
+                            $('#chkall').click(function(){
+                                if(this.checked)
+                                {
+                                    $("#pretable tr td input[type=checkbox]").attr("checked",true);
+                                }
+                                else{
+                                    $("#pretable tr td input[type=checkbox]").attr("checked",false);
+                                }
+                            })
+                            $('#btndel').click(function(){
+                                var intl=$("#pretable tr td input:checked:not('#chkall')").length;
+                                //console.log(intl);
+                                if(intl !=0)
+                                {
+                                    $("#pretable tr td input[type=checkbox]:not('#chkall')").each(function(index){
+                                        if(this.checked)
+                                        {
+                                            $("#pretable tr[id="+this.value+"]").remove();
+                                        }
+
+                                    })
+                                }
+                            })
+                        })
+                    </script>
+                </textArea>
+
+            </div>
+            <div class="safe">
+                <h3><a href="demo/jquery_calu相册.html" target="_blank">demo</a></h3>
+                <h2>css样式表现</h2>
+                <textArea class="subText">
+                    <style type="text/css">
+                        body,.sw_box,.sw_box ul,.sw_box li{margin:0;padding:0;}
+                        .sw_box img{display: block; border:0;}
+                        .sw_box ul{ list-style:none;}
+                        .sw_box .clear{zoom:1}
+                        .sw_box .clear:after{content:'.';display:block; clear: both;height:0; visibility: hidden;}
+                        .sw_box{width:490px;height:224px;border:2px solid #ccc; margin:0 auto; position:relative;}
+                        .sw_box .sw_nav{padding-top:170px;padding-left:30px;}
+                        .sw_box .sw_nav li{float:left;width:70px;height:50px; overflow: hidden; margin-right:14px; display:inline; }
+                        .sw_box .sw_nav li img{width:70px;height:50px;position:absolute;}
+                        .sw_box .sw_nav li.selected{border:1px solid red;}
+                        .sw_showAreas{ overflow: hidden;}
+                        .sw_showAreas img{position:absolute;left:0;top:0;}
+                        .s_zindex{z-index:10;}
+                        .s_zindexnav{z-index:100;}
+                    </style>
+                </textArea>
+                <h2>div结构</h2>
+                <textArea class="subText">
+                    <div class="sw_box clear">
+                        <ul class="sw_nav clear">
+                            <li class="selected"><img src="images/01.jpg"><img src="images/01.jpg" ></li>
+                            <li><img src="images/02.jpg"><img src="images/02.jpg"></li>
+                            <li><img src="images/03.jpg"><img src="images/03.jpg"></li>
+                            <li><img src="images/04.jpg"><img src="images/04.jpg"></li>
+                            <li><img src="images/05.jpg"><img src="images/05.jpg"></li>
+                        </ul>
+                    </div>
+                </textArea>
+                <h2>js行为</h2>
+                <textArea class="subText">
+                    <script src="http://a.tbcdn.cn/libs/jquery/1.7.1/jquery.js"></script>
+                    <script type="text/javascript">
+                        $(function(){
+                            var n=0;
+                            $(".sw_nav li").each(function(index){
+
+                                $this=$(this);
+                                $(".sw_nav li:eq("+ 0+") img:eq(1)").css({
+                                    width:490,
+                                    height:170,
+                                    left:0,
+                                    top:0
+                                });
+                                $(".sw_nav li:eq("+ index+") img:eq(1)").css({
+                                    left:30+70*index+14*index,
+                                    top:170
+                                });
+                                $(".sw_nav li:eq("+ index+")").click(function(){
+                                    if( $(".sw_nav li:eq("+ index+") img:eq(1)").hasClass("s_zindex")){return;}
+                                    $(".sw_nav li:eq("+ n+") img:eq(1)").removeClass("s_zindex").animate({
+                                        width:70,
+                                        height:50,
+                                        left:30+70*n+14*n,
+                                        top:170
+                                    },2000,function(){
+                                    });
+                                    $(".sw_nav li:eq("+ index+") img:eq(1)").addClass("s_zindex").animate({
+                                        width:490,
+                                        height:170,
+                                        left:0,
+                                        top:0
+                                    },2000,function(){
+                                    });
+                                    n=index;
+                                })
+                            })
+
+                        })
+                    </script>
+                </textArea>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript">
+    (function () {
+        var $ = function (id) {
+            return typeof id === "string" ? document.getElementById(id) : id;
+        }
+        var $$ = function (tagname, obj) {
+            return (obj || document).getElementsByTagName(tagname)
+        };
+        var $$$ = function (sClass, obj) {
+            var aClass = [];
+            var reClass = new RegExp("(^| )" + sClass + "( |$)");
+            var aElem = $$("*", obj);
+            for (var i = 0; i < aElem.length; i++) reClass.test(aElem[i].className) && aClass.push(aElem[i]);
+            return aClass
+        };
+        function hasClass(obj, cls) {
+            return (new RegExp("\\b" + cls + "\\b")).test(obj.className);
+            //return obj.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+        }
+        function addClass(obj, cls) {
+            if (!hasClass(obj, cls)) {
+                obj.className.replace(/\s/g, '') === '' ? obj.className = cls : obj.className += " " + cls;
+            }
+        }
+        function removeClass(obj, cls) {
+            return obj.className = obj.className.replace(new RegExp("\\b" + cls + "\\b"), "");
+            //hasClass(obj,cls) && (obj.className = obj.className.replace(new RegExp('(\\s*|^)'+cls+'(\\s*|$)'),' '));
+        }
+        function addHandler(oElement, sEventType, fnHandler) {
+            return oElement.addEventListener ? oElement.addEventListener(sEventType, fnHandler, false) : oElement.attachEvent("on" + sEventType, fnHandler)
+        }
+        //删除绑定事件
+        function removeHandler(oElement, sEventType, fnHandler) {
+            return oElement.removeEventListener ? oElement.removeEventListener(sEventType, fnHandler, false) : oElement.detachEvent("on" + sEventType, fnHandler)
+        }
+        //绑定事件到对象
+        function bind(object, fnHandler) {
+            return function () {
+                return fnHandler.apply(object, arguments)
+            }
+        }
+        function alltogether(id, id1, cls1, cls2) {
+            var _this = this;
+            this.oBox = $(id);
+            this.oDiv = $(id1);
+            this.oH2 = $$("h2", this.oBox);
+            this.oUl = $$("ul", this.oBox);
+            this.clsName = $$$(cls2, this.oDiv);
+            this.cls1 = cls1;
+            this.Mbox=$("Mars")
+        }
+        alltogether.prototype = {
+            init:function () {
+                var _this = this;
+                for (var i = 0; i < this.oH2.length; i++) {
+                    this.oH2[i].index = i;
+                    this.oH2[i].onclick = function () {
+                        _this.number1 = this.index;
+                        _this.Mbox.style.display="none";
+                        _this.show();
+                    }
+                }
+                for(var i=0;i<this.clsName.length;i++){
+                    this.clsName[i].style.display = "none";
+                }
+                /*创建标签*/
+                var obTitle= document.createElement("h2");
+                var txt=document.createTextNode("hello welcome JS 主页");
+                obTitle.appendChild(txt);
+                console.log(this.Mbox);
+                this.Mbox.appendChild(obTitle);
+
+            },
+            show:function () {
+                var _this = this;
+                this.oLi = $$("li", this.oUl[this.number1]);
+                this.className1 = $$$(this.cls1, this.clsName[this.number1]);
+                for (var i = 0; i < this.oH2.length; i++) {
+                    this.oH2[i].className = "";
+                    this.starMove(this.oUl[i], 0);
+                }
+                this.className = "current";
+                this.starMove(this.oUl[this.number1], this.oUl[this.number1].offsetHeight ? 0 : this.oLi.length * this.oLi[0].offsetHeight);
+                //alert(className1.length);
+                for (var k = 0; k < this.clsName.length; k++) {
+                    this.clsName[k].style.display = "none";
+                }
+                this.clsName[this.number1].style.display = "block";
+                for (var m = 0; m < this.className1.length; m++) {
+                    this.className1[m].style.display = "none";
+                }
+                for (var j = 0; j < this.oLi.length; j++) {
+                    this.oLi[j].index = j;
+                    this.oLi[j].onclick = function () {
+                        _this.number2 = this.index;
+                        _this.shows1();
+                    }
+                }
+            },
+            shows1:function () {
+                for (var k = 0; k < this.className1.length; k++) {
+                    this.className1[k].style.display = "none";
+                }
+                this.className1[this.number2].style.display = "block";
+            },
+            starMove:function (obj, iTarget) {
+                var _this = this;
+                clearInterval(obj.timer);
+                obj.timer = setInterval(function () {
+                    _this.doMove(obj, iTarget);
+                }, 30);
+            },
+            doMove:function (obj, iTarget) {
+                var iSpeed = (iTarget - obj.offsetHeight) / 8;
+                iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+                obj.offsetHeight == iTarget ? (clearInterval(obj.timer), obj.offsetHeight || ((obj.previousElementSibling || obj.previousSibling).className = "")) : (obj.style.height = obj.offsetHeight + iSpeed + "px")
+            }
+        }
+        var p = new alltogether("lesson", "oBox1", "safe", "delay");
+        p.init();
+        function roll(id, top) {
+            this.oBox = $(id);
+            this.compY = this.Top = top;
+        }
+        roll.prototype = {
+            init:function () {
+                var _this = this;
+                setInterval(function () {
+                    _this.curScrollTop = (document.documentElement.scrollTop || document.body.scrollTop || 0) - (document.documentElement.clientTop || document.body.clientTop || 0);
+                    _this.compY += (_this.curScrollTop + _this.Top - _this.compY) / 15;
+                    _this.oBox.style.top = Math.ceil(_this.compY) + "px";
+                    /*					_this.curScrollTop=(document.documentElement.scrollTop||document.body.scrollTop||0)-(document.documentElement.clientTop||document.body.clientTop||0);
+                     _this.Top += ( _this.curScrollTop + 200 - _this.Top)/15;
+                     _this.oBox.style.top=Math.ceil(_this.Top)+"px";*/
+                }, 10);
+            }
+        }
+    })()
+</script>
+</body>
+</html>

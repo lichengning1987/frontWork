@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery-1.7.2-min.js"></script>
+     <script src="http://a.tbcdn.cn/libs/jquery/1.7.1/jquery.js"></script>
+    <style type="text/css">
+        .container{width:990px;margin:0 auto; position:relative;}
+        .divFrame{width:300px;height:40px; border:2px solid #eee; position:absolute;}
+    </style>
+    <script type="text/javascript">
+        $(function(){
+               $(".divFrame").toggle(function(){
+                   $(this).animate({
+                               width:"20px;",
+                               height:"100px",
+                               left:"200px",
+                               top:"70px"
+                           },200,"linear",function(){
+                               $(this).css({"border":"solid 3px red"}).html("变大了")
+                           }
+                   )
+
+               },function(){
+                   $(this).animate({
+                               width:"0;",
+                               height:"30px",
+                               left:"0",
+                               top:"0"
+                           },200,"linear",function(){
+                               $(this).css({"border":"solid 1px black"}).html("变小了")
+                           }
+                   )
+               })
+
+        })
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="divFrame">
+        点击变大
+    </div>
+</div>
+
+
+</body>
+</html>
