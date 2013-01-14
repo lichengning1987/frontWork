@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<strike>12345</strike>
+<script type="text/javascript">
+	(function(){
+		function _$(els){/*获得元素的节点*/
+			this.elements=[];
+			for(var i=0,len=els.length;i<len;++i){
+				var element = els[i];
+				if(typeof element === 'string'){
+					element = document.getElementById(element);	
+				}
+				this.elements.push(element);	
+			}
+			
+		}
+		_$.prototype={
+			each:function(fn){/*遍历并且给this对象赋予fn方法*/
+				for(var i=0,len = this.elements.length; i < len ; ++i){
+					fn.call(this,this.elements[i]);
+				}
+				return this;
+			},
+			setStyle:function(pro,val){/*设置style样式*/
+				this.each(function(el){
+					el.style[pro]=val;	
+				})
+				return this;
+			},
+			show:function(){/*设置是否显示*/
+				var that=this;
+				this.each(function(el){
+					that.setStyle('display','block');	
+				});	
+				return this;
+			},
+			addEvent:function(type,fn){/*定义事件监听*/
+				var add=function(el){
+					if(window.addEventListener){
+						el.addEventListener(type,fn,false);	
+					}
+					else if(window.attachEvent){
+						el.attachEvent("on"+type,fn);	
+					}
+				}
+				this.each(function(el){
+					add(el);	
+				})
+				return this;		
+			}
+		}	
+		window.$=function(){
+			return new _$(arguments);	
+		}
+		
+	})()
+</script>
+<script type="text/javascript">
+$(window).addEvent("load",function(){
+	$('test1','test2').show().setStyle('color','red').addEvent('mouseover',function(e){
+		var e= e|| window.event;
+		var target=e.target || e.srcElement;
+		$(target).setStyle('color','green');
+		});	
+})
+</script>
+<div id="test1" style="display:none;width:100px;height:60px; border:1px solid #000; font-size:40px;">
+1
+</div>
+<div id="test2" style="display:none;font-size:40px;width:100px;height:60px; border:1px solid #000;">
+2
+</div>
+
+
+</body>
+</html>
