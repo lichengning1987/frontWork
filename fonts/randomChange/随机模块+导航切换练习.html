@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+html{background-image:url(about:blank);background-attachment:fixed;}
+body,ln_container div,.ln_container ul,ln_container li,h2,h3,h4,dl,dt,p{margin:0;padding:0;}
+.ln_container img{border:0; display:block;}
+.ln_container ul{ list-style:none;}
+.ln_container a{ text-decoration:none;}
+.ln_container em{ font-style:normal;}
+.ln_container .clearfix:after{ content:'.';height:0; clear:both; visibility:hidden; display:block;}
+.ln_container .clearfix{ zoom:1}
+.ln_container{font:12px/1.5 tahoma,arial,宋体b8b\4f53; overflow:hidden; background:#F5FAFB;}
+
+
+.mbs1{width:990px;margin:0 auto; height:800px; background:red;}
+
+.mbs2{width:990px;margin:0 auto; height:500px; background:blue;}
+
+.mbs3{width:990px;margin:0 auto; height:600px; background:yellow;}
+.mbs4{width:990px;margin:0 auto; height:700px; background:#09F;}
+
+
+
+
+.tab_nav_ab{ margin:0 auto; }
+.tab_nav_width{width:990px; height:61px;background:#fff;}
+.tab_nav_width1{width:1000px;height:100px;background:#33CCFF;}
+.tab_nav_width2{width:1000px;height:130px;background:#000; color:#fff;}
+.tab_nav_width3{width:990px;height:50px;background:red; color:#fff;}
+.tab_nav_fix{position: fixed;left: 50%;margin-left: -496px;top: 0px;z-index: 9999;_position: absolute;_top: expression(eval(documentElement.scrollTop));}
+
+
+.header{width:990px;margin:0 auto; background:#FC9;height:430px;}
+.footer{height:500px;}
+</style>
+</head>
+
+<body>
+<div class="ln_container" >
+	<div class="header">
+     sdffffffffffff
+    </div>
+    <div class="main">
+        <div class="mbscont mbs1" datanum="0">
+            <div class="tab_nav_ab tab_nav_width">
+                导航1
+            </div>
+        </div>
+        <div class="mbscont mbs2" datanum="1">
+             <div class="tab_nav_ab tab_nav_width1">
+                导航2
+            </div>
+        </div>
+        <div class="mbscont mbs3" datanum="2">
+            <div class="tab_nav_ab tab_nav_width2">
+                导航3
+            </div>
+        </div>
+        <div class="mbscont mbs4" datanum="3">
+           <div class="tab_nav_ab tab_nav_width3">
+                导航4
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+     footer
+    </div>
+</div>
+<script src="http://a.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+<script language="javascript">
+KISSY.ready(function(S){
+			function changes(){
+				var box	=KISSY.query(".main");
+				var cont=KISSY.query(".mbscont",box[0]);
+				var len=cont.length;
+				for(var i=0;i<len;i++){
+					var index = window.parseInt(Math.random()*len);
+					KISSY.DOM.append(cont[index],box[0])
+				}	
+			}
+			changes()	
+	} 
+)
+</script>
+<script type="text/javascript">
+	KISSY.ready(function(S){
+		 var DOM=S.DOM,Event=S.Event;
+		 function navScroll(fgm){
+				 this.navboxS=DOM.query(fgm.navFClass);
+				 this.bNavS=DOM.query(".tab_nav_ab");
+			     this.absCalss=fgm.absClass||"";
+				 this.fixClass=fgm.fixClass||"";
+			     this.loc = fgm.loc;
+				 this.refix=function(elem){var p = 0;while ( elem.offsetParent ) {p += elem.offsetTop;elem = elem.offsetParent;}return p;}(this.bNavS[0]);
+				 this.refix1=function(elem){var p = 0;while ( elem.offsetParent ) {p += elem.offsetTop;elem = elem.offsetParent;}return p;}(this.bNavS[1]);
+				 this.refix2=function(elem){var p = 0;while ( elem.offsetParent ) {p += elem.offsetTop;elem = elem.offsetParent;}return p;}(this.bNavS[2]);
+				 this.refix3=function(elem){var p = 0;while ( elem.offsetParent ) {p += elem.offsetTop;elem = elem.offsetParent;}return p;}(this.bNavS[3]);
+				 this.init();  
+		 }
+		 navScroll.prototype={
+			  pdFix:function(){
+					var _this=this,t=DOM.scrollTop(window);
+					if(_this.loc == "top"){					
+						if(t>_this.refix){
+						    DOM.replaceClass(_this.bNavS[0],_this.absCalss,_this.fixClass);	
+						}else if(t<=_this.refix) {
+							DOM.replaceClass(_this.bNavS[0],_this.fixClass,_this.absCalss);
+						}
+						if(t>_this.refix1){
+							DOM.css(_this.bNavS[0],'display','none');
+							DOM.replaceClass(_this.bNavS[1],_this.absCalss,_this.fixClass);		
+						}else if(t<_this.refix1){
+							DOM.css(_this.bNavS[0],'display','block');
+							DOM.replaceClass(_this.bNavS[1],_this.fixClass,_this.absCalss);
+						}
+						if(t>_this.refix2){
+							DOM.css(_this.bNavS[1],'display','none');
+							DOM.replaceClass(_this.bNavS[2],_this.absCalss,_this.fixClass);		
+						}else if(t<_this.refix2){
+							DOM.css(_this.bNavS[1],'display','block');
+							DOM.replaceClass(_this.bNavS[2],_this.fixClass,_this.absCalss);
+						}
+						if(t>_this.refix3){
+							DOM.css(_this.bNavS[2],'display','none');
+							
+							DOM.replaceClass(_this.bNavS[3],_this.absCalss,_this.fixClass);		
+						}else if(t<_this.refix3){
+							DOM.css(_this.bNavS[2],'display','block');
+							DOM.replaceClass(_this.bNavS[3],_this.fixClass,_this.absCalss);
+						}
+						if(t>_this.navboxS[3].offsetHeight+_this.refix3){
+							DOM.css(_this.bNavS[3],'display','none');
+						}else{
+							DOM.css(_this.bNavS[3],'display','block');	
+						}
+					}
+			  },
+			  init:function(){    
+				  var oThis=this;
+				   oThis.pdFix();
+				  Event.on(window, "scroll",function(){
+					  oThis.pdFix();
+				  })
+				  //window.onscroll=oThis.winonscoll;
+			  }	 
+		 }
+	  new navScroll({navFClass:".mbscont",bsClass:"tab_nav_ab",fixClass:"tab_nav_fix",loc:"top"})		
+		 
+		 			
+	})
+
+
+
+</script>
+
+
+
+</body>
+</html>
